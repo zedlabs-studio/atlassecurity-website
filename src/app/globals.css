@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'leaflet/dist/leaflet.css';
 
 :root {
   --background: #ffffff;
@@ -23,4 +24,43 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+  Add this to your existing app/globals.css (don't replace the whole file —
+  merge this block in, ideally near the top after your @tailwind/@import directives).
+
+  Fixes the default thick gray browser scrollbar visible in the screenshot.
+  Two layers: Firefox (scrollbar-width/color) + WebKit (Chrome/Edge/Safari,
+  which need explicit ::-webkit-scrollbar rules since they ignore the
+  standard properties).
+*/
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1e40af #0a1628;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a78;
+  border-radius: 999px;
+  border: 2px solid #0a1628;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
 }
