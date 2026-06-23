@@ -3,10 +3,10 @@
 
 import { PrismaClient } from '../src/generated/prisma/client'
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient({} as any)
 
 async function main() {
-  console.log('Seeding database...')
+  console.log('Seeding database...')  
 
   // Seed blogs
   await prisma.blog.createMany({
