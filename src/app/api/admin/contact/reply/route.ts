@@ -53,18 +53,18 @@ export async function POST(req: Request) {
     console.log('Resend accepted the send:', data)
 
     // 5. Update Database (Optional/Non-blocking)
-    if (submissionId) {
-      // Wrapping this in its own try/catch so a database error here 
-      // doesn't crash the route AFTER the email was already successfully sent.
-      try {
-        await prisma.contactSubmission.update({
-          where: { id: submissionId },
-          data: { repliedAt: new Date() },
-        })
-      } catch (dbError) {
-        console.warn('Email sent, but failed to update submission repliedAt column:', dbError)
-      }
-    }
+    // if (submissionId) {
+    //   // Wrapping this in its own try/catch so a database error here 
+    //   // doesn't crash the route AFTER the email was already successfully sent.
+    //   try {
+    //     await prisma.contactSubmission.update({
+    //       where: { id: submissionId },
+    //       data: { repliedAt: new Date() },
+    //     })
+    //   } catch (dbError) {
+    //     console.warn('Email sent, but failed to update submission repliedAt column:', dbError)
+    //   }
+    // }
 
     return NextResponse.json({ success: true })
     
