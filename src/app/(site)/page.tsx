@@ -64,7 +64,7 @@ export function CredibilityStrip() {
       ),
       title: 'Reliable',
       desc: 'Consistent security services',
-      count: 500,
+      count: 50,
       suffix: '+',
     },
     {
@@ -89,7 +89,7 @@ export function CredibilityStrip() {
       ),
       title: 'Trusted',
       desc: 'Building trust through results',
-      count: 10,
+      count: 5,
       suffix: '+ yrs',
     },
     {

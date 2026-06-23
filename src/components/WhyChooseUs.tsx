@@ -56,8 +56,8 @@ const points = [
 ]
 
 const accentStats = [
-  { num: '10+',  label: 'Years active'  },
-  { num: '500+', label: 'Sites secured' },
+  { num: '5+',  label: 'Years active'  },
+  { num: '50+', label: 'Sites secured' },
   { num: '24/7', label: 'Response'      },
 ]
 
