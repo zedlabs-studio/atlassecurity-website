@@ -102,7 +102,7 @@ export default function AboutPage() {
                 </div>
                 {/* Floating stat card */}
                 <div className="absolute -bottom-5 -left-5 bg-[#1e40af] rounded-xl px-6 py-4 shadow-xl">
-                  <p className="text-white text-3xl font-extrabold">500+</p>
+                  <p className="text-white text-3xl font-extrabold">50+</p>
                   <p className="text-blue-200 text-sm">Businesses Protected</p>
                 </div>
                 <div className="absolute -top-5 -right-5 bg-white rounded-xl px-6 py-4 shadow-xl border border-gray-100">

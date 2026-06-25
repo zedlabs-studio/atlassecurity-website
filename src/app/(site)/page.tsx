@@ -89,7 +89,7 @@ export function CredibilityStrip() {
       ),
       title: 'Trusted',
       desc: 'Building trust through results',
-      count: 5,
+      count: 7,
       suffix: '+ yrs',
     },
     {

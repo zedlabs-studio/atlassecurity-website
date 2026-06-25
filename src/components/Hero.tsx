@@ -158,7 +158,7 @@ function TrustRow() {
         ))}
       </div>
       <p className="text-gray-300 text-sm">
-        <span className="text-white font-semibold">500+</span> businesses protected
+        <span className="text-white font-semibold">50+</span> businesses protected
       </p>
     </motion.div>
   )
