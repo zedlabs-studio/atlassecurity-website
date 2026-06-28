@@ -46,8 +46,8 @@ export default function Footer() {
             <p className="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact</p>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="tel:02219934866" className="text-gray-400 hover:text-white transition-colors">
-                  022 199 3486
+                <a href="tel:+64 221993486" className="text-gray-400 hover:text-white transition-colors">
+                  +64 22 199 3486
                 </a>
               </li>
               <li>
