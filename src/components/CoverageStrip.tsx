@@ -5,18 +5,28 @@ import { motion } from 'framer-motion'
 import { fadeUp, stagger, viewport } from '@/lib/motion'
 
 const regions = [
-  { name: 'Hamilton',     type: 'Metro' },
-  { name: 'Cambridge',    type: 'City'  },
-  { name: 'Te Awamutu',   type: 'City'  },
-  { name: 'Huntly',       type: 'Town'  },
-  { name: 'Ngaruawahia',  type: 'Town'  },
-  { name: 'Morrinsville', type: 'Town'  },
+  { name: 'Hamilton',      type: 'Metro'  },
+  { name: 'Auckland',      type: 'Metro'  },
+  { name: 'Wellington',    type: 'Metro'  },
+  { name: 'Tauranga',      type: 'City'   },
+  { name: 'Palmerston Nth',type: 'City'   },
+  { name: 'Napier',        type: 'City'   },
+  { name: 'Hastings',      type: 'City'   },
+  { name: 'New Plymouth',  type: 'City'   },
+  { name: 'Whanganui',     type: 'City'   },
+  { name: 'Rotorua',       type: 'City'   },
+  { name: 'Cambridge',     type: 'Town'   },
+  { name: 'Te Awamutu',    type: 'Town'   },
+  { name: 'Huntly',        type: 'Town'   },
+  { name: 'Ngaruawahia',   type: 'Town'   },
+  { name: 'Morrinsville',  type: 'Town'   },
+  { name: 'Whangarei',     type: 'City'   },
 ]
 
 const stats = [
-  { num: '6+',   label: 'Towns'    },
-  { num: '24/7', label: 'Response' },
-  { num: 'NZ',   label: 'Licensed' },
+  { num: '16+',  label: 'Cities & Towns' },
+  { num: '24/7', label: 'Response'       },
+  { num: 'NZ',   label: 'Licensed'       },
 ]
 
 function NZSilhouette() {
@@ -72,13 +82,14 @@ export function CoverageStrip() {
               Service Coverage
             </p>
             <h2 className="text-[32px] lg:text-[36px] font-extrabold text-white leading-[1.12] tracking-tight">
-              Waikato<br />
+              North Island<br />
               <span className="text-[#3b5fd9]">Security</span><br />
               Coverage
             </h2>
             <p className="mt-4 text-white/40 text-sm leading-relaxed max-w-70">
-              Serving Hamilton and the wider Waikato region — licensed security
-              professionals covering every major town and district.
+              Serving Auckland, Wellington, Waikato, and the entire North Island
+              — licensed security professionals covering every major city, town,
+              and district.
             </p>
           </div>
 
@@ -111,7 +122,7 @@ export function CoverageStrip() {
         >
           <div className="mb-7">
             <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-400 mb-1">
-              Waikato Region
+              North Island, New Zealand
             </p>
           </div>
 

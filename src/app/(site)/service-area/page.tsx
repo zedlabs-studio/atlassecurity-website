@@ -5,12 +5,24 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const COVERED_CITIES = [
-  { name: 'Hamilton',     lat: -37.7870, lng: 175.2793, primary: true,  detail: 'Head office & primary coverage' },
-  { name: 'Cambridge',    lat: -37.8893, lng: 175.4746, primary: true,  detail: 'Static guard & mobile patrol'   },
-  { name: 'Te Awamutu',   lat: -38.0093, lng: 175.3260, primary: false, detail: 'Mobile patrol'                  },
-  { name: 'Huntly',       lat: -37.5594, lng: 175.1568, primary: false, detail: 'Mobile patrol'                  },
-  { name: 'Ngaruawahia',  lat: -37.6697, lng: 175.1547, primary: false, detail: 'Mobile patrol'                  },
-  { name: 'Morrinsville', lat: -37.6506, lng: 175.5333, primary: false, detail: 'Mobile patrol'                  },
+  // Primary hubs
+  { name: 'Hamilton',        lat: -37.7870, lng: 175.2793, primary: true,  detail: 'Head office & primary coverage'   },
+  { name: 'Auckland',        lat: -36.8485, lng: 174.7633, primary: true,  detail: 'Static guard & mobile patrol'     },
+  { name: 'Wellington',      lat: -41.2865, lng: 174.7762, primary: true,  detail: 'Static guard & mobile patrol'     },
+  // Secondary cities
+  { name: 'Tauranga',        lat: -37.6870, lng: 176.1654, primary: false, detail: 'Mobile patrol' },
+  { name: 'Rotorua',         lat: -38.1368, lng: 176.2497, primary: false, detail: 'Mobile patrol' },
+  { name: 'Napier',          lat: -39.4928, lng: 176.9120, primary: false, detail: 'Mobile patrol' },
+  { name: 'Hastings',        lat: -39.6386, lng: 176.8402, primary: false, detail: 'Mobile patrol' },
+  { name: 'New Plymouth',    lat: -39.0556, lng: 174.0752, primary: false, detail: 'Mobile patrol' },
+  { name: 'Whanganui',       lat: -39.9301, lng: 175.0472, primary: false, detail: 'Mobile patrol' },
+  { name: 'Palmerston North',lat: -40.3523, lng: 175.6082, primary: false, detail: 'Mobile patrol' },
+  { name: 'Whangarei',       lat: -35.7275, lng: 174.3166, primary: false, detail: 'Mobile patrol' },
+  { name: 'Cambridge',       lat: -37.8893, lng: 175.4746, primary: false, detail: 'Mobile patrol' },
+  { name: 'Te Awamutu',      lat: -38.0093, lng: 175.3260, primary: false, detail: 'Mobile patrol' },
+  { name: 'Huntly',          lat: -37.5594, lng: 175.1568, primary: false, detail: 'Mobile patrol' },
+  { name: 'Ngaruawahia',     lat: -37.6697, lng: 175.1547, primary: false, detail: 'Mobile patrol' },
+  { name: 'Morrinsville',    lat: -37.6506, lng: 175.5333, primary: false, detail: 'Mobile patrol' },
 ]
 
 const PRIMARY_CITIES   = COVERED_CITIES.filter(c => c.primary)
@@ -39,8 +51,8 @@ function CoverageMap() {
       if (!mapRef.current || leafletRef.current) return
 
       const map = L.default.map(mapRef.current, {
-        center:             [-37.85, 175.35],
-        zoom:               9,
+        center:             [-38.5, 175.8],
+        zoom:               6,
         zoomControl:        true,
         scrollWheelZoom:    false,
         attributionControl: true,
@@ -78,7 +90,7 @@ function CoverageMap() {
             <div style="font-family:Arial,sans-serif;min-width:140px">
               <p style="margin:0 0 4px;font-weight:700;font-size:14px;color:#0a1628">${city.name}</p>
               <p style="margin:0;font-size:12px;color:#6b7280">${city.detail}</p>
-              ${city.primary ? `<span style="display:inline-block;margin-top:6px;background:#1e40af;color:white;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px">Primary</span>` : ''}
+              ${city.primary ? `<span style="display:inline-block;margin-top:6px;background:#1e40af;color:white;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px">Primary Hub</span>` : ''}
             </div>
           `, { maxWidth: 200 })
       })
@@ -95,9 +107,9 @@ function CoverageMap() {
   return (
     <div
       ref={mapRef}
-      className="w-full h-full"
-      style={{ minHeight: 480 }}
-      aria-label="Map showing Atlas Security coverage areas across the Waikato region"
+      className="w-full"
+      style={{ height: '100%', minHeight: 600 }}
+      aria-label="Map showing Atlas Security coverage areas across the North Island of New Zealand"
     />
   )
 }
@@ -124,12 +136,13 @@ export default function ServiceAreaPage() {
               Where We Operate
             </p>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
-              Protecting Waikato.<br />
-              <span className="text-[#1e40af]">Town by Town.</span>
+              Protecting the North Island.<br />
+              <span className="text-[#1e40af]">City by City.</span>
             </h1>
             <p className="text-gray-300 mt-4 text-lg max-w-xl leading-relaxed">
-              Atlas Security covers Hamilton and the wider Waikato region — from Cambridge
-              to Huntly. Wherever your business operates, we have boots on the ground.
+              Atlas Security covers Auckland, Wellington, Hamilton, and every major city and
+              town across the North Island — wherever your business operates, we have boots
+              on the ground.
             </p>
             <div className="w-14 h-1 bg-[#1e40af] rounded mt-6" />
           </motion.div>
@@ -139,10 +152,10 @@ export default function ServiceAreaPage() {
             initial="hidden" animate="visible" variants={stagger}
           >
             {[
-              { value: '6',    label: 'Cities covered'       },
-              { value: '2',    label: 'Primary hubs'          },
-              { value: '24/7', label: 'Response availability' },
-              { value: 'NZ',   label: 'Owned & operated'      },
+              { value: '16+',  label: 'Cities & towns covered' },
+              { value: '3',    label: 'Primary hubs'            },
+              { value: '24/7', label: 'Response availability'   },
+              { value: 'NZ',   label: 'Owned & operated'        },
             ].map((s, i) => (
               <motion.div key={i} variants={fadeUp}
                 className="bg-white/5 border border-white/10 rounded-xl px-5 py-4">
@@ -159,9 +172,10 @@ export default function ServiceAreaPage() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="flex flex-col xl:flex-row gap-8">
 
+            {/* Map — explicit height so the child div has something to fill against */}
             <motion.div
               className="flex-1 rounded-2xl overflow-hidden shadow-lg border border-gray-200"
-              style={{ minHeight: 480 }}
+              style={{ height: 600 }}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -228,8 +242,8 @@ export default function ServiceAreaPage() {
 
               {/* CTA */}
               <motion.div variants={fadeUp} className="bg-[#1e40af] rounded-2xl p-6 text-center">
-                <p className="text-white font-bold text-base mb-1">Outside the Waikato region?</p>
-                <p className="text-blue-200 text-sm mb-4">We're expanding. Get in touch — we may be able to accommodate your location.</p>
+                <p className="text-white font-bold text-base mb-1">Not on the list?</p>
+                <p className="text-blue-200 text-sm mb-4">We're expanding across New Zealand. Get in touch — we may be able to accommodate your location.</p>
                 <Link href="/contact"
                   className="inline-flex items-center gap-2 bg-white text-[#1e40af] font-bold px-6 py-2.5 rounded-lg text-sm hover:bg-blue-50 transition-colors">
                   Contact Us
@@ -254,7 +268,7 @@ export default function ServiceAreaPage() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
           >
             {COVERED_CITIES.map((city, i) => (
