@@ -6,9 +6,9 @@ import { fadeUp, stagger, cardVariant, viewport } from '@/lib/motion'
 
 const testimonials = [
   {
-    name: 'James Whitfield',
-    role: 'Warehouse Manager',
-    location: 'Auckland',
+    name: 'Morgan',
+    role: 'Emergency Housing Manager',
+    location: 'Hamilton',
     rating: 5,
     message:
       'Atlas Security has been protecting our Auckland warehouse for over a year. Professional, reliable, and always responsive. Could not ask for better service.',
@@ -22,9 +22,9 @@ const testimonials = [
       'The mobile patrol team is excellent. We have had zero incidents since switching to Atlas. Highly recommend to any NZ business owner.',
   },
   {
-    name: 'Raj Patel',
+    name: 'Rachel Parker',
     role: 'Property Manager',
-    location: 'Christchurch',
+    location: 'Cambridge',
     rating: 5,
     message:
       'Very professional team. They responded within minutes when our alarm triggered at 2am. That kind of dedication is rare.',
