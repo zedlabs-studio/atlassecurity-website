@@ -303,7 +303,7 @@ export default function AboutPage() {
             {/* Photo 5 — portrait */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-8 0 lg:h-64"
+              className="relative overflow-hidden rounded-2xl group h-80 lg:h-64"
             >
               <Image
                 src="/images/team/guards-portrait.jpeg"
