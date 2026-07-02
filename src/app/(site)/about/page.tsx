@@ -90,7 +90,6 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 lg:px-16">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
-            {/* Text */}
             <motion.div
               className="flex-1 w-full min-w-0"
               initial="hidden"
@@ -114,12 +113,12 @@ export default function AboutPage() {
                 locally trained, licensed, and background checked.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                Today, Atlas Security protects hundreds of businesses across New Zealand, from Auckland retail
-                stores to Wellington construction sites. Our growth is built on one thing: results that speak for themselves.
+                Today, Atlas Security has earned the trust of 50+ businesses across New Zealand, from Hamilton retail 
+                stores to Wellington construction sites. Our growth is built on one thing: results that speak for themselves. 
               </p>
             </motion.div>
 
-            {/* Image card */}
+            {/* Story image — full team lineup */}
             <motion.div
               className="flex-1 w-full min-w-0"
               initial="hidden"
@@ -129,22 +128,21 @@ export default function AboutPage() {
               <div className="relative pt-8 pb-10 px-6 sm:px-8">
                 <div className="relative rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-96">
                   <Image
-                    src="/images/team/guards-car-front.jpeg"
-                    alt="Atlas Security team with patrol vehicle"
+                    src="/images/team/24X7.jpeg"
+                    alt="Atlas Security full team lineup"
                     fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    loading="eager"
                     priority
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
+                  {/* dark overlay so stat cards are legible */}
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/40 via-transparent to-transparent" />
                 </div>
-
-                {/* Bottom-left stat */}
                 <div className="absolute bottom-0 left-0 bg-[#1e40af] rounded-xl px-4 py-3 sm:px-6 sm:py-4 shadow-xl">
-                  <p className="text-white text-2xl sm:text-3xl font-extrabold">70+</p>
+                  <p className="text-white text-2xl sm:text-3xl font-extrabold">50+</p>
                   <p className="text-blue-200 text-xs sm:text-sm">Businesses Protected</p>
                 </div>
-
-                {/* Top-right stat */}
                 <div className="absolute top-0 right-0 bg-white rounded-xl px-4 py-3 sm:px-6 sm:py-4 shadow-xl border border-gray-100">
                   <p className="text-[#0a1628] text-2xl sm:text-3xl font-extrabold">24/7</p>
                   <p className="text-gray-500 text-xs sm:text-sm">Always On Call</p>
@@ -212,29 +210,28 @@ export default function AboutPage() {
 
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4"
+            style={{ gridAutoRows: 'minmax(240px, auto)' }}
             initial="hidden"
             animate={galleryInView ? 'visible' : 'hidden'}
             variants={stagger}
           >
 
-            {/* Photo 1 — large feature (2 cols × 2 rows on lg) */}
+            {/* Photo 1 — team lineup, large feature (2 cols × 2 rows on lg) */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group
-                         h-72 sm:h-80
-                         lg:col-span-2 lg:row-span-2 lg:h-130"
+              className="relative overflow-hidden rounded-2xl group h-72 sm:h-80 lg:col-span-2 lg:row-span-2 lg:h-auto"
             >
               <Image
-                src="/images/team/guards-car-front.jpeg"
-                alt="Atlas Security guards with patrol vehicle"
+                src="/images/team/guards-team-lineup.jpeg"
+                alt="Atlas Security full team lineup at night"
                 fill
-                className="object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 66vw"
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4">
                 <span className="inline-block bg-[#1e40af] text-white text-xs font-bold px-3 py-1.5 rounded-full">
-                  Mobile Patrol Unit
+                  The Atlas Team
                 </span>
               </div>
             </motion.div>
@@ -242,7 +239,7 @@ export default function AboutPage() {
             {/* Photo 2 — walking shot */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-60 lg:h-63"
+              className="relative overflow-hidden rounded-2xl group h-60"
             >
               <Image
                 src="/images/team/guards-walking.jpeg"
@@ -262,7 +259,7 @@ export default function AboutPage() {
             {/* Photo 3 — radio in car */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-60 lg:h-63"
+              className="relative overflow-hidden rounded-2xl group h-60"
             >
               <Image
                 src="/images/team/guards-radio.jpeg"
@@ -279,23 +276,22 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            {/* Photo 4 — patrol car rear (2 cols on lg) */}
+            {/* Photo 4 — patrol car (2 cols on lg) */}
             <motion.div
               variants={photoVariant}
-              //className="relative overflow-hidden rounded-2xl group h-60 lg:col-span-2 lg:h-64"
-              className="relative overflow-hidden rounded-2xl group h-80 object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="relative overflow-hidden rounded-2xl group h-64 lg:col-span-2"
             >
               <Image
-                src="/images/team/guards-car-rear.jpeg"
-                alt="Atlas Security guards behind patrol vehicle"
+                src="/images/team/patrol-car-front.jpeg"
+                alt="Atlas Security patrol vehicle"
                 fill
-                className="object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4">
                 <span className="inline-block bg-[#1e40af] text-white text-xs font-bold px-3 py-1.5 rounded-full">
-                  Atlas Patrol Team
+                  Atlas Patrol Vehicle
                 </span>
               </div>
             </motion.div>
@@ -303,7 +299,7 @@ export default function AboutPage() {
             {/* Photo 5 — portrait */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-80 lg:h-64"
+              className="relative overflow-hidden rounded-2xl group h-64"
             >
               <Image
                 src="/images/team/guards-portrait.jpeg"
