@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 import type { Variants } from 'framer-motion'
 import { useRef } from 'react'
@@ -25,12 +26,21 @@ const cardVariant: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
 }
+const photoVariant: Variants = {
+  hidden: { opacity: 0, scale: 0.96 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } },
+}
 
 function PageHero({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
     <section className="bg-[#0a1628] py-16 lg:py-20 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.04]"
-        style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+          backgroundSize: '50px 50px',
+        }}
+      />
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#1e40af] rounded-full filter blur-[120px] opacity-10 pointer-events-none" />
       <div className="container mx-auto px-6 lg:px-16 relative z-10">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -49,16 +59,19 @@ function PageHero({ title, subtitle }: { title: string; subtitle?: string }) {
 }
 
 export default function AboutPage() {
-  const storyRef  = useRef(null)
-  const valuesRef = useRef(null)
-  const teamRef   = useRef(null)
-  const storyInView  = useInView(storyRef,  { once: true, margin: '-80px' })
-  const valuesInView = useInView(valuesRef, { once: true, margin: '-80px' })
-  const teamInView   = useInView(teamRef,   { once: true, margin: '-80px' })
+  const storyRef   = useRef(null)
+  const valuesRef  = useRef(null)
+  const galleryRef = useRef(null)
+  const teamRef    = useRef(null)
+
+  const storyInView   = useInView(storyRef,   { once: true, margin: '-80px' })
+  const valuesInView  = useInView(valuesRef,  { once: true, margin: '-80px' })
+  const galleryInView = useInView(galleryRef, { once: true, margin: '-80px' })
+  const teamInView    = useInView(teamRef,    { once: true, margin: '-80px' })
 
   const values = [
     { icon: '🛡️', title: 'Integrity',         desc: 'We operate with complete transparency and honesty in everything we do.' },
-    { icon: '⚡', title: 'Responsiveness',     desc: 'Fast, decisive action when it matters most — day or night.' },
+    { icon: '⚡',  title: 'Responsiveness',    desc: 'Fast, decisive action when it matters most — day or night.' },
     { icon: '🤝', title: 'Partnership',        desc: 'We build long-term relationships, not just contracts.' },
     { icon: '🏆', title: 'Excellence',         desc: 'We hold ourselves to the highest standards of professional security.' },
     { icon: '🇳🇿', title: 'Local Commitment', desc: 'NZ owned and operated — we reinvest in the communities we protect.' },
@@ -66,7 +79,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <PageHero
         title="About Us"
         subtitle="New Zealand's trusted security partner — professional, reliable, and locally owned."
@@ -79,7 +92,7 @@ export default function AboutPage() {
 
             {/* Text */}
             <motion.div
-              className="flex-1 w-full"
+              className="flex-1 w-full min-w-0"
               initial="hidden"
               animate={storyInView ? 'visible' : 'hidden'}
               variants={fadeLeft}
@@ -108,26 +121,26 @@ export default function AboutPage() {
 
             {/* Image card */}
             <motion.div
-              className="flex-1 w-full"
+              className="flex-1 w-full min-w-0"
               initial="hidden"
               animate={storyInView ? 'visible' : 'hidden'}
               variants={fadeRight}
             >
-              {/* Extra padding so floating cards don't clip */}
-              <div className="relative pt-8 pb-8 px-6 sm:pt-8 sm:pb-10 sm:px-8">
-                <div className="bg-[#0a1628] rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-96 flex items-center justify-center">
-                  {/* Replace with real image */}
-                  <div className="text-center text-white/20">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" className="mx-auto mb-3">
-                      <path d="M21 19v1H3v-1l2-2V11c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2zM12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z"/>
-                    </svg>
-                    <p className="text-sm">Team / Office Image</p>
-                  </div>
+              <div className="relative pt-8 pb-10 px-6 sm:px-8">
+                <div className="relative rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-96">
+                  <Image
+                    src="/images/team/guards-car-front.jpeg"
+                    alt="Atlas Security team with patrol vehicle"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
                 </div>
 
                 {/* Bottom-left stat */}
                 <div className="absolute bottom-0 left-0 bg-[#1e40af] rounded-xl px-4 py-3 sm:px-6 sm:py-4 shadow-xl">
-                  <p className="text-white text-2xl sm:text-3xl font-extrabold">50+</p>
+                  <p className="text-white text-2xl sm:text-3xl font-extrabold">70+</p>
                   <p className="text-blue-200 text-xs sm:text-sm">Businesses Protected</p>
                 </div>
 
@@ -179,6 +192,138 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Photo Gallery ── */}
+      <section className="py-16 lg:py-24 bg-white" ref={galleryRef}>
+        <div className="container mx-auto px-6 lg:px-16">
+
+          <motion.div
+            className="text-center mb-10 lg:mb-14"
+            initial="hidden"
+            animate={galleryInView ? 'visible' : 'hidden'}
+            variants={fadeUp}
+          >
+            <p className="text-[#1e40af] font-semibold text-sm uppercase tracking-widest mb-3">In the Field</p>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">Meet the Team</h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm sm:text-base">
+              Our guards are trained professionals — on patrol every night to keep your business safe.
+            </p>
+            <div className="w-14 h-1 bg-[#1e40af] mx-auto mt-4 rounded" />
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4"
+            initial="hidden"
+            animate={galleryInView ? 'visible' : 'hidden'}
+            variants={stagger}
+          >
+
+            {/* Photo 1 — large feature (2 cols × 2 rows on lg) */}
+            <motion.div
+              variants={photoVariant}
+              className="relative overflow-hidden rounded-2xl group
+                         h-72 sm:h-80
+                         lg:col-span-2 lg:row-span-2 lg:h-130"
+            >
+              <Image
+                src="/images/team/guards-car-front.jpeg"
+                alt="Atlas Security guards with patrol vehicle"
+                fill
+                className="object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 66vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="inline-block bg-[#1e40af] text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  Mobile Patrol Unit
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Photo 2 — walking shot */}
+            <motion.div
+              variants={photoVariant}
+              className="relative overflow-hidden rounded-2xl group h-60 lg:h-63"
+            >
+              <Image
+                src="/images/team/guards-walking.jpeg"
+                alt="Atlas Security guards on patrol"
+                fill
+                className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="inline-block bg-[#1e40af] text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  On the Ground
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Photo 3 — radio in car */}
+            <motion.div
+              variants={photoVariant}
+              className="relative overflow-hidden rounded-2xl group h-60 lg:h-63"
+            >
+              <Image
+                src="/images/team/guards-radio.jpeg"
+                alt="Atlas Security guards in patrol vehicle with radio"
+                fill
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="inline-block bg-[#1e40af] text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  24/7 Response
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Photo 4 — patrol car rear (2 cols on lg) */}
+            <motion.div
+              variants={photoVariant}
+              //className="relative overflow-hidden rounded-2xl group h-60 lg:col-span-2 lg:h-64"
+              className="relative overflow-hidden rounded-2xl group h-80 object-cover object-center transition-transform duration-700 group-hover:scale-105"
+            >
+              <Image
+                src="/images/team/guards-car-rear.jpeg"
+                alt="Atlas Security guards behind patrol vehicle"
+                fill
+                className="object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 66vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="inline-block bg-[#1e40af] text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  Atlas Patrol Team
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Photo 5 — portrait */}
+            <motion.div
+              variants={photoVariant}
+              className="relative overflow-hidden rounded-2xl group h-8 0 lg:h-64"
+            >
+              <Image
+                src="/images/team/guards-portrait.jpeg"
+                alt="Atlas Security guards with radio equipment"
+                fill
+                className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="inline-block bg-[#1e40af] text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  Licensed Professionals
+                </span>
+              </div>
+            </motion.div>
+
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── NZ Owned Banner ── */}
       <section className="py-14 lg:py-16 bg-[#0a1628]" ref={teamRef}>
         <div className="container mx-auto px-6 lg:px-16 text-center">
@@ -202,7 +347,7 @@ export default function AboutPage() {
             >
               Get a Free Quote
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </Link>
           </motion.div>
