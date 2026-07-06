@@ -31,6 +31,24 @@ const photoVariant: Variants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } },
 }
 
+/* ── New Leadership Specific Variants ── */
+const leadershipImageLeft: Variants = {
+  hidden: { opacity: 0, x: -40, scale: 0.95 },
+  visible: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } },
+}
+const leadershipImageRight: Variants = {
+  hidden: { opacity: 0, x: 40, scale: 0.95 },
+  visible: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } },
+}
+const staggerLeadership: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+}
+const slideUpFade: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+}
+
 function PageHero({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
     <section className="bg-[#0a1628] py-16 lg:py-20 relative overflow-hidden">
@@ -59,23 +77,25 @@ function PageHero({ title, subtitle }: { title: string; subtitle?: string }) {
 }
 
 export default function AboutPage() {
-  const storyRef   = useRef(null)
-  const valuesRef  = useRef(null)
-  const galleryRef = useRef(null)
-  const teamRef    = useRef(null)
+  const storyRef      = useRef(null)
+  const leadershipRef = useRef(null)
+  const valuesRef     = useRef(null)
+  const galleryRef    = useRef(null)
+  const teamRef       = useRef(null)
 
-  const storyInView   = useInView(storyRef,   { once: true, margin: '-80px' })
-  const valuesInView  = useInView(valuesRef,  { once: true, margin: '-80px' })
-  const galleryInView = useInView(galleryRef, { once: true, margin: '-80px' })
-  const teamInView    = useInView(teamRef,    { once: true, margin: '-80px' })
+  const storyInView      = useInView(storyRef,      { once: true, margin: '-80px' })
+  const leadershipInView = useInView(leadershipRef, { once: true, margin: '-80px' })
+  const valuesInView     = useInView(valuesRef,     { once: true, margin: '-80px' })
+  const galleryInView    = useInView(galleryRef,    { once: true, margin: '-80px' })
+  const teamInView       = useInView(teamRef,       { once: true, margin: '-80px' })
 
   const values = [
-    { icon: '🛡️', title: 'Integrity',         desc: 'We operate with complete transparency and honesty in everything we do.' },
+    { icon: '🛡️', title: 'Integrity',        desc: 'We operate with complete transparency and honesty in everything we do.' },
     { icon: '⚡',  title: 'Responsiveness',    desc: 'Fast, decisive action when it matters most — day or night.' },
-    { icon: '🤝', title: 'Partnership',        desc: 'We build long-term relationships, not just contracts.' },
-    { icon: '🏆', title: 'Excellence',         desc: 'We hold ourselves to the highest standards of professional security.' },
+    { icon: '🤝', title: 'Partnership',       desc: 'We build long-term relationships, not just contracts.' },
+    { icon: '🏆', title: 'Excellence',        desc: 'We hold ourselves to the highest standards of professional security.' },
     { icon: '🇳🇿', title: 'Local Commitment', desc: 'NZ owned and operated — we reinvest in the communities we protect.' },
-    { icon: '📋', title: 'Compliance',         desc: 'Fully licensed, insured, and compliant with all NZ security regulations.' },
+    { icon: '📋', title: 'Compliance',        desc: 'Fully licensed, insured, and compliant with all NZ security regulations.' },
   ]
 
   return (
@@ -126,9 +146,9 @@ export default function AboutPage() {
               variants={fadeRight}
             >
               <div className="relative pt-8 pb-10 px-6 sm:px-8">
-                <div className="relative rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-96">
+                <div className="relative rounded-2xl overflow-hidden w-full aspect-4/3 lg:aspect-4/3">
                   <Image
-                    src="/images/team/24X7.jpeg"
+                    src="/images/team/guards-portrait.jpeg"
                     alt="Atlas Security full team lineup"
                     fill
                     loading="eager"
@@ -136,7 +156,6 @@ export default function AboutPage() {
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  {/* dark overlay so stat cards are legible */}
                   <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/40 via-transparent to-transparent" />
                 </div>
                 <div className="absolute bottom-0 left-0 bg-[#1e40af] rounded-xl px-4 py-3 sm:px-6 sm:py-4 shadow-xl">
@@ -154,8 +173,105 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Leadership / Team ── */}
+      <section className="py-16 lg:py-24 bg-[#f8f9fa]" ref={leadershipRef}>
+        <div className="container mx-auto px-6 lg:px-16">
+          <motion.div
+            className="text-center mb-16 lg:mb-20"
+            initial="hidden"
+            animate={leadershipInView ? 'visible' : 'hidden'}
+            variants={fadeUp}
+          >
+            <p className="text-[#1e40af] font-semibold text-sm uppercase tracking-widest mb-3">Our People</p>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">Meet the Leadership</h2>
+            <div className="w-14 h-1 bg-[#1e40af] mx-auto mt-4 rounded" />
+          </motion.div>
+
+          {/* Hemant Tagra */}
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center mb-16 lg:mb-24">
+            <motion.div
+              className="w-full lg:w-2/5"
+              initial="hidden"
+              animate={leadershipInView ? 'visible' : 'hidden'}
+              variants={leadershipImageLeft}
+            >
+              <div className="relative rounded-2xl overflow-hidden w-full aspect-3/4 shadow-xl group">
+                <Image
+                  src="/images/team/hemant.jpeg"
+                  alt="Hemant Tagra - Founder and Director"
+                  fill
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="w-full lg:w-3/5"
+              initial="hidden"
+              animate={leadershipInView ? 'visible' : 'hidden'}
+              variants={staggerLeadership}
+            >
+              <motion.h3 variants={slideUpFade} className="text-3xl font-extrabold text-[#0a1628] mb-2">
+                Hemant Tagra
+              </motion.h3>
+              <motion.p variants={slideUpFade} className="text-[#1e40af] font-bold text-lg mb-6">
+                Founder and Director
+              </motion.p>
+              <motion.p variants={slideUpFade} className="text-gray-500 leading-relaxed mb-4">
+                As the Founder and Director of Atlas Security, I have dedicated more than eight years to delivering exceptional security services built on professionalism, integrity, and trust. Throughout my career, I have developed a reputation for providing tailored security solutions with an unwavering commitment to protecting people, property, and businesses.
+              </motion.p>
+              <motion.p variants={slideUpFade} className="text-gray-500 leading-relaxed">
+                At Atlas Security, excellence is at the heart of everything we do. I take great pride in leading a team that consistently delivers the highest standards of service while building long-term relationships with our clients. As our company continues to grow, my vision is to expand our capabilities, invest in our people, and set the benchmark for premium security services for years to come.
+              </motion.p>
+            </motion.div>
+          </div>
+
+          {/* Ankit Hooda */}
+          <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-center">
+            <motion.div
+              className="w-full lg:w-2/5"
+              initial="hidden"
+              animate={leadershipInView ? 'visible' : 'hidden'}
+              variants={leadershipImageRight}
+            >
+              <div className="relative rounded-2xl overflow-hidden w-full aspect-3/4 shadow-xl group">
+                <Image
+                  src="/images/team/ankit.jpeg"
+                  alt="Ankit Hooda - Operations Coordinator"
+                  fill
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="w-full lg:w-3/5"
+              initial="hidden"
+              animate={leadershipInView ? 'visible' : 'hidden'}
+              variants={staggerLeadership}
+            >
+              <motion.h3 variants={slideUpFade} className="text-3xl font-extrabold text-[#0a1628] mb-2">
+                Ankit Hooda
+              </motion.h3>
+              <motion.p variants={slideUpFade} className="text-[#1e40af] font-bold text-lg mb-6">
+                Operations Coordinator
+              </motion.p>
+              <motion.p variants={slideUpFade} className="text-gray-500 leading-relaxed mb-4">
+                As Operations Coordinator at Atlas Security, Ankit brings over three years of industry experience and a strong commitment to operational excellence. He is responsible for ensuring the smooth coordination of daily operations, maintaining service quality, and supporting the delivery of reliable security solutions across all areas of the business.
+              </motion.p>
+              <motion.p variants={slideUpFade} className="text-gray-500 leading-relaxed">
+                Known for his proactive approach, attention to detail, and strong organisational skills, he is dedicated to delivering efficient outcomes for both clients and staff. His focus on continuous improvement and high standards plays an integral role in the ongoing success and growth of Atlas Security.
+              </motion.p>
+            </motion.div>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── Values ── */}
-      <section className="py-16 lg:py-24 bg-[#f8f9fa]" ref={valuesRef}>
+      <section className="py-16 lg:py-24 bg-white" ref={valuesRef}>
         <div className="container mx-auto px-6 lg:px-16">
           <motion.div
             className="text-center mb-10 lg:mb-14"
@@ -178,7 +294,7 @@ export default function AboutPage() {
               <motion.div
                 key={i}
                 variants={cardVariant}
-                className="bg-white rounded-xl p-6 lg:p-7 border border-gray-100
+                className="bg-gray-50 rounded-xl p-6 lg:p-7 border border-gray-100
                            hover:border-[#1e40af]/30 hover:shadow-md transition-all duration-300"
               >
                 <div className="text-3xl mb-4">{v.icon}</div>
@@ -191,7 +307,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Photo Gallery ── */}
-      <section className="py-16 lg:py-24 bg-white" ref={galleryRef}>
+      <section className="py-16 lg:py-24 bg-[#f8f9fa]" ref={galleryRef}>
         <div className="container mx-auto px-6 lg:px-16">
 
           <motion.div
@@ -215,14 +331,13 @@ export default function AboutPage() {
             animate={galleryInView ? 'visible' : 'hidden'}
             variants={stagger}
           >
-
             {/* Photo 1 — team lineup, large feature (2 cols × 2 rows on lg) */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-72 sm:h-80 lg:col-span-2 lg:row-span-2 lg:h-auto"
+              className="relative overflow-hidden rounded-2xl group w-full h-72 sm:h-80 lg:col-span-2 lg:row-span-2 lg:h-full min-h-60"
             >
               <Image
-                src="/images/team/guards-team-lineup.jpeg"
+                src="/images/team/guards-radio.jpeg"
                 alt="Atlas Security full team lineup at night"
                 fill
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -239,10 +354,10 @@ export default function AboutPage() {
             {/* Photo 2 — walking shot */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-60"
+              className="relative overflow-hidden rounded-2xl group w-full h-64 sm:h-full min-h-60"
             >
               <Image
-                src="/images/team/guards-walking.jpeg"
+                src="/images/team/guards-car-front.jpeg"
                 alt="Atlas Security guards on patrol"
                 fill
                 className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
@@ -259,10 +374,10 @@ export default function AboutPage() {
             {/* Photo 3 — radio in car */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-60"
+              className="relative overflow-hidden rounded-2xl group w-full h-64 sm:h-full min-h-60"
             >
               <Image
-                src="/images/team/guards-radio.jpeg"
+                src="/images/team/24X7.jpeg"
                 alt="Atlas Security guards in patrol vehicle with radio"
                 fill
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -279,7 +394,7 @@ export default function AboutPage() {
             {/* Photo 4 — patrol car (2 cols on lg) */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-64 lg:col-span-2"
+              className="relative overflow-hidden rounded-2xl group w-full aspect-3/2 sm:h-full lg:aspect-video lg:h-auto min-h-60 lg:col-span-2"
             >
               <Image
                 src="/images/team/patrol-car-front.jpeg"
@@ -299,10 +414,10 @@ export default function AboutPage() {
             {/* Photo 5 — portrait */}
             <motion.div
               variants={photoVariant}
-              className="relative overflow-hidden rounded-2xl group h-64"
+              className="relative overflow-hidden rounded-2xl group w-full h-64 sm:h-full min-h-60"
             >
               <Image
-                src="/images/team/guards-portrait.jpeg"
+                src="/images/team/guards-team-lineup.jpeg"
                 alt="Atlas Security guards with radio equipment"
                 fill
                 className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
