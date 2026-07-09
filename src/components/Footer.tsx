@@ -22,12 +22,13 @@ export default function Footer() {
             <p className="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</p>
             <ul className="space-y-2.5">
               {[
-                { label: 'Home',     href: '/'         },
-                { label: 'About Us', href: '/about'    },
-                { label: 'Services', href: '/services' },
-                { label: 'Careers',  href: '/careers'  },
-                { label: 'Blog',     href: '/blog'     },
-                { label: 'Contact',  href: '/contact'  },
+                { label: 'Home',               href: '/'         },
+                { label: 'About Us',           href: '/about'    },
+                { label: 'Services',           href: '/services' },
+                { label: 'Careers',            href: '/careers'  },
+                { label: 'Blog',               href: '/blog'     },
+                { label: 'Contact',            href: '/contact'  },
+                { label: 'Terms & Conditions', href: '/terms'    },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -62,10 +63,21 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <p className="text-gray-500 text-xs text-center sm:text-left">
-            © 2026 Atlas Security NZ. All rights reserved.
-          </p>
+        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+          
+          {/* Copyright & Legal */}
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+            <p className="text-gray-500 text-xs text-center sm:text-left">
+              © 2026 Atlas Security NZ. All rights reserved.
+            </p>
+            <Link 
+              href="/terms" 
+              className="text-gray-500 hover:text-gray-300 text-xs transition-colors"
+            >
+              Terms & Conditions
+            </Link>
+          </div>
+
           <p className="text-gray-600 text-xs">
             Built by <span className="text-gray-400">Zedlabs Studio</span>
           </p>
