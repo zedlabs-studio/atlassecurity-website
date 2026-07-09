@@ -337,7 +337,7 @@ export default function AboutPage() {
               className="relative overflow-hidden rounded-2xl group w-full h-72 sm:h-80 lg:col-span-2 lg:row-span-2 lg:h-full min-h-60"
             >
               <Image
-                src="/images/team/guards-radio.jpeg"
+                src="/images/team/atlas_team.jpeg"
                 alt="Atlas Security full team lineup at night"
                 fill
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -357,7 +357,7 @@ export default function AboutPage() {
               className="relative overflow-hidden rounded-2xl group w-full h-64 sm:h-full min-h-60"
             >
               <Image
-                src="/images/team/guards-car-front.jpeg"
+                src="/images/team/on_ground.jpeg"
                 alt="Atlas Security guards on patrol"
                 fill
                 className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
