@@ -11,12 +11,12 @@ const testimonials = [
     location: 'Hamilton',
     rating: 5,
     message:
-      'Atlas Security has been protecting our Auckland warehouse for over a year. Professional, reliable, and always responsive. Could not ask for better service.',
+      'Atlas Security has been protecting our Auckland warehouse for over 6 month. Professional, reliable, and always responsive. Could not ask for better service.',
   },
   {
     name: 'Sarah Thompson',
     role: 'Retail Owner',
-    location: 'Wellington',
+    location: 'Cambridge',
     rating: 5,
     message:
       'The mobile patrol team is excellent. We have had zero incidents since switching to Atlas. Highly recommend to any NZ business owner.',
