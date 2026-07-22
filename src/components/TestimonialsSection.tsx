@@ -6,7 +6,7 @@ import { fadeUp, stagger, cardVariant, viewport } from '@/lib/motion'
 
 const testimonials = [
   {
-    name: 'Morgan',
+    name: 'Mathhew',
     role: 'Emergency Housing Manager',
     location: 'Hamilton',
     rating: 5,
