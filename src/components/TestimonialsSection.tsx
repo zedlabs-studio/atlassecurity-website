@@ -11,7 +11,7 @@ const testimonials = [
     location: 'Hamilton',
     rating: 5,
     message:
-      'Atlas Security has been protecting our Auckland warehouse for over 6 month. Professional, reliable, and always responsive. Could not ask for better service.',
+      'Atlas Security has been protecting our Emergency Housing for over 6 month. Professional, reliable, and always responsive. Could not ask for better service.',
   },
   {
     name: 'Sarah Thompson',
