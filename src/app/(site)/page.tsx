@@ -144,38 +144,46 @@ export function CredibilityStrip() {
         <div className="h-px bg-white/6 my-14" />
 
         <motion.div
-          className="flex flex-wrap items-center gap-x-10 gap-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-          variants={stagger}
-        >
-          {badges.map((b, i) => (
-            <motion.div key={i} variants={fadeUp} className="flex items-center gap-2.5">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b5fd9" strokeWidth="2.5" className="shrink-0">
-                <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="12" cy="12" r="10" stroke="#3b5fd9" strokeWidth="1.4" />
-              </svg>
-              <div>
-                <p className="text-gray-200 text-sm font-medium leading-tight">{b.label}</p>
-                <p className="text-gray-500 text-xs">{b.sub}</p>
-              </div>
-            </motion.div>
-          ))}
+  className="flex flex-wrap items-center gap-x-10 gap-y-8"
+  initial="hidden"
+  whileInView="visible"
+  viewport={viewport}
+  variants={stagger}
+>
+  {/* Existing badges */}
+  {badges.map((b, i) => (
+    <motion.div key={i} variants={fadeUp} className="flex items-center gap-2.5">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b5fd9" strokeWidth="2.5" className="shrink-0">
+        <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="12" cy="12" r="10" stroke="#3b5fd9" strokeWidth="1.4" />
+      </svg>
+      <div>
+        <p className="text-gray-200 text-sm font-medium leading-tight">{b.label}</p>
+        <p className="text-gray-500 text-xs">{b.sub}</p>
+      </div>
+    </motion.div>
+  ))}
 
-          {/* Waikato Chamber of Commerce membership badge */}
-          <motion.div variants={fadeUp} className="flex items-center">
-            <div className="bg-white rounded-md p-2 shadow-sm">
-              <Image
-                src="/images/team/waikato-chamber-member.jpeg"
-                alt="NZ Chambers of Commerce Waikato Member"
-                width={100}
-                height={50}
-                className="object-contain h-12 w-auto"
-              />
-            </div>
-          </motion.div>
-        </motion.div>
+  {/* Divider before memberships */}
+  <div className="hidden lg:block w-px h-10 bg-white/10 mx-2" />
+
+  {/* Memberships & Affiliations */}
+  <motion.div variants={fadeUp} className="flex items-center gap-3">
+    <div className="bg-white rounded-md p-1.5 shadow-sm shrink-0">
+      <Image
+        src="/images/team/waikato-chamber-member.jpeg"
+        alt="NZ Chambers of Commerce Waikato Member"
+        width={100}
+        height={50}
+        className="object-contain h-9 w-auto"
+      />
+    </div>
+    <div>
+      <p className="text-gray-200 text-sm font-medium leading-tight">Memberships</p>
+      <p className="text-gray-500 text-xs">& Affiliations</p>
+    </div>
+  </motion.div>
+</motion.div>
       </div>
     </section>
   )
