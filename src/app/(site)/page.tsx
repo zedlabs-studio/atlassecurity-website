@@ -42,7 +42,7 @@ export default function HomePage() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
-      <CredibilityStrip />
+      <CredibilityAndQuoteSection />
       <ServicesSection />
       <IndustriesSection />
       <CoverageStrip />
@@ -54,22 +54,21 @@ export default function HomePage() {
   )
 }
 
-export function CredibilityStrip() {
+export function CredibilityAndQuoteSection() {
   const stats = [
     {
       icon: (
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         </svg>
       ),
       title: 'Reliable',
-      desc: 'Consistent security services',
       count: 50,
       suffix: '+',
     },
     {
       icon: (
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
           <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -77,30 +76,27 @@ export function CredibilityStrip() {
         </svg>
       ),
       title: 'Professional',
-      desc: 'Licensed security experts',
       count: 100,
       suffix: '%',
     },
     {
       icon: (
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
         </svg>
       ),
       title: 'Trusted',
-      desc: 'Building trust through results',
       count: 7,
       suffix: '+ yrs',
     },
     {
       icon: (
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
           <circle cx="12" cy="12" r="10" />
           <polyline points="12 6 12 12 16 14" />
         </svg>
       ),
       title: 'Always on',
-      desc: 'Here when you need us',
       count: 24,
       suffix: '/7',
     },
@@ -113,81 +109,493 @@ export function CredibilityStrip() {
     { label: 'Trained Professionals', sub: 'Background checked' },
   ]
 
+  const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async () => {
+    if (!form.name || !form.email || !form.message) return
+    setStatus('loading')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setStatus('success')
+        setForm({ name: '', phone: '', email: '', service: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <section className="bg-[#0a1628] border-t border-white/6">
       <div className="container mx-auto px-6 lg:px-16 py-20">
-        <motion.div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-          variants={stagger}
-        >
-          {stats.map((s, i) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+
+          {/* LEFT — Credibility */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            variants={stagger}
+          >
             <motion.div
-              key={i}
-              variants={fadeUp}
-              className="group relative pl-6 border-l border-white/10 first:pl-0 first:border-l-0 lg:first:pl-0"
+              className="grid grid-cols-2 gap-x-8 gap-y-10 mb-12"
+              variants={stagger}
             >
-              <div className="text-[#3b5fd9] mb-3 group-hover:scale-110 transition-transform duration-300 w-fit">
-                {s.icon}
-              </div>
-              <p className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-1">
-                <Counter target={s.count} suffix={s.suffix} />
-              </p>
-              <p className="text-white font-semibold text-sm mb-0.5">{s.title}</p>
-              <p className="text-gray-500 text-xs leading-snug">{s.desc}</p>
+              {stats.map((s, i) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  className="group relative pl-6 border-l border-white/10 first:pl-0 first:border-l-0"
+                >
+                  <div className="text-[#3b5fd9] mb-3 group-hover:scale-110 transition-transform duration-300 w-fit">
+                    {s.icon}
+                  </div>
+                  <p className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-1">
+                    <Counter target={s.count} suffix={s.suffix} />
+                  </p>
+                  <p className="text-white font-semibold text-sm">{s.title}</p>
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-        </motion.div>
 
-        <div className="h-px bg-white/6 my-14" />
+            <div className="h-px bg-white/6 mb-10" />
 
-        <motion.div
-  className="flex flex-wrap items-center gap-x-10 gap-y-8"
-  initial="hidden"
-  whileInView="visible"
-  viewport={viewport}
-  variants={stagger}
->
-  {/* Existing badges */}
-  {badges.map((b, i) => (
-    <motion.div key={i} variants={fadeUp} className="flex items-center gap-2.5">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b5fd9" strokeWidth="2.5" className="shrink-0">
-        <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="12" cy="12" r="10" stroke="#3b5fd9" strokeWidth="1.4" />
-      </svg>
-      <div>
-        <p className="text-gray-200 text-sm font-medium leading-tight">{b.label}</p>
-        <p className="text-gray-500 text-xs">{b.sub}</p>
-      </div>
-    </motion.div>
-  ))}
+            <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8 mb-10" variants={stagger}>
+              {badges.map((b, i) => (
+                <motion.div key={i} variants={fadeUp} className="flex items-center gap-2.5">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b5fd9" strokeWidth="2.5" className="shrink-0">
+                    <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="12" r="10" stroke="#3b5fd9" strokeWidth="1.4" />
+                  </svg>
+                  <div>
+                    <p className="text-gray-200 text-sm font-medium leading-tight">{b.label}</p>
+                    <p className="text-gray-500 text-xs">{b.sub}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
 
-  {/* Divider before memberships */}
-  <div className="hidden lg:block w-px h-10 bg-white/10 mx-2" />
+            <motion.div variants={fadeUp} className="flex items-center gap-3">
+              <div className="bg-white rounded-md p-1.5 shadow-sm shrink-0">
+                <Image
+                  src="/images/team/waikato-chamber-member.jpeg"
+                  alt="NZ Chambers of Commerce Waikato Member"
+                  width={100}
+                  height={50}
+                  className="object-contain h-9 w-auto"
+                />
+              </div>
+              <div>
+                <p className="text-gray-200 text-sm font-medium leading-tight">Memberships</p>
+                <p className="text-gray-500 text-xs">& Affiliations</p>
+              </div>
+            </motion.div>
+          </motion.div>
 
-  {/* Memberships & Affiliations */}
-  <motion.div variants={fadeUp} className="flex items-center gap-3">
-    <div className="bg-white rounded-md p-1.5 shadow-sm shrink-0">
-      <Image
-        src="/images/team/waikato-chamber-member.jpeg"
-        alt="NZ Chambers of Commerce Waikato Member"
-        width={100}
-        height={50}
-        className="object-contain h-9 w-auto"
-      />
-    </div>
-    <div>
-      <p className="text-gray-200 text-sm font-medium leading-tight">Memberships</p>
-      <p className="text-gray-500 text-xs">& Affiliations</p>
-    </div>
-  </motion.div>
-</motion.div>
+          {/* RIGHT — Quote form */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            variants={fadeUp}
+          >
+            <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl">
+              {status === 'success' ? (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5">
+                      <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#0a1628] mb-2">Message Sent!</h3>
+                  <p className="text-gray-500">Thank you for reaching out. We&apos;ll be in touch within 2 hours.</p>
+                </div>
+              ) : (
+                <>
+                  <h2 className="text-2xl font-extrabold text-[#0a1628] mb-1">Get a Free Quote</h2>
+                  <p className="text-gray-400 text-sm mb-8">We respond within 2 hours during business hours.</p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                    <div>
+                      <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Full Name *</label>
+                      <input
+                        type="text"
+                        placeholder="John Smith"
+                        value={form.name}
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                        className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Phone Number</label>
+                      <input
+                        type="tel"
+                        placeholder="022 XXX XXXX"
+                        value={form.phone}
+                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                        className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mb-5">
+                    <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Email Address *</label>
+                    <input
+                      type="email"
+                      placeholder="john@company.co.nz"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+                    />
+                  </div>
+
+                  <div className="mb-5">
+                    <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Service of Interest</label>
+                    <select
+                      value={form.service}
+                      onChange={(e) => setForm({ ...form, service: e.target.value })}
+                      className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+                    >
+                      <option value="">Select a service...</option>
+                      <option value="Static Guard">Static Guard Services</option>
+                      <option value="Mobile Patrolling">Mobile Patrolling Services</option>
+                      <option value="Alarm & Monitoring">Alarm & Monitoring</option>
+                      <option value="Other">Other / Not Sure</option>
+                    </select>
+                  </div>
+
+                  <div className="mb-7">
+                    <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Message *</label>
+                    <textarea
+                      rows={4}
+                      placeholder="Tell us about your security needs, site location, and any specific requirements..."
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                      className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors resize-none"
+                    />
+                  </div>
+
+                  {status === 'error' && (
+                    <p className="text-red-500 text-sm mb-4">Something went wrong. Please try again or call us directly.</p>
+                  )}
+
+                  <button
+                    onClick={handleSubmit}
+                    disabled={status === 'loading'}
+                    className="w-full bg-[#1e40af] hover:bg-[#1d3a9e] disabled:opacity-60 text-white font-bold py-4 rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#1e40af]/30 flex items-center justify-center gap-2"
+                  >
+                    {status === 'loading' ? (
+                      <>
+                        <svg className="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Get Quote
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+                </>
+              )}
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   )
 }
+
+// export function CredibilityStrip() {
+//   const stats = [
+//     {
+//       icon: (
+//         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+//           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+//         </svg>
+//       ),
+//       title: 'Reliable',
+//       desc: 'Consistent security services',
+//       count: 50,
+//       suffix: '+',
+//     },
+//     {
+//       icon: (
+//         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+//           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+//           <circle cx="9" cy="7" r="4" />
+//           <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+//           <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+//         </svg>
+//       ),
+//       title: 'Professional',
+//       desc: 'Licensed security experts',
+//       count: 100,
+//       suffix: '%',
+//     },
+//     {
+//       icon: (
+//         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+//           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+//         </svg>
+//       ),
+//       title: 'Trusted',
+//       desc: 'Building trust through results',
+//       count: 7,
+//       suffix: '+ yrs',
+//     },
+//     {
+//       icon: (
+//         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+//           <circle cx="12" cy="12" r="10" />
+//           <polyline points="12 6 12 12 16 14" />
+//         </svg>
+//       ),
+//       title: 'Always on',
+//       desc: 'Here when you need us',
+//       count: 24,
+//       suffix: '/7',
+//     },
+//   ]
+
+//   const badges = [
+//     { label: 'NZ Licensed & Certified', sub: 'Certificate of Approval' },
+//     { label: 'Fully Insured', sub: 'Comprehensive coverage' },
+//     { label: 'NZ Owned & Operated', sub: 'Local expertise' },
+//     { label: 'Trained Professionals', sub: 'Background checked' },
+//   ]
+
+//   return (
+//     <section className="bg-[#0a1628] border-t border-white/6">
+//       <div className="container mx-auto px-6 lg:px-16 py-20">
+//         <motion.div
+//           className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={viewport}
+//           variants={stagger}
+//         >
+//           {stats.map((s, i) => (
+//             <motion.div
+//               key={i}
+//               variants={fadeUp}
+//               className="group relative pl-6 border-l border-white/10 first:pl-0 first:border-l-0 lg:first:pl-0"
+//             >
+//               <div className="text-[#3b5fd9] mb-3 group-hover:scale-110 transition-transform duration-300 w-fit">
+//                 {s.icon}
+//               </div>
+//               <p className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-1">
+//                 <Counter target={s.count} suffix={s.suffix} />
+//               </p>
+//               <p className="text-white font-semibold text-sm mb-0.5">{s.title}</p>
+//               <p className="text-gray-500 text-xs leading-snug">{s.desc}</p>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+
+//         <div className="h-px bg-white/6 my-14" />
+
+//         <motion.div
+//   className="flex flex-wrap items-center gap-x-10 gap-y-8"
+//   initial="hidden"
+//   whileInView="visible"
+//   viewport={viewport}
+//   variants={stagger}
+// >
+//   {/* Existing badges */}
+//   {badges.map((b, i) => (
+//     <motion.div key={i} variants={fadeUp} className="flex items-center gap-2.5">
+//       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b5fd9" strokeWidth="2.5" className="shrink-0">
+//         <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+//         <circle cx="12" cy="12" r="10" stroke="#3b5fd9" strokeWidth="1.4" />
+//       </svg>
+//       <div>
+//         <p className="text-gray-200 text-sm font-medium leading-tight">{b.label}</p>
+//         <p className="text-gray-500 text-xs">{b.sub}</p>
+//       </div>
+//     </motion.div>
+//   ))}
+
+//   {/* Divider before memberships */}
+//   <div className="hidden lg:block w-px h-10 bg-white/10 mx-2" />
+
+//   {/* Memberships & Affiliations */}
+//   <motion.div variants={fadeUp} className="flex items-center gap-3">
+//     <div className="bg-white rounded-md p-1.5 shadow-sm shrink-0">
+//       <Image
+//         src="/images/team/waikato-chamber-member.jpeg"
+//         alt="NZ Chambers of Commerce Waikato Member"
+//         width={100}
+//         height={50}
+//         className="object-contain h-9 w-auto"
+//       />
+//     </div>
+//     <div>
+//       <p className="text-gray-200 text-sm font-medium leading-tight">Memberships</p>
+//       <p className="text-gray-500 text-xs">& Affiliations</p>
+//     </div>
+//   </motion.div>
+// </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
+
+// export function QuoteSection() {
+//   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' })
+//   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+//   const handleSubmit = async () => {
+//     if (!form.name || !form.email || !form.message) return
+//     setStatus('loading')
+//     try {
+//       const res = await fetch('/api/contact', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(form),
+//       })
+//       if (res.ok) {
+//         setStatus('success')
+//         setForm({ name: '', phone: '', email: '', service: '', message: '' })
+//       } else {
+//         setStatus('error')
+//       }
+//     } catch {
+//       setStatus('error')
+//     }
+//   }
+
+//   return (
+//     <section className="py-24 bg-[#f8f9fa]">
+//       <div className="container mx-auto px-6 lg:px-16">
+//         <motion.div
+//           className="max-w-2xl mx-auto"
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={viewport}
+//           variants={fadeUp}
+//         >
+//           <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-gray-100">
+//             {status === 'success' ? (
+//               <div className="text-center py-12">
+//                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+//                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5">
+//                     <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
+//                   </svg>
+//                 </div>
+//                 <h3 className="text-xl font-bold text-[#0a1628] mb-2">Message Sent!</h3>
+//                 <p className="text-gray-500">Thank you for reaching out. We&apos;ll be in touch within 2 hours.</p>
+//               </div>
+//             ) : (
+//               <>
+//                 <h2 className="text-2xl font-extrabold text-[#0a1628] mb-1">Get a Free Quote</h2>
+//                 <p className="text-gray-400 text-sm mb-8">We respond within 2 hours during business hours.</p>
+
+//                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+//                   <div>
+//                     <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Full Name *</label>
+//                     <input
+//                       type="text"
+//                       placeholder="John Smith"
+//                       value={form.name}
+//                       onChange={(e) => setForm({ ...form, name: e.target.value })}
+//                       className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+//                     />
+//                   </div>
+//                   <div>
+//                     <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Phone Number</label>
+//                     <input
+//                       type="tel"
+//                       placeholder="022 XXX XXXX"
+//                       value={form.phone}
+//                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
+//                       className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 <div className="mb-5">
+//                   <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Email Address *</label>
+//                   <input
+//                     type="email"
+//                     placeholder="john@company.co.nz"
+//                     value={form.email}
+//                     onChange={(e) => setForm({ ...form, email: e.target.value })}
+//                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+//                   />
+//                 </div>
+
+//                 <div className="mb-5">
+//                   <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Service of Interest</label>
+//                   <select
+//                     value={form.service}
+//                     onChange={(e) => setForm({ ...form, service: e.target.value })}
+//                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors"
+//                   >
+//                     <option value="">Select a service...</option>
+//                     <option value="Static Guard">Static Guard Services</option>
+//                     <option value="Mobile Patrolling">Mobile Patrolling Services</option>
+//                     <option value="Alarm & Monitoring">Alarm & Monitoring</option>
+//                     <option value="Other">Other / Not Sure</option>
+//                   </select>
+//                 </div>
+
+//                 <div className="mb-7">
+//                   <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Message *</label>
+//                   <textarea
+//                     rows={5}
+//                     placeholder="Tell us about your security needs, site location, and any specific requirements..."
+//                     value={form.message}
+//                     onChange={(e) => setForm({ ...form, message: e.target.value })}
+//                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors resize-none"
+//                   />
+//                 </div>
+
+//                 {status === 'error' && (
+//                   <p className="text-red-500 text-sm mb-4">Something went wrong. Please try again or call us directly.</p>
+//                 )}
+
+//                 <button
+//                   onClick={handleSubmit}
+//                   disabled={status === 'loading'}
+//                   className="w-full bg-[#1e40af] hover:bg-[#1d3a9e] disabled:opacity-60 text-white font-bold py-4 rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#1e40af]/30 flex items-center justify-center gap-2"
+//                 >
+//                   {status === 'loading' ? (
+//                     <>
+//                       <svg className="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                         <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+//                       </svg>
+//                       Sending...
+//                     </>
+//                   ) : (
+//                     <>
+//                       Get Quote
+//                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+//                         <path d="M5 12h14M12 5l7 7-7 7" />
+//                       </svg>
+//                     </>
+//                   )}
+//                 </button>
+//               </>
+//             )}
+//           </div>
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
 
 function ServicesSection() {
   const services = [
