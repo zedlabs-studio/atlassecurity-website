@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import
 
 export default function Footer() {
   return (
