@@ -799,7 +799,7 @@ export function IndustriesSection() {
         </svg>
       ),
       title: 'Security for Events & Venues',
-      desc: 'Crowd management and venue security for events of all sizes.',
+      desc: 'Crowd management and venue security guard service for events of all sizes.',
     },
     {
       icon: (
