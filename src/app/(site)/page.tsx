@@ -275,7 +275,7 @@ export function CredibilityAndQuoteSection() {
                     <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Message *</label>
                     <textarea
                       rows={4}
-                      placeholder="Tell us about your security needs, site location, and any specific requirements..."
+                      placeholder="Tell us about your security needs,we provide you and your family security guard services, site location, and any specific requirements..."
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors resize-none"
@@ -556,7 +556,7 @@ export function CredibilityAndQuoteSection() {
 //                   <label className="block text-sm font-semibold text-[#0a1628] mb-1.5">Message *</label>
 //                   <textarea
 //                     rows={5}
-//                     placeholder="Tell us about your security needs, site location, and any specific requirements..."
+//                     placeholder="Tell us about your security needs,we provide you and your family security guard services, site location, and any specific requirements..."
 //                     value={form.message}
 //                     onChange={(e) => setForm({ ...form, message: e.target.value })}
 //                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#1e40af] focus:ring-1 focus:ring-[#1e40af] transition-colors resize-none"
@@ -607,8 +607,8 @@ function ServicesSection() {
         </svg>
       ),
       number: '01',
-      title: 'STATIC GUARD SERVICES',
-      desc: 'Professional on-site security personnel to protect your people, property and assets.',
+      title: 'STATIC SECURITY GUARD SERVICES',
+      desc: 'Professional on-site security Guard Services to protect your people, property and assets.',
       features: ['Trained & licensed guards', 'Access control & visitor management', '24/7 professional presence'],
       href: '/services/static-guard',
     },
@@ -755,7 +755,7 @@ export function IndustriesSection() {
         </svg>
       ),
       title: 'Corporate & Office',
-      desc: 'Professional security presence for office buildings and corporate campuses.',
+      desc: 'Professional security  Guard officer presence for office buildings and corporate campuses.',
     },
     {
       icon: (
@@ -774,7 +774,7 @@ export function IndustriesSection() {
           <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
         </svg>
       ),
-      title: 'Healthcare',
+      title: 'Healthcare Industry security  Guard Solutions',
       desc: 'Sensitive security solutions for hospitals, clinics and medical facilities.',
     },
     {
@@ -798,7 +798,7 @@ export function IndustriesSection() {
           <path d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
       ),
-      title: 'Events & Venues',
+      title: 'Security for Events & Venues',
       desc: 'Crowd management and venue security for events of all sizes.',
     },
     {
@@ -818,8 +818,8 @@ export function IndustriesSection() {
           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
         </svg>
       ),
-      title: 'Hospitality',
-      desc: 'Discreet, professional security for hotels, restaurants and entertainment venues.',
+      title: 'Hospitality Security Solutions',
+      desc: 'Discreet, professional security Services for hotels, restaurants and entertainment venues.',
     },
   ]
 
@@ -1044,7 +1044,7 @@ function CTABanner() {
             </svg>
           </div>
           <div>
-            <p className="text-white font-bold text-lg">Need a security solution tailored to you?</p>
+            <p className="text-white font-bold text-lg">Need a security Guard Service solution tailored to you?</p>
             <p className="text-gray-400 text-sm mt-0.5">Contact us today for a free consultation and site assessment.</p>
           </div>
         </div>
@@ -1261,8 +1261,8 @@ function CTABanner() {
 //         </svg>
 //       ),
 //       number: '01',
-//       title: 'STATIC GUARD SERVICES',
-//       desc: 'Professional on-site security personnel to protect your people, property and assets.',
+//       title: 'Static Security Guard',
+//       desc: 'Professional on-site security Guard Services to protect your people, property and assets.',
 //       features: ['Trained & licensed guards', 'Access control & visitor management', '24/7 professional presence'],
 //       href: '/services/static-guard',
 //     },
@@ -1417,7 +1417,7 @@ function CTABanner() {
 //         </svg>
 //       ),
 //       title: 'Corporate & Office',
-//       desc: 'Professional security presence for office buildings and corporate campuses.',
+//       desc: 'Professional  Security Guards team  presence for office buildings and corporate campuses.',
 //     },
 //     {
 //       icon: (
@@ -1461,7 +1461,7 @@ function CTABanner() {
 //         </svg>
 //       ),
 //       title: 'Events & Venues',
-//       desc: 'Crowd management and venue security for events of all sizes.',
+//       desc: 'Crowd management and venue security Guard Service for events of all sizes.',
 //     },
 //     {
 //       icon: (
@@ -1481,7 +1481,7 @@ function CTABanner() {
 //         </svg>
 //       ),
 //       title: 'Hospitality',
-//       desc: 'Discreet, professional security for hotels, restaurants and entertainment venues.',
+//       desc: 'Discreet, professional security Guard team  for hotels, restaurants and entertainment venues.',
 //     },
 //   ]
 
@@ -1500,7 +1500,7 @@ function CTABanner() {
 //           <h2 className="text-4xl font-extrabold text-white tracking-tight">Industries We Protect</h2>
 //           <div className="w-14 h-1 bg-blue-600 mx-auto mt-4 rounded" />
 //           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
-//             From retail floors to construction sites, our security solutions are tailored to the unique challenges of
+//             From retail floors to construction sites, our security  Guard solutions are tailored to the unique challenges of
 //             your industry.
 //           </p>
 //         </motion.div>
