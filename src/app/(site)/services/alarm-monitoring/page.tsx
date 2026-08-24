@@ -30,7 +30,7 @@ const cardVariant: Variants = {
 const data = {
   title: 'Alarm & Monitoring',
   tagline: 'Advanced alarm systems and 24/7 monitoring for complete peace of mind.',
-  description: 'Our alarm and monitoring service combines cutting-edge technology with round-the-clock human oversight. From intruder detection to CCTV surveillance, we deploy and monitor intelligent security systems that alert our response teams the moment a threat is detected — keeping your property protected at all times.',
+  description: 'Our alarm and monitoring service combines cutting-edge technology with round-the-clock human oversight. From intruder detection to CCTV surveillance, we deploy and monitor intelligent security services systems that alert our response teams the moment a threat is detected — keeping your property protected at all times.',
   image: '/images/service-alarm.png',
   features: [
     'Intruder alarm installation & monitoring',
@@ -46,7 +46,7 @@ const data = {
     {
       icon: '📡',
       title: '24/7 Remote Monitoring',
-      desc: 'Our dedicated monitoring centre watches your property around the clock — every alarm is reviewed by a real operator, not just an automated system.',
+      desc: 'Our dedicated profesion monitoring centre watches your property around the clock — every alarm is reviewed by a real operator, not just an automated system.',
     },
     {
       icon: '⚡',
@@ -220,7 +220,7 @@ export default function AlarmMonitoringPage() {
       <section className="bg-[#1e40af] py-14">
         <div className="container mx-auto px-6 lg:px-16 text-center">
           <h2 className="text-2xl font-extrabold text-white mb-3">Ready to secure your premises?</h2>
-          <p className="text-blue-200 mb-7">Get a free site assessment and custom alarm solution quote today.</p>
+          <p className="text-blue-200 mb-7">Get a free site assessment and custom Security services alarm solution quote today.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact"
               className="inline-flex items-center gap-2 bg-white text-[#1e40af] font-bold px-8 py-3.5 rounded hover:bg-blue-50 transition-colors duration-200">
