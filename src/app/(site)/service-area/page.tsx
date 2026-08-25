@@ -25,8 +25,33 @@ const COVERED_CITIES = [
   { name: 'Morrinsville',    lat: -37.6506, lng: 175.5333, primary: false, detail: 'Mobile patrol' },
 ]
 
-const PRIMARY_CITIES   = COVERED_CITIES.filter(c => c.primary)
-const SECONDARY_CITIES = COVERED_CITIES.filter(c => !c.primary)
+// Core services, phrased with the search terms people actually use in NZ
+const CORE_SERVICES = [
+  {
+    title: 'Static Security Guards',
+    copy: 'On-site guards stationed at your premises around the clock, trained to deter theft, manage access, and respond fast if something goes wrong.',
+  },
+  {
+    title: 'Mobile Patrol Security',
+    copy: 'Scheduled or randomised patrol services that check your property, log every visit, and give you an extra layer of coverage between shifts.',
+  },
+  {
+    title: 'CCTV Surveillance & Monitoring',
+    copy: 'Camera installation and remote monitoring so your site is watched even when no one is on the ground.',
+  },
+  {
+    title: 'Alarm Monitoring',
+    copy: '24/7 alarm monitoring services with a rapid-response team dispatched the moment a signal comes through.',
+  },
+  {
+    title: 'Access Control Solutions',
+    copy: 'Keycard, fob, and visitor-management systems that control exactly who can get into your building and when.',
+  },
+  {
+    title: 'Site Security for Business',
+    copy: 'Tailored site security plans for construction sites, warehouses, retail, and commercial properties across the North Island.',
+  },
+]
 
 const fadeUp = {
   hidden:  { opacity: 0, y: 30 },
@@ -36,6 +61,9 @@ const stagger = {
   hidden:  {},
   visible: { transition: { staggerChildren: 0.08 } },
 }
+
+const PRIMARY_CITIES   = COVERED_CITIES.filter(c => c.primary)
+const SECONDARY_CITIES = COVERED_CITIES.filter(c => !c.primary)
 
 function CoverageMap() {
   const mapRef     = useRef<HTMLDivElement>(null)
@@ -109,7 +137,7 @@ function CoverageMap() {
       ref={mapRef}
       className="w-full"
       style={{ height: '100%', minHeight: 600 }}
-      aria-label="Map showing Atlas Security coverage areas across the North Island of New Zealand"
+      aria-label="Map showing Atlas Security's security guard and mobile patrol coverage across the North Island of New Zealand"
     />
   )
 }
@@ -117,6 +145,32 @@ function CoverageMap() {
 export default function ServiceAreaPage() {
   return (
     <main className="overflow-x-hidden">
+
+      {/* Local business structured data — helps Google understand who/where you are for SERP + Maps */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SecurityService',
+            name: 'Atlas Security',
+            image: 'https://www.YOUR-DOMAIN.co.nz/og-image.jpg',
+            '@id': 'https://www.YOUR-DOMAIN.co.nz',
+            url: 'https://www.YOUR-DOMAIN.co.nz/service-area',
+            telephone: '+64221993486',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Hamilton',
+              addressRegion: 'Waikato',
+              addressCountry: 'NZ',
+            },
+            areaServed: COVERED_CITIES.map(c => c.name),
+            description:
+              'Atlas Security provides static security guards, mobile patrol security, CCTV surveillance, alarm monitoring and access control services across Auckland, Wellington, Hamilton and the wider North Island.',
+            openingHours: 'Mo-Su 00:00-23:59',
+          }),
+        }}
+      />
 
       {/* ── Hero ── */}
       <section className="bg-[#0a1628] py-20 relative overflow-hidden">
@@ -136,13 +190,14 @@ export default function ServiceAreaPage() {
               Where We Operate
             </p>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
-              Protecting the North Island.<br />
-              <span className="text-[#1e40af]">City by City.</span>
+              Security Services Across<br />
+              <span className="text-[#1e40af]">The North Island.</span>
             </h1>
             <p className="text-gray-300 mt-4 text-lg max-w-xl leading-relaxed">
-              Atlas Security covers Auckland, Wellington, Hamilton, and every major city and
-              town across the North Island — wherever your business operates, we have boots
-              on the ground.
+              Atlas Security is a professional security company covering Auckland, Wellington,
+              Hamilton, and every major city and town across the North Island. From static
+              security guards and mobile patrol security to CCTV surveillance, alarm monitoring
+              and access control, we have boots on the ground wherever your business operates.
             </p>
             <div className="w-14 h-1 bg-[#1e40af] rounded mt-6" />
           </motion.div>
@@ -154,7 +209,7 @@ export default function ServiceAreaPage() {
             {[
               { value: '16+',  label: 'Cities & towns covered' },
               { value: '3',    label: 'Primary hubs'            },
-              { value: '24/7', label: 'Response availability'   },
+              { value: '24/7', label: 'Security guard & alarm monitoring' },
               { value: 'NZ',   label: 'Owned & operated'        },
             ].map((s, i) => (
               <motion.div key={i} variants={fadeUp}
@@ -257,8 +312,37 @@ export default function ServiceAreaPage() {
         </div>
       </section>
 
-      {/* ── City detail cards ── */}
+      {/* ── Services offered (new — keyword-rich, one clear idea per card) ── */}
       <section className="bg-white py-20">
+        <div className="container mx-auto px-6 lg:px-16">
+          <motion.div className="text-center mb-12"
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <p className="text-[#1e40af] font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+            <h2 className="text-3xl font-extrabold text-[#0a1628] tracking-tight">Security Services Available in Every Location</h2>
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+              Wherever you're based on the North Island, our team can put together a security
+              guard and monitoring plan built around your site — not a one-size-fits-all package.
+            </p>
+            <div className="w-14 h-1 bg-[#1e40af] mx-auto mt-4 rounded" />
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+          >
+            {CORE_SERVICES.map((service, i) => (
+              <motion.div key={i} variants={fadeUp}
+                className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6 hover:border-[#1e40af]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                <h3 className="font-extrabold text-[#0a1628] text-base mb-2">{service.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{service.copy}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── City detail cards ── */}
+      <section className="bg-[#f8f9fa] py-20">
         <div className="container mx-auto px-6 lg:px-16">
           <motion.div className="text-center mb-12"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -276,7 +360,7 @@ export default function ServiceAreaPage() {
                 className={`relative rounded-xl p-5 border group hover:-translate-y-1 transition-all duration-300 ${
                   city.primary
                     ? 'bg-[#0d1f3c] border-[#1e40af]/30 hover:border-[#1e40af]'
-                    : 'bg-[#f8f9fa] border-gray-200 hover:border-[#1e40af]/40 hover:bg-white hover:shadow-md'
+                    : 'bg-white border-gray-200 hover:border-[#1e40af]/40 hover:shadow-md'
                 }`}
               >
                 {city.primary && (
@@ -290,11 +374,44 @@ export default function ServiceAreaPage() {
                   {city.name.charAt(0)}
                 </div>
                 <p className={`font-extrabold text-sm mb-1 ${city.primary ? 'text-white' : 'text-[#0a1628]'}`}>
-                  {city.name}
+                  Security guard services in {city.name}
                 </p>
                 <p className={`text-xs leading-snug ${city.primary ? 'text-gray-400' : 'text-gray-500'}`}>
                   {city.detail}
                 </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── FAQ (targets long-tail, "near me" style search queries) ── */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+          <motion.div className="text-center mb-10"
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <h2 className="text-3xl font-extrabold text-[#0a1628] tracking-tight">Common Questions</h2>
+            <div className="w-14 h-1 bg-[#1e40af] mx-auto mt-4 rounded" />
+          </motion.div>
+
+          <motion.div className="space-y-4" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            {[
+              {
+                q: 'Do you offer security guard services near me?',
+                a: 'We provide static security guards and mobile patrol security across Auckland, Wellington, Hamilton and 13 other North Island towns. If you don\'t see your area listed, get in touch — we\'re adding new locations regularly.',
+              },
+              {
+                q: 'Can I get a same-day quote for site security?',
+                a: 'Yes. Contact our team with your location and requirements and we\'ll arrange a free site assessment and quote, usually within the same day.',
+              },
+              {
+                q: 'Do you provide 24/7 alarm monitoring?',
+                a: 'Our alarm monitoring and mobile patrol services run around the clock, with a rapid-response team ready to attend if an alert comes through.',
+              },
+            ].map((item, i) => (
+              <motion.div key={i} variants={fadeUp} className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6">
+                <p className="font-bold text-[#0a1628] mb-2">{item.q}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.a}</p>
               </motion.div>
             ))}
           </motion.div>
