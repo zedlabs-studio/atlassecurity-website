@@ -14,7 +14,7 @@ const points = [
       </svg>
     ),
     title: 'NZ Owned & Operated',
-    desc: 'Locally owned, committed to New Zealand communities and businesses.',
+    desc: 'A locally owned New Zealand security company, committed to the communities and businesses we protect.',
     featured: true,
   },
   {
@@ -26,7 +26,7 @@ const points = [
       </svg>
     ),
     title: 'Licensed & Certified',
-    desc: 'All guards hold current NZ Certificate of Approval — no exceptions.',
+    desc: 'All our security guards hold a current NZ Certificate of Approval — no exceptions.',
     featured: false,
   },
   {
@@ -38,7 +38,7 @@ const points = [
       </svg>
     ),
     title: 'Rapid Response',
-    desc: 'Fast deployment and alarm response across all coverage areas.',
+    desc: 'Fast deployment, mobile security patrol and alarm response across all coverage areas.',
     featured: false,
   },
   {
@@ -50,7 +50,7 @@ const points = [
       </svg>
     ),
     title: 'Tailored Solutions',
-    desc: 'Security plans designed around your specific needs and budget.',
+    desc: 'From access control to alarm systems, our security solutions are designed around your specific needs and budget.',
     featured: false,
   },
 ]
@@ -83,12 +83,13 @@ export function WhyChooseUs() {
             <h2 className="text-[36px] lg:text-[40px] font-extrabold text-[#0a1628] leading-[1.1] tracking-tight mb-5">
               New Zealand's<br />
               Trusted Security<br />
-              Partner
+              Services Partner
             </h2>
 
             <p className="text-gray-500 text-sm leading-relaxed max-w-95 mb-9">
-              With years of experience protecting NZ businesses, we combine professional expertise
-              with local knowledge to deliver security solutions you can count on — day and night.
+              With years of experience delivering professional security services to NZ businesses, we combine
+              expert security guards with local knowledge to provide security solutions you can count on — day
+              and night.
             </p>
 
             <MagneticButton
