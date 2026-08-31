@@ -29,13 +29,13 @@ const cardVariant: Variants = {
 
 const data = {
   title: 'Static Guard Services',
-  tagline: 'Professional on-site security personnel protecting your people, property and assets.',
-  description: 'Our static guard service provides dedicated, professional security personnel stationed at your premises. Whether you need a single guard or a full team, our licensed officers maintain a visible, professional presence that deters threats and responds swiftly to incidents.',
+  tagline: 'Professional, licensed security guard services providing on-site security personnel to protect your people, property and assets.',
+  description: 'Our static guard services provide dedicated, professional security personnel stationed at your premises for reliable site security. Whether you need a single security guard or a full security guard team, our trained, NZ COA-certified officers maintain a visible, professional presence — managing access control and responding swiftly to incidents, day and night.',
   image: '/images/service-static-guard.png',
   features: [
-    'Trained & licensed guards (NZ COA certified)',
+    'Trained & licensed security guards (NZ COA certified)',
     'Access control & visitor management',
-    '24/7 professional presence',
+    '24/7 professional security presence',
     'Incident reporting & documentation',
     'Emergency response coordination',
     'CCTV monitoring support',
@@ -43,16 +43,16 @@ const data = {
     'Alarm response',
   ],
   benefits: [
-    { icon: '👁️', title: 'Visible Deterrent', desc: 'A uniformed guard presence significantly reduces the risk of theft, vandalism and unauthorised access.' },
-    { icon: '⚡', title: 'Immediate Response', desc: 'On-site guards respond to incidents in real time — no waiting for a patrol vehicle to arrive.' },
-    { icon: '📋', title: 'Detailed Reporting', desc: 'Every shift ends with a comprehensive incident report so you always know what happened on your premises.' },
-    { icon: '🤝', title: 'Customer Service', desc: 'Our guards are trained to represent your brand professionally when greeting visitors and managing access.' },
+    { icon: '👁️', title: 'Visible Deterrent', desc: 'A uniformed security guard presence significantly reduces the risk of theft, vandalism and unauthorised access to your site.' },
+    { icon: '⚡', title: 'Immediate Response', desc: 'On-site security guards respond to incidents in real time — no waiting for a patrol vehicle to arrive.' },
+    { icon: '📋', title: 'Detailed Reporting', desc: 'Every shift ends with a comprehensive security guard report, so you always know exactly what happened on your premises.' },
+    { icon: '🤝', title: 'Customer Service', desc: 'Our trained security guards represent your brand professionally when greeting visitors and managing access control.' },
   ],
   process: [
-    { step: '01', title: 'Site Assessment', desc: 'We visit your premises to understand your security needs, risks and layout.' },
+    { step: '01', title: 'Site Assessment', desc: 'We visit your premises to carry out a thorough site security assessment, understanding your needs, risks and layout.' },
     { step: '02', title: 'Custom Plan', desc: 'We design a security plan tailored to your specific requirements and budget.' },
-    { step: '03', title: 'Guard Deployment', desc: 'We assign and brief dedicated guards who are matched to your site requirements.' },
-    { step: '04', title: 'Ongoing Review', desc: 'Regular reviews ensure your security keeps pace with your changing needs.' },
+    { step: '03', title: 'Guard Deployment', desc: 'We assign and brief dedicated, trained security guards matched to your site requirements.' },
+    { step: '04', title: 'Ongoing Review', desc: 'Regular reviews ensure your security guard services keep pace with your changing needs.' },
   ],
 }
 
@@ -169,7 +169,7 @@ export default function StaticGuardPage() {
       <section className="bg-[#1e40af] py-14">
         <div className="container mx-auto px-6 lg:px-16 text-center">
           <h2 className="text-2xl font-extrabold text-white mb-3">Ready to get started?</h2>
-          <p className="text-blue-200 mb-7">Contact us today for a free site assessment and custom quote.</p>
+          <p className="text-blue-200 mb-7">Contact us today for a free security site assessment and custom quote.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-[#1e40af] font-bold px-8 py-3.5 rounded hover:bg-blue-50 transition-colors duration-200">
               Get a Free Quote
