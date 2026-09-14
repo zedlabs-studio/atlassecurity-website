@@ -169,21 +169,85 @@ export default function ServicesPageClient() {
         </div>
       </section>
 
-      {/* Services — alternating layout */}
-      <div ref={servicesRef}>
-        {services.map((service, index) => {
-          const isEven = index % 2 === 0
-          return (
-            <ServiceRow
-              key={service.href}
-              service={service}
-              isEven={isEven}
-              inView={servicesInView}
-              index={index}
-            />
-          )
-        })}
-      </div>
+      {/* Specialized Industry Security Services */}
+      <section className="py-20 bg-[#0f172a] text-white">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="text-center mb-14">
+            <p className="text-[#3b82f6] font-semibold text-sm uppercase tracking-widest mb-3">Industry Solutions</p>
+            <h2 className="text-3xl font-extrabold text-white">Specialized Industry Security Services</h2>
+            <p className="text-gray-400 mt-3 text-base max-w-2xl mx-auto">
+              Tailored commercial security operational models built for the specific risks, access challenges, and compliance requirements of key sectors.
+            </p>
+            <div className="w-14 h-1 bg-[#1e40af] mx-auto mt-4 rounded" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-[#1e293b] border border-gray-800 rounded-xl p-8 flex flex-col justify-between hover:border-[#1e40af] transition-all duration-300 group">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#1e40af]/20 flex items-center justify-center text-[#3b82f6] mb-6">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M2 22h20M6 18v-7M10 18v-11M14 18v-15M18 18v-4"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#3b82f6] transition-colors">Construction Site Security</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Comprehensive site protection, asset monitoring, plant equipment tracking, and mobile security patrols for active and after-hours development projects.
+                </p>
+              </div>
+              <Link href="/services/construction-site-security" className="inline-flex items-center gap-2 text-[#3b82f6] font-bold text-sm hover:underline">
+                Explore Construction Security
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-[#1e293b] border border-gray-800 rounded-xl p-8 flex flex-col justify-between hover:border-[#1e40af] transition-all duration-300 group">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#1e40af]/20 flex items-center justify-center text-[#3b82f6] mb-6">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#3b82f6] transition-colors">Retail Security Services</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Uniformed retail security officers, loss prevention guards, anti-shoplifting presence, and emergency conflict resolution for retail outlets and centers.
+                </p>
+              </div>
+              <Link href="/services/retail-security" className="inline-flex items-center gap-2 text-[#3b82f6] font-bold text-sm hover:underline">
+                Explore Retail Security
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-[#1e293b] border border-gray-800 rounded-xl p-8 flex flex-col justify-between hover:border-[#1e40af] transition-all duration-300 group">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#1e40af]/20 flex items-center justify-center text-[#3b82f6] mb-6">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                    <path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M8 10h.01M16 10h.01M12 14h.01M8 14h.01M16 14h.01"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#3b82f6] transition-colors">Commercial & Corporate Security</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Concierge guards, commercial building protection, tenant access control, and 24/7 facility patrols for commercial property owners and corporate offices.
+                </p>
+              </div>
+              <Link href="/services/commercial-security" className="inline-flex items-center gap-2 text-[#3b82f6] font-bold text-sm hover:underline">
+                Explore Commercial Security
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Why Atlas */}
       <section className="py-24 bg-[#0a1628]" ref={whyRef}>

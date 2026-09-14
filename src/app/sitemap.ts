@@ -19,6 +19,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/services/alarm-monitoring',
     '/services/mobile-patrolling',
     '/services/static-guard',
+    '/services/construction-site-security',
+    '/services/retail-security',
+    '/services/commercial-security',
     '/terms',
     '/testimonials',
   ].map((route) => ({
