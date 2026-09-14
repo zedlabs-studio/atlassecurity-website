@@ -1,40 +1,57 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import BlogCoverImage from '@/components/BlogCoverImage'
+import { prisma } from '@/lib/db'
+import { constructMetadata, siteConfig } from '@/lib/siteConfig'
+import { JsonLd, getBlogPostingSchema, getBreadcrumbSchema } from '@/components/JsonLd'
 
-type Blog = {
-  id: string
-  title: string
-  slug: string
-  content: string
-  coverImage: string
-  publishedAt: string | null
+type Props = {
+  params: Promise<{ slug: string }>
 }
 
-export default async function BlogDetailPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
-  const { slug } = await params
-  let blog: Blog | null = null
-
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-
+async function getBlog(slug: string) {
   try {
-    const res = await fetch(`${baseUrl}/api/blogs/${slug}`, {
-      next: { revalidate: 3600 },
+    const blog = await prisma.blog.findUnique({
+      where: { slug },
     })
-    if (res.ok) blog = await res.json()
-  } catch {
-    blog = null
+    return blog
+  } catch (err) {
+    console.warn(`Could not fetch blog post ${slug}:`, err)
+    return null
   }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const blog = await getBlog(slug)
+
+  if (!blog) {
+    return constructMetadata({
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.',
+      path: `/blog/${slug}`,
+      noIndex: true,
+    })
+  }
+
+  return constructMetadata({
+    title: `${blog.title} | Security Insights`,
+    description: blog.excerpt || blog.title,
+    path: `/blog/${slug}`,
+    image: blog.coverImage ? (blog.coverImage.startsWith('http') ? blog.coverImage : `${siteConfig.url}${blog.coverImage}`) : undefined,
+  })
+}
+
+export default async function BlogDetailPage({ params }: Props) {
+  const { slug } = await params
+  const blog = await getBlog(slug)
 
   if (!blog) {
     return (
       <main className="min-h-screen bg-[#f8f9fa] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-extrabold text-[#0a1628] mb-3">Post Not Found</h1>
-          <p className="text-gray-500 mb-6">This blog post doesn't exist or has been removed.</p>
+          <p className="text-gray-500 mb-6">This blog post doesn&apos;t exist or has been removed.</p>
           <Link href="/blog" className="text-[#1e40af] font-semibold hover:underline">← Back to Blog</Link>
         </div>
       </main>
@@ -52,8 +69,25 @@ export default async function BlogDetailPage({
     }
   })()
 
+  const blogSchema = getBlogPostingSchema({
+    title: blog.title,
+    description: blog.excerpt || blog.title,
+    slug: blog.slug,
+    publishedAt: blog.publishedAt || blog.createdAt,
+    updatedAt: blog.updatedAt,
+    coverImage: blog.coverImage,
+  })
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', item: '/' },
+    { name: 'Blog', item: '/blog' },
+    { name: blog.title, item: `/blog/${blog.slug}` },
+  ])
+
   return (
     <main>
+      <JsonLd data={[blogSchema, breadcrumbSchema]} />
+
       <div className="relative h-72 lg:h-96 bg-[#0a1628]">
         {hasValidImage ? (
           <BlogCoverImage src={blog.coverImage} alt={blog.title} />
@@ -95,7 +129,6 @@ export default async function BlogDetailPage({
       <section className="py-16 bg-[#f8f9fa]">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
           <div
-            // Added text-gray-900 right here to fix the invisible body text
             className="prose prose-lg text-gray-900 prose-headings:text-[#0a1628] prose-a:text-[#1e40af] prose-strong:text-[#0a1628] max-w-none"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />

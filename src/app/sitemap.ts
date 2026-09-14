@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/db'
+import { siteConfig } from '@/lib/siteConfig'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.atlassecurity.co.nz'
+  const baseUrl = siteConfig.url
 
   const staticRoutes: MetadataRoute.Sitemap = [
     '',
@@ -24,20 +25,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route === '' ? 1 : 0.8,
   }))
 
-  const posts = await prisma.blog.findMany({
-    where: { published: true },
-    select: {
-      slug: true,
-      updatedAt: true,
-    },
-  })
+  let blogRoutes: MetadataRoute.Sitemap = []
+  try {
+    const posts = await prisma.blog.findMany({
+      where: { published: true },
+      select: {
+        slug: true,
+        updatedAt: true,
+      },
+    })
 
-  const blogRoutes: MetadataRoute.Sitemap = posts.map((post: { slug: string; updatedAt: Date }) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.updatedAt,
-    changeFrequency: 'monthly',
-    priority: 0.6,
-  }))
+    blogRoutes = posts.map((post: { slug: string; updatedAt: Date }) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.updatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    }))
+  } catch (err) {
+    console.warn('Could not fetch blog posts for sitemap generation:', err)
+  }
 
   return [...staticRoutes, ...blogRoutes]
 }
