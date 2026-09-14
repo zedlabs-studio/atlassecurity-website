@@ -21,7 +21,7 @@ export function getOrganizationSchema() {
     name: siteConfig.legalName,
     alternateName: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/logo.png`,
+    logo: `${siteConfig.url}/images/logo.jpeg`,
     image: siteConfig.defaultOgImage,
     description: siteConfig.description,
     telephone: siteConfig.phone,

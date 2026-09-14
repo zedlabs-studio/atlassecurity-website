@@ -23,7 +23,7 @@ export const siteConfig = {
     facebook: 'https://facebook.com/atlassecuritynz',
     linkedin: 'https://linkedin.com/company/atlassecuritynz',
   },
-  defaultOgImage: 'https://www.atlassecurity.co.nz/images/og-image.jpg',
+  defaultOgImage: 'https://www.atlassecurity.co.nz/images/hero-car-swift.png',
 }
 
 export function constructMetadata({

@@ -22,6 +22,26 @@ export const metadata: Metadata = {
   verification: {
     google: '9f2wnKUTsD5YdHHVkAStw3EXxjDZgLDhCH9pK2i76Vo',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_NZ',
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: 'Atlas Security NZ | Professional Security Services',
+    description: siteConfig.description,
+    images: [{ url: siteConfig.defaultOgImage, width: 1200, height: 630, alt: siteConfig.name }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Atlas Security NZ | Professional Security Services',
+    description: siteConfig.description,
+    images: [siteConfig.defaultOgImage],
+  },
   robots: {
     index: true,
     follow: true,
