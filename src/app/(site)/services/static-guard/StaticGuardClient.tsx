@@ -31,7 +31,7 @@ const data = {
   title: 'Static Guard Services',
   tagline: 'Professional, licensed security guard services from a trusted security company — on-site security personnel to protect your people, property and assets.',
   description: 'As a leading security company, our static guard services deliver dedicated, professional security personnel stationed at your premises for reliable site security. Whether you need a single security guard or a full security guards service team, our trained, NZ COA-certified officers maintain a visible, professional presence — managing access control and responding swiftly to incidents, day and night. It\'s one of our most requested security services for businesses across the region.',
-  image: '/images/service-static-guard.png',
+  image: '/images/service-static-guard.webp',
   features: [
     'Trained & licensed security guards (NZ COA certified)',
     'Access control & visitor management',

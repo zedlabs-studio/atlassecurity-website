@@ -19,7 +19,7 @@ export default function Hero() {
       {/* Background photo — fills the entire hero */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-car-swift.png"
+          src="/images/hero-car-swift.webp"
           alt="Atlas Security guard on patrol"
           fill
           priority

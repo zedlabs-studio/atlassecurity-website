@@ -319,7 +319,7 @@ export function CredibilityAndQuoteSection() {
 function ServicesSection() {
   const services = [
     {
-      image: '/images/service-static-guard.png',
+      image: '/images/service-static-guard.webp',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -332,7 +332,7 @@ function ServicesSection() {
       href: '/services/static-guard',
     },
     {
-      image: '/images/service-mobile-patrol.png',
+      image: '/images/service-mobile-patrol.webp',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
           <rect x="1" y="3" width="15" height="13" rx="1" />
@@ -348,7 +348,7 @@ function ServicesSection() {
       href: '/services/mobile-patrolling',
     },
     {
-      image: '/images/service-alarm.png',
+      image: '/images/service-alarm.webp',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
           <path d="M23 7l-7 5 7 5V7z" />

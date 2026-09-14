@@ -31,7 +31,7 @@ const data = {
   title: 'Mobile Patrolling Services',
   tagline: 'Proactive mobile patrols that deter crime, identify risks and respond when it matters most.',
   description: 'Our mobile patrol service provides flexible, cost-effective security coverage across multiple sites. Patrol vehicles conduct scheduled and random checks, respond to alarms, and provide a visible deterrent across a wider area than static guarding alone.',
-  image: '/images/service-mobile-patrol.png',
+  image: '/images/service-mobile-patrol.webp',
   features: [
     'Scheduled & random patrol routes',
     'Alarm response & investigation',

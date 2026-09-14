@@ -31,7 +31,7 @@ const data = {
   title: 'Alarm & Monitoring',
   tagline: 'Advanced alarm systems and 24/7 monitoring for complete peace of mind.',
   description: 'Our alarm and monitoring service combines cutting-edge technology with round-the-clock human oversight. From intruder detection to CCTV surveillance, we deploy and monitor intelligent security systems that alert our response teams the moment a threat is detected — keeping your property protected at all times.',
-  image: '/images/service-alarm.png',
+  image: '/images/service-alarm.webp',
   features: [
     'Intruder alarm installation & monitoring',
     '24/7 CCTV surveillance',

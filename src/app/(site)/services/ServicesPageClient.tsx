@@ -31,7 +31,7 @@ const services = [
   {
     title: 'Static Guard Services',
     tagline: 'Professional on-site security personnel protecting your people, property and assets.',
-    image: '/images/service-static-guard.png',
+    image: '/images/service-static-guard.webp',
     href: '/services/static-guard',
     features: [
       'Trained & licensed guards (NZ COA certified)',
@@ -51,7 +51,7 @@ const services = [
   {
     title: 'Mobile Patrolling Services',
     tagline: 'Proactive mobile patrols that deter crime, identify risks and respond when it matters most.',
-    image: '/images/service-mobile-patrol.png',
+    image: '/images/service-mobile-patrol.webp',
     href: '/services/mobile-patrolling',
     features: [
       'Scheduled & random patrol routes',
@@ -74,7 +74,7 @@ const services = [
   {
     title: 'Alarm & Monitoring',
     tagline: 'Advanced alarm systems and 24/7 monitoring for complete peace of mind.',
-    image: '/images/service-alarm.png',
+    image: '/images/service-alarm.webp',
     href: '/services/alarm-monitoring',
     features: [
       'Intruder alarm installation & monitoring',

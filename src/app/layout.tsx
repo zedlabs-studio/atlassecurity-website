@@ -4,7 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { siteConfig } from '@/lib/siteConfig'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const viewport: Viewport = {
   themeColor: '#0a1628',
