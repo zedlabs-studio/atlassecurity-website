@@ -302,6 +302,25 @@ export default function AboutPageClient() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Licensing & Compliance Callout */}
+          <div className="mt-12 bg-[#0a1628] rounded-2xl p-8 lg:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 bg-[#1e40af]/30 border border-[#1e40af]/50 text-blue-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                <span>LEGAL COMPLIANCE & GOVERNANCE</span>
+              </div>
+              <h3 className="text-xl lg:text-2xl font-extrabold mb-3">PSPLA Licensed & Background-Checked Security</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                All Atlas Security personnel hold a current Certificate of Approval (COA) issued under the <em>Private Security Personnel and Private Investigators Act 2010</em>. Every guard undergoes background checks, site-specific training, and ongoing operational review before deployment.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3.5 rounded-lg text-sm transition-all shrink-0 hover:shadow-lg"
+            >
+              Verify Licensing & Contact Us
+            </Link>
+          </div>
         </div>
       </section>
 

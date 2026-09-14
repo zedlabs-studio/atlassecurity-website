@@ -127,6 +127,46 @@ export default function VerticalServicePageClient({ vertical }: { vertical: Vert
         </div>
       </section>
 
+      {/* Operational Security Delivery Process */}
+      <section className="py-16 bg-[#0a1628] text-white">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-[#3b82f6] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+              OPERATIONAL EXCELLENCE
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+              How Atlas Security Delivers {vertical.name}
+            </h2>
+            <p className="text-gray-400 mt-2 text-sm">
+              Our structured 4-step security process ensures complete accountability, rapid incident escalation, and seamless service delivery.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="w-9 h-9 rounded-full bg-[#1e40af] text-white font-bold flex items-center justify-center text-sm mb-4">1</div>
+              <h3 className="font-bold text-white text-base mb-2">Confidential Site Risk Audit</h3>
+              <p className="text-gray-400 text-xs leading-relaxed">Evaluation of site layout, access points, vulnerable assets, and high-risk hours to craft custom post orders.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="w-9 h-9 rounded-full bg-[#1e40af] text-white font-bold flex items-center justify-center text-sm mb-4">2</div>
+              <h3 className="font-bold text-white text-base mb-2">COA Guard Deployment</h3>
+              <p className="text-gray-400 text-xs leading-relaxed">Deployment of fully licensed, background-checked guards with sector-specific post orders and emergency protocols.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="w-9 h-9 rounded-full bg-[#1e40af] text-white font-bold flex items-center justify-center text-sm mb-4">3</div>
+              <h3 className="font-bold text-white text-base mb-2">Digital Patrol Verification</h3>
+              <p className="text-gray-400 text-xs leading-relaxed">GPS patrol logging and electronic checkpoint sign-ins provide verifiable real-time proof of site presence.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <div className="w-9 h-9 rounded-full bg-[#1e40af] text-white font-bold flex items-center justify-center text-sm mb-4">4</div>
+              <h3 className="font-bold text-white text-base mb-2">24/7 Control Center Support</h3>
+              <p className="text-gray-400 text-xs leading-relaxed">Direct line to our 24/7 dispatch operations for immediate incident escalation, backup patrol dispatch, or emergency response.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Core Services Mapping Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-6 lg:px-16">
