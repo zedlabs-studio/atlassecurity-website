@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   verification: {
-    google: '9f2wnKUTsD5YdHHVkAStw3EXxjDZgLDhCH9pK2i76Vo',
+    google: 'google2ecef68c70fcd9f4',
   },
   icons: {
     icon: '/favicon.ico',
