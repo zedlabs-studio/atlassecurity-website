@@ -25,9 +25,32 @@ export default function AlarmMonitoringPage() {
     { name: 'Alarm & Monitoring', item: '/services/alarm-monitoring' },
   ])
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do I need to switch my alarm monitoring provider to use Atlas Security?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No, Atlas Security works independently with all major monitoring centers across New Zealand to provide rapid mobile alarm response dispatch regardless of your current monitoring provider.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does 24/7 CCTV surveillance monitoring work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our centralized monitoring hub receives real-time CCTV motion alerts, verifies security breaches remotely, and immediately dispatches mobile patrol officers or contacts emergency services.',
+        },
+      },
+    ],
+  }
+
   return (
     <>
-      <JsonLd data={[serviceSchema, breadcrumbSchema]} />
+      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
       <AlarmMonitoringClient />
     </>
   )

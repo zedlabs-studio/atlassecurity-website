@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#0a1628] border-t border-white/10">
       <div className="container mx-auto px-6 lg:px-16 py-12 lg:py-14">
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-10">
 
           {/* Brand — full width on mobile, normal on md+ */}
           <div className="col-span-2 md:col-span-1">
@@ -39,6 +39,17 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <p className="text-white font-bold text-sm uppercase tracking-wider mb-4">Service Areas</p>
+            <ul className="space-y-2.5 text-sm">
+              <li><Link href="/service-area/auckland" className="text-gray-400 hover:text-white transition-colors">Auckland Security</Link></li>
+              <li><Link href="/service-area/hamilton" className="text-gray-400 hover:text-white transition-colors">Hamilton Security</Link></li>
+              <li><Link href="/service-area/wellington" className="text-gray-400 hover:text-white transition-colors">Wellington Security</Link></li>
+              <li><Link href="/service-area" className="text-[#1e40af] hover:underline font-semibold text-xs mt-1 block">View All Locations →</Link></li>
             </ul>
           </div>
 

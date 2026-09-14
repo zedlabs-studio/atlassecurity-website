@@ -25,9 +25,32 @@ export default function StaticGuardPage() {
     { name: 'Static Guard Services', item: '/services/static-guard' },
   ])
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What industries do your static security guards protect?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We deploy static security guards across commercial office buildings, industrial facilities, construction sites, retail shopping centres, and private events throughout New Zealand.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are all Atlas Security guards licensed in New Zealand?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, 100% of our static security guards hold current Certificates of Approval (COA) issued under the Private Security Personnel and Private Investigators Act 2010.',
+        },
+      },
+    ],
+  }
+
   return (
     <>
-      <JsonLd data={[serviceSchema, breadcrumbSchema]} />
+      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
       <StaticGuardClient />
     </>
   )

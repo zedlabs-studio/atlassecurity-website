@@ -132,15 +132,43 @@ export default async function BlogDetailPage({ params }: Props) {
             className="prose prose-lg text-gray-900 prose-headings:text-[#0a1628] prose-a:text-[#1e40af] prose-strong:text-[#0a1628] max-w-none"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          {/* Contextual Internal Linking Silo */}
+          <div className="mt-12 p-8 bg-white border border-gray-200 rounded-2xl shadow-xs">
+            <h3 className="text-xl font-bold text-[#0a1628] mb-2">Need Professional Security for Your Site?</h3>
+            <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+              Atlas Security NZ delivers licensed <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guards</Link>, GPS-tracked <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol units</Link>, and 24/7 <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">alarm monitoring services</Link> across New Zealand.
+            </p>
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-100 text-xs text-gray-500">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-bold text-[#0a1628]">Service Locations:</span>
+                <Link href="/service-area/auckland" className="hover:text-[#1e40af] underline">Auckland</Link> |
+                <Link href="/service-area/hamilton" className="hover:text-[#1e40af] underline">Hamilton</Link> |
+                <Link href="/service-area/wellington" className="hover:text-[#1e40af] underline">Wellington</Link>
+              </div>
+              <Link
+                href="/contact"
+                className="bg-[#0a1628] hover:bg-[#1e40af] text-white font-bold px-4 py-2 rounded-lg text-xs transition-colors"
+              >
+                Request Free Quote
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-8 flex justify-between items-center pt-6 border-t border-gray-200">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-[#1e40af] font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-[#1e40af] font-semibold hover:underline text-sm"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M19 12H5M12 5l-7 7 7 7"/>
               </svg>
-              Back to Blog
+              Back to All Insights
+            </Link>
+            <Link
+              href="/services"
+              className="text-xs font-semibold text-gray-600 hover:text-[#1e40af] underline"
+            >
+              Explore All Security Services →
             </Link>
           </div>
         </div>

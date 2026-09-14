@@ -25,9 +25,32 @@ export default function MobilePatrollingPage() {
     { name: 'Mobile Patrolling Services', item: '/services/mobile-patrolling' },
   ])
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do GPS-tracked mobile patrols verify property visits?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our mobile security patrol vehicles are equipped with real-time GPS tracking and electronic checkpoint verification, providing clients with logged timestamps and digital incident reports.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What happens during a mobile security lock-up service?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our mobile patrol officer arrives at your designated closing time, verifies all windows and doors are secured, arming alarm systems, and clearing unauthorized personnel from the premises.',
+        },
+      },
+    ],
+  }
+
   return (
     <>
-      <JsonLd data={[serviceSchema, breadcrumbSchema]} />
+      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
       <MobilePatrollingClient />
     </>
   )
