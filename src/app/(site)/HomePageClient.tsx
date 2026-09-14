@@ -696,6 +696,7 @@ function BlogTeaser() {
                       <img
                         src={b.coverImage}
                         alt={b.title}
+                        loading="lazy"
                         className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-all duration-500"
                         onError={(e) => {
                           ;(e.target as HTMLImageElement).style.display = 'none'
