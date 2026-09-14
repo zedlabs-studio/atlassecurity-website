@@ -1,4 +1,4 @@
-import Metadata from 'next'
+import type { Metadata } from 'next'
 import { constructMetadata } from '@/lib/siteConfig'
 import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
 import TestimonialsPageClient from './TestimonialsPageClient'

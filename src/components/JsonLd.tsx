@@ -153,7 +153,7 @@ export function getBlogPostingSchema({
       url: siteConfig.url,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteConfig.url}/images/logo.png`,
+        url: `${siteConfig.url}/images/logo.jpeg`,
       },
     },
     mainEntityOfPage: {
