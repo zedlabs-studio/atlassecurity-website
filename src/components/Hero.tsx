@@ -23,6 +23,7 @@ export default function Hero() {
           alt="Atlas Security guard on patrol"
           fill
           priority
+          sizes="100vw"
           className="object-cover object-[65%_center]"
         />
       </div>
