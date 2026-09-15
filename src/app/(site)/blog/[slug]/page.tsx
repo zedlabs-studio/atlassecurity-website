@@ -90,6 +90,20 @@ export default async function BlogDetailPage({ params }: Props) {
     { name: blog.title, item: `/blog/${blog.slug}` },
   ])
 
+  // Compute reading time & Table of Contents (server-side)
+  const plainText = blog.content.replace(/<[^>]+>/g, ' ')
+  const wordCount = plainText.trim().split(/\s+/).filter(Boolean).length
+  const readingTime = Math.ceil(wordCount / 200)
+
+  // Extract H2 headings for TOC and inject IDs into content
+  const toc: { id: string; text: string }[] = []
+  let processedContent = blog.content.replace(/<h2([^>]*)>(.*?)<\/h2>/gi, (match, attrs, innerText) => {
+    const cleanText = innerText.replace(/<[^>]+>/g, '').trim()
+    const id = cleanText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    toc.push({ id, text: cleanText })
+    return `<h2 id="${id}"${attrs}>${innerText}</h2>`
+  })
+
   return (
     <main>
       <JsonLd data={[blogSchema, breadcrumbSchema]} />
@@ -120,23 +134,64 @@ export default async function BlogDetailPage({ params }: Props) {
           <h1 className="text-3xl lg:text-5xl font-extrabold text-white max-w-3xl leading-tight">
             {blog.title}
           </h1>
-          {blog.publishedAt && (
-            <p className="text-gray-300 text-sm mt-3">
-              {new Date(blog.publishedAt).toLocaleDateString('en-NZ', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-              })}
-            </p>
-          )}
+          <div className="flex items-center gap-4 text-gray-300 text-sm mt-3">
+            {blog.publishedAt && (
+              <span>
+                {new Date(blog.publishedAt).toLocaleDateString('en-NZ', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                })}
+              </span>
+            )}
+            <span>•</span>
+            <span className="flex items-center gap-1 text-blue-300 font-medium">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              {readingTime} min read
+            </span>
+          </div>
         </div>
       </div>
 
       <section className="py-16 bg-[#f8f9fa]">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+          {toc.length > 0 && (
+            <div className="mb-10 p-6 bg-white border border-gray-200 rounded-2xl shadow-xs">
+              <h3 className="text-sm font-extrabold uppercase tracking-wider text-[#0a1628] mb-3 flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="8" y1="6" x2="21" y2="6" />
+                  <line x1="8" y1="12" x2="21" y2="12" />
+                  <line x1="8" y1="18" x2="21" y2="18" />
+                  <line x1="3" y1="6" x2="3.01" y2="6" />
+                  <line x1="3" y1="12" x2="3.01" y2="12" />
+                  <line x1="3" y1="18" x2="3.01" y2="18" />
+                </svg>
+                Table of Contents
+              </h3>
+              <nav>
+                <ol className="space-y-2 text-sm text-gray-700">
+                  {toc.map((item, idx) => (
+                    <li key={item.id}>
+                      <a
+                        href={`#${item.id}`}
+                        className="hover:text-[#1e40af] hover:underline flex items-start gap-2"
+                      >
+                        <span className="text-xs font-semibold text-gray-400 mt-0.5">{idx + 1}.</span>
+                        <span>{item.text}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </div>
+          )}
+
           <div
-            className="prose prose-lg text-gray-900 prose-headings:text-[#0a1628] prose-a:text-[#1e40af] prose-strong:text-[#0a1628] max-w-none"
-            dangerouslySetInnerHTML={{ __html: blog.content }}
+            className="prose prose-lg text-gray-900 prose-headings:text-[#0a1628] prose-headings:scroll-mt-24 prose-a:text-[#1e40af] prose-strong:text-[#0a1628] max-w-none"
+            dangerouslySetInnerHTML={{ __html: processedContent }}
           />
           {/* Contextual Internal Linking Silo */}
           <div className="mt-12 p-8 bg-white border border-gray-200 rounded-2xl shadow-xs">
