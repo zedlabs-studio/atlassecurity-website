@@ -534,6 +534,75 @@ export const mockBlogs: Blog[] = [
     createdAt: '2026-05-10T00:00:00Z',
     updatedAt: '2026-05-10T00:00:00Z',
   },
+  {
+    id: 'p3-1',
+    title: 'What to Look For in a COA-Licensed Security Guard in New Zealand',
+    slug: 'how-to-choose-coa-licensed-security-guard-nz',
+    excerpt: 'Learn why Ministry of Justice COA licensing matters when hiring security guards in New Zealand, and how to verify professional standards, vetting, and compliance for your business.',
+    content: `
+<p className="lead">Hiring physical security for your commercial premises, construction site, or retail store in New Zealand requires verifying that your security personnel are fully compliant with national legal standards. In New Zealand, all security guards, mobile patrol officers, and crowd controllers must hold an active <strong>Certificate of Approval (COA)</strong> issued by the Ministry of Justice.</p>
+
+<h2>Why Security Guard Licensing Matters in New Zealand</h2>
+<p>Under the <em>Private Security Personnel and Private Investigators Act 2010</em>, operating as a security guard without a valid COA is illegal. Licensing ensures that security personnel have undergone strict background vetting, criminal history checks, and professional competency training before taking responsibility for your property and staff safety.</p>
+
+<h2>Key Criteria to Check When Hiring Security Guards</h2>
+<p>When selecting a security provider in <a href="/service-area/auckland" className="text-[#1e40af] font-semibold underline">Auckland</a>, <a href="/service-area/hamilton" className="text-[#1e40af] font-semibold underline">Hamilton</a>, or <a href="/service-area/wellington" className="text-[#1e40af] font-semibold underline">Wellington</a>, ensure they meet these core operational standards:</p>
+<ul>
+  <li><strong>Active Ministry of Justice COA Credential:</strong> Verify that guards carry their physical COA badge displaying their legal name, photograph, expiration date, and approved classes of security work.</li>
+  <li><strong>Background Vetting &amp; Criminal History Checks:</strong> Confirm that the security firm conducts police background checks and reference screening.</li>
+  <li><strong>Site-Specific Training &amp; De-Escalation Skills:</strong> Ensure guards are trained in verbal conflict de-escalation, emergency evacuation procedures, and incident reporting.</li>
+  <li><strong>Clear Escalation &amp; Communication Protocols:</strong> Verify how guards log incidents, communicate with 24/7 dispatch, and notify emergency services during an active incident.</li>
+</ul>
+
+<h2>COA Licensing Classes &amp; Professional Standards</h2>
+<p>The Ministry of Justice issues COA licenses across specific security categories. Depending on your operational requirements, your security officers should hold credentials in:</p>
+<ul>
+  <li><strong>Property Guarding:</strong> Stationed <a href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guards</a> protecting corporate office towers, warehouses, and industrial yards.</li>
+  <li><strong>Personal Guarding &amp; Crowd Control:</strong> Managing access control, retail store entry points, and high-traffic public events.</li>
+  <li><strong>Mobile Patrol &amp; Alarm Response:</strong> Conducting vehicle sweeps and responding to 24/7 <a href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">security alarm activations</a>.</li>
+</ul>
+
+<h2>Questions to Ask a Security Guard Provider Before Signing</h2>
+<div className="bg-[#f8f9fa] border border-gray-200 p-6 rounded-xl my-6">
+  <h3 className="font-bold text-[#0a1628] text-base mb-3">Essential Buyer Audit Questions:</h3>
+  <ol className="space-y-2 text-sm text-gray-700">
+    <li><strong>1. Are 100% of your guards COA-licensed in New Zealand?</strong> (Every on-site officer must hold active credentials).</li>
+    <li><strong>2. How do you track officer attendance and patrol sweeps?</strong> (Ensure they use GPS tracking and electronic scan points).</li>
+    <li><strong>3. What is your incident reporting procedure?</strong> (Verify that time-stamped digital reports are provided after every shift or alarm response).</li>
+    <li><strong>4. Do you provide localized coverage in our region?</strong> (Check regional operational hubs in Auckland, Hamilton, or Wellington).</li>
+  </ol>
+</div>
+
+<h2>Matching Security Coverage to Your Property Needs</h2>
+<p>Different property types require distinct guard deployment models. Commercial office towers benefit from stationed concierge guards, while expansive logistics yards across <a href="/service-area/hamilton" className="text-[#1e40af] font-semibold underline">Te Rapa and Waikato</a> are best served by a combination of static gatehouse guards and GPS-tracked <a href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile security patrols</a>.</p>
+<p>Read our detailed guide on <a href="/blog/static-guards-vs-mobile-patrols-nz" className="text-[#1e40af] font-semibold underline">Static Security Guards vs Mobile Patrols</a> to evaluate which model best fits your operational budget.</p>
+
+<h2>How Atlas Security Guarantees Licensing Compliance</h2>
+<p>At Atlas Security NZ, 100% of our security personnel hold active Ministry of Justice COA credentials. Our operational management team conducts ongoing compliance audits, site inductions, and performance reviews to ensure uncompromising safety standards across every client location in New Zealand.</p>
+<p>Learn more about our company values and professional standards on our <a href="/about" className="text-[#1e40af] font-semibold underline">About Atlas Security</a> page.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How can I verify if a security guard's COA is authentic?</h3>
+<p>You can request to view the guard's physical COA card, which displays their photo and license number, or verify licensing credentials directly through the Ministry of Justice Private Security Personnel Licensing Authority (PSPLA) public register.</p>
+
+<h3>What happens if an un-licensed guard works on my property?</h3>
+<p>Deploying unlicensed security guards is a violation of the Private Security Personnel and Private Investigators Act 2010. It exposes business owners to serious legal liability, insurance invalidation, and safety risks.</p>
+
+<h3>Do Atlas Security guards undergo site-specific inductions?</h3>
+<p>Yes. Before commencing duties at your premises, every Atlas Security guard completes a thorough site risk assessment and operational induction covering emergency exits, access control systems, post orders, and health &amp; safety requirements.</p>
+
+<div className="mt-8 p-6 bg-[#0a1628] text-white rounded-xl">
+  <h3 className="text-xl font-bold mb-2 text-white">Hire Licensed COA Security Guards for Your Business</h3>
+  <p className="text-gray-300 text-sm mb-4">Partner with a fully licensed, compliant New Zealand security provider. Contact Atlas Security today for a tailored quote.</p>
+  <a href="/contact" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">Request Security Guard Quote</a>
+</div>
+`,
+    coverImage: '/images/service-static-guard.webp',
+    published: true,
+    publishedAt: '2026-09-15T00:00:00Z',
+    createdAt: '2026-09-15T00:00:00Z',
+    updatedAt: '2026-09-15T00:00:00Z',
+  },
 ]
 
 export const mockTestimonials: Testimonial[] = [

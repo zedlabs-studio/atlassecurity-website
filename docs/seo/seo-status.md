@@ -13,10 +13,10 @@
 This document serves as the master central record for all completed, ongoing, and planned SEO implementations for Atlas Security New Zealand.
 
 ### Quick Stats:
-* **Total Public Indexable Routes:** 24 URLs (including Homepage, Core Services, Verticals, Regional Hubs, Utilities, and 9 Blog Articles).
-* **Next.js Pre-rendered SSG Static Routes:** 53 total routes (including admin/utility SSG routes).
+* **Total Public Indexable Routes:** 25 URLs (including Homepage, Core Services, Verticals, Regional Hubs, Utilities, and 10 Blog Articles).
+* **Next.js Pre-rendered SSG Static Routes:** 54 total routes (including admin/utility SSG routes).
 * **TypeScript & Build Status:** Clean compilation (`0 type errors`, Next.js 16 SSG build passing).
-* **On-Page Keyword Optimization:** 100% complete across all 24 public pages.
+* **On-Page Keyword Optimization:** 100% complete across all 25 public indexable pages.
 
 ---
 
@@ -26,7 +26,7 @@ This document serves as the master central record for all completed, ongoing, an
 1. **Master Keyword Architecture:** Documented in `docs/seo-keyword-map.md`. Zero keyword cannibalization between Homepage, Core Services, and City pages.
 2. **On-Page SEO & Metadata:** Custom `constructMetadata` helper providing unique Title Tags, Meta Descriptions, OpenGraph images, and Canonicals across all routes.
 3. **Structured Data (JSON-LD):** Implemented `SecurityService`, `Organization`, `WebSite`, `BreadcrumbList`, `FAQPage`, and `BlogPosting` schemas via `@/components/JsonLd`.
-4. **Blog Content Architecture:** 9 high-intent blogs published, complete with Table of Contents (TOC), dynamic word-count Reading Time, WebP images, and contextual SILO linking.
+4. **Blog Content Architecture:** 10 high-intent blogs published, complete with Table of Contents (TOC), dynamic word-count Reading Time, WebP images, and contextual SILO linking.
 5. **Technical SEO:** `robots.ts` configured; dynamic `sitemap.ts` with DB fallback to mock data.
 6. **Performance & CWV Code Optimization:** Pure Server Component (RSC) blog rendering, zero-layout-shift image sizing, and semantic HTML5 headings.
 
@@ -58,7 +58,7 @@ This document serves as the master central record for all completed, ongoing, an
 ## 4. Prioritized SEO Roadmap (P0 – P3)
 
 ### P0 — Critical (Immediate External Action)
-* Log into Google Search Console and submit the 24 public URLs from `docs/seo/gsc-indexation-checklist.md` for indexation.
+* Log into Google Search Console and submit the 25 public URLs from `docs/seo/gsc-indexation-checklist.md` for indexation.
 
 ### P1 — High Priority (Local Verification & Profile Setup)
 * Verify and optimize Google Business Profiles for Hamilton HQ, Auckland, and Wellington using `docs/local-seo/gbp-consistency-checklist.md`.

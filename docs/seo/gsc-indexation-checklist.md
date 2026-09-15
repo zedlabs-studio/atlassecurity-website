@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary & Verification Protocol
 
-This document lists all **24 public indexable URLs** on the Atlas Security NZ website that require URL Inspection and Indexation Request within Google Search Console (GSC) to ensure rapid indexation and SERP presentation.
+This document lists all **25 public indexable URLs** on the Atlas Security NZ website that require URL Inspection and Indexation Request within Google Search Console (GSC) to ensure rapid indexation and SERP presentation.
 
 > [!IMPORTANT]
 > **Status:** `PENDING CLIENT GSC ACCESS`  
@@ -17,7 +17,7 @@ This document lists all **24 public indexable URLs** on the Atlas Security NZ we
 
 ---
 
-## 2. Master GSC URL Inspection Queue (24 URLs)
+## 2. Master GSC URL Inspection Queue (25 Public Indexable URLs)
 
 | Priority | Targeted Public URL | Page Category | Expected Canonical URL | Expected Indexability | GSC Action Required |
 |---|---|---|---|---|---|
@@ -28,6 +28,7 @@ This document lists all **24 public indexable URLs** on the Atlas Security NZ we
 | **P0** | `https://www.atlassecurity.co.nz/service-area/auckland` | Local City Page | `https://www.atlassecurity.co.nz/service-area/auckland` | Indexable (`index, follow`) | Inspect & Request Indexing |
 | **P0** | `https://www.atlassecurity.co.nz/service-area/hamilton` | Local City Page / HQ | `https://www.atlassecurity.co.nz/service-area/hamilton` | Indexable (`index, follow`) | Inspect & Request Indexing |
 | **P0** | `https://www.atlassecurity.co.nz/service-area/wellington` | Local City Page | `https://www.atlassecurity.co.nz/service-area/wellington` | Indexable (`index, follow`) | Inspect & Request Indexing |
+| **P1** | `https://www.atlassecurity.co.nz/blog/how-to-choose-coa-licensed-security-guard-nz` | COA Blog #10 | `https://www.atlassecurity.co.nz/blog/how-to-choose-coa-licensed-security-guard-nz` | Indexable (`index, follow`) | Inspect & Request Indexing |
 | **P1** | `https://www.atlassecurity.co.nz/blog/commercial-building-after-hours-security-checklist` | P2 Blog #4 | `https://www.atlassecurity.co.nz/blog/commercial-building-after-hours-security-checklist` | Indexable (`index, follow`) | Inspect & Request Indexing |
 | **P1** | `https://www.atlassecurity.co.nz/blog/how-business-alarm-monitoring-works-nz` | P2 Blog #5 | `https://www.atlassecurity.co.nz/blog/how-business-alarm-monitoring-works-nz` | Indexable (`index, follow`) | Inspect & Request Indexing |
 | **P1** | `https://www.atlassecurity.co.nz/blog/waikato-industrial-distribution-yard-security` | P2 Blog #6 | `https://www.atlassecurity.co.nz/blog/waikato-industrial-distribution-yard-security` | Indexable (`index, follow`) | Inspect & Request Indexing |
@@ -48,10 +49,7 @@ This document lists all **24 public indexable URLs** on the Atlas Security NZ we
 
 ---
 
-## 3. Step-by-Step GSC Submission Guide for Client
+## 3. Distinction Note
 
-1. Log into [Google Search Console](https://search.google.com/search-console).
-2. Select property: `https://www.atlassecurity.co.nz/`.
-3. Paste each URL into the top **Inspect any URL** search bar.
-4. Verify that the rendered canonical URL matches `https://www.atlassecurity.co.nz/...`.
-5. Click **Request Indexing**.
+* **Public Indexable URLs:** 25 pages (Listed above, indexed by search engines).
+* **Total Next.js SSG Routes:** 54 pre-rendered static routes (Includes admin routes `/admin/*`, `/terms`, `/testimonials`, `/careers`).
