@@ -5,8 +5,14 @@ import { prisma } from '@/lib/db'
 import { constructMetadata, siteConfig } from '@/lib/siteConfig'
 import { JsonLd, getBlogPostingSchema, getBreadcrumbSchema } from '@/components/JsonLd'
 
+import { mockBlogs } from '@/lib/mock'
+
 type Props = {
   params: Promise<{ slug: string }>
+}
+
+export function generateStaticParams() {
+  return mockBlogs.map((b) => ({ slug: b.slug }))
 }
 
 async function getBlog(slug: string) {
@@ -14,11 +20,11 @@ async function getBlog(slug: string) {
     const blog = await prisma.blog.findUnique({
       where: { slug },
     })
-    return blog
+    if (blog) return blog
   } catch (err) {
-    console.warn(`Could not fetch blog post ${slug}:`, err)
-    return null
+    console.warn(`Could not fetch blog post ${slug} from DB:`, err)
   }
+  return mockBlogs.find((b) => b.slug === slug) || null
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

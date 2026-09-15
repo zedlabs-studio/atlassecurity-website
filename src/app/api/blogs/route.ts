@@ -1,6 +1,6 @@
-// src/app/api/blogs/route.ts
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
+import { mockBlogs } from '@/lib/mock'
 
 export async function GET() {
   try {
@@ -16,10 +16,11 @@ export async function GET() {
         publishedAt: true,
       },
     })
-    return NextResponse.json(blogs)
+    if (blogs.length > 0) {
+      return NextResponse.json(blogs)
+    }
   } catch (err) {
-    // Added the 'err' parameter and console.error so you can debug production issues
-    console.error('GET public blogs error:', err)
-    return NextResponse.json({ error: 'Failed to fetch blogs' }, { status: 500 })
+    console.error('GET public blogs DB error, using static fallback:', err)
   }
+  return NextResponse.json(mockBlogs)
 }

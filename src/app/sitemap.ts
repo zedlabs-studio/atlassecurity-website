@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/db'
 import { siteConfig } from '@/lib/siteConfig'
+import { mockBlogs } from '@/lib/mock'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.url
@@ -41,14 +42,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       },
     })
 
-    blogRoutes = posts.map((post: { slug: string; updatedAt: Date }) => ({
+    if (posts.length > 0) {
+      blogRoutes = posts.map((post: { slug: string; updatedAt: Date }) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: post.updatedAt,
+        changeFrequency: 'monthly',
+        priority: 0.6,
+      }))
+    }
+  } catch (err) {
+    console.warn('Could not fetch blog posts from DB for sitemap generation:', err)
+  }
+
+  if (blogRoutes.length === 0) {
+    blogRoutes = mockBlogs.map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: post.updatedAt,
+      lastModified: new Date(post.updatedAt || post.publishedAt || post.createdAt),
       changeFrequency: 'monthly',
       priority: 0.6,
     }))
-  } catch (err) {
-    console.warn('Could not fetch blog posts for sitemap generation:', err)
   }
 
   return [...staticRoutes, ...blogRoutes]
