@@ -139,7 +139,7 @@ export const mockBlogs: Blog[] = [
   <a href="/services/alarm-monitoring" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">Explore Alarm Monitoring Services</a>
 </div>
 `,
-    coverImage: '/images/team/24X7.jpeg',
+    coverImage: '/images/blog-alarm-monitoring.jpg',
     published: true,
     publishedAt: '2026-09-15T00:00:00Z',
     createdAt: '2026-09-15T00:00:00Z',
@@ -204,7 +204,7 @@ export const mockBlogs: Blog[] = [
   <a href="/service-area/hamilton" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">View Hamilton &amp; Waikato Services</a>
 </div>
 `,
-    coverImage: '/images/team/guards-car-rear.jpeg',
+    coverImage: '/images/blog-industrial-yard.jpg',
     published: true,
     publishedAt: '2026-09-15T00:00:00Z',
     createdAt: '2026-09-15T00:00:00Z',
@@ -323,7 +323,7 @@ export const mockBlogs: Blog[] = [
   <a href="/contact" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">Request Free Consultation</a>
 </div>
 `,
-    coverImage: '/images/team/guards-car-front.jpeg',
+    coverImage: '/images/blog-static-vs-mobile.jpg',
     published: true,
     publishedAt: '2026-09-14T00:00:00Z',
     createdAt: '2026-09-14T00:00:00Z',
@@ -456,7 +456,7 @@ export const mockBlogs: Blog[] = [
   <a href="/contact" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">Speak With a Retail Security Specialist</a>
 </div>
 `,
-    coverImage: '/images/service-alarm.webp',
+    coverImage: '/images/blog-retail-security.jpg',
     published: true,
     publishedAt: '2026-09-10T00:00:00Z',
     createdAt: '2026-09-10T00:00:00Z',
@@ -485,7 +485,7 @@ export const mockBlogs: Blog[] = [
 <h2>5. Partner with a 24/7 Monitored Response Provider</h2>
 <p>Ensure your intruder alarms are connected to a centralized monitoring station with immediate <a href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">guard dispatch capabilities</a> across Auckland, Hamilton, and Wellington.</p>
 `,
-    coverImage: '/images/team/guards-walking.jpeg',
+    coverImage: '/images/blog-security-tips.jpg',
     published: true,
     publishedAt: '2026-06-01T00:00:00Z',
     createdAt: '2026-06-01T00:00:00Z',
@@ -508,7 +508,7 @@ export const mockBlogs: Blog[] = [
 <h2>GPS Verification &amp; Proof of Attendance</h2>
 <p>Modern mobile patrol fleets use real-time GPS tracking and electronic checkpoint logging to deliver time-stamped inspection reports to property managers in <a href="/service-area/hamilton" className="text-[#1e40af] font-semibold underline">Hamilton</a>, <a href="/service-area/auckland" className="text-[#1e40af] font-semibold underline">Auckland</a>, and regional commercial centers.</p>
 `,
-    coverImage: '/images/hero-car-swift.webp',
+    coverImage: '/images/blog-mobile-patrols.jpg',
     published: true,
     publishedAt: '2026-05-20T00:00:00Z',
     createdAt: '2026-05-20T00:00:00Z',
@@ -528,7 +528,7 @@ export const mockBlogs: Blog[] = [
 <h2>Retail &amp; Commercial Security Solutions</h2>
 <p>Wellington store operators can also leverage our specialized <a href="/blog/retail-loss-prevention-nz-stores" className="text-[#1e40af] font-semibold underline">retail loss prevention strategies</a> to combat shoplifting and protect floor staff during trading and closing shifts.</p>
 `,
-    coverImage: '/images/team/guards-team-lineup.jpeg',
+    coverImage: '/images/blog-wellington-security.jpg',
     published: true,
     publishedAt: '2026-05-10T00:00:00Z',
     createdAt: '2026-05-10T00:00:00Z',
@@ -597,7 +597,7 @@ export const mockBlogs: Blog[] = [
   <a href="/contact" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">Request Security Guard Quote</a>
 </div>
 `,
-    coverImage: '/images/team/guards-portrait.jpeg',
+    coverImage: '/images/blog-coa-guard.jpg',
     published: true,
     publishedAt: '2026-09-15T00:00:00Z',
     createdAt: '2026-09-15T00:00:00Z',
