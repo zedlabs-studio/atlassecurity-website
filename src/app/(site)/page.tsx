@@ -4,9 +4,9 @@ import { JsonLd, getOrganizationSchema, getWebSiteSchema } from '@/components/Js
 import HomePageClient from './HomePageClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Atlas Security NZ | Static Guard, Mobile Patrols & Security Services',
+  title: 'Atlas Security NZ | Licensed Security Company & Patrol Services',
   description:
-    'Atlas Security NZ provides licensed static security guard services, mobile patrols, and 24/7 alarm monitoring across Auckland, Waikato, and New Zealand.',
+    'Atlas Security is a leading licensed security company in NZ. We provide static security guards, mobile vehicle patrols, and 24/7 alarm monitoring across Auckland, Waikato & Wellington.',
   path: '/',
 })
 

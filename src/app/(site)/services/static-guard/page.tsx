@@ -4,9 +4,9 @@ import { JsonLd, getServiceSchema, getBreadcrumbSchema } from '@/components/Json
 import StaticGuardClient from './StaticGuardClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Static Guard Services | Licensed On-Site Security Personnel NZ',
+  title: 'Static Security Guards NZ | On-Site Guard Services | Atlas Security',
   description:
-    'Professional static security guard services in NZ. Trained & NZ COA certified security guards for retail, commercial buildings, industrial & construction sites.',
+    'Licensed static security guards & on-site security guard services in NZ. COA-certified security personnel for retail stores, commercial office towers & industrial sites.',
   path: '/services/static-guard',
 })
 

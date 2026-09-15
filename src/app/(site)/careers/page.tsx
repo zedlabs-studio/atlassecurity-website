@@ -4,9 +4,9 @@ import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
 import CareersPageClient from './CareersPageClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Careers & Job Openings | Security Guard Jobs NZ',
+  title: 'Security Guard Jobs NZ | Careers at Atlas Security',
   description:
-    'Join Atlas Security NZ. Explore static guard, mobile patrol & security officer career opportunities in Auckland, Waikato & across New Zealand.',
+    'Join the Atlas Security team. We are hiring COA-licensed static security guards & mobile patrol officers in Auckland, Hamilton & Wellington.',
   path: '/careers',
 })
 

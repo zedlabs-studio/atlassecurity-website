@@ -4,9 +4,9 @@ import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
 import TestimonialsPageClient from './TestimonialsPageClient'
 
 export const metadata = constructMetadata({
-  title: 'Client Testimonials & Reviews | Atlas Security NZ',
+  title: 'Client Testimonials & Reviews | Trusted Security Company NZ',
   description:
-    'Read genuine feedback and client testimonials from New Zealand businesses and property owners who trust Atlas Security for static guards, mobile patrols, and alarm monitoring.',
+    'Read client reviews & testimonials for Atlas Security NZ. Trusted by business owners across Auckland, Hamilton & Wellington for security guarding.',
   path: '/testimonials',
 })
 

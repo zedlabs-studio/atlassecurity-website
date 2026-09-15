@@ -4,9 +4,9 @@ import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
 import ServiceAreaPageClient from './ServiceAreaPageClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Service Areas | Security Guards in Auckland, Hamilton & North Island',
+  title: 'Service Areas | Security Guarding Across Auckland, Hamilton & Wellington',
   description:
-    'Atlas Security NZ provides static guard, mobile patrol & alarm monitoring services across 16+ cities including Auckland, Hamilton, Tauranga & Wellington.',
+    'Licensed security guard, mobile patrol & 24/7 alarm monitoring coverage across Auckland, Hamilton, Wellington & North Island business precincts.',
   path: '/service-area',
 })
 

@@ -4,9 +4,9 @@ import { JsonLd, getBreadcrumbSchema, getOrganizationSchema } from '@/components
 import ContactPageClient from './ContactPageClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Contact Us | Free Security Quote & Site Assessment NZ',
+  title: 'Contact Security Company NZ | Request a Free Security Quote',
   description:
-    'Contact Atlas Security NZ for a free security consultation. Call +64 800 285 277 or email info@atlassecurity.co.nz for static guards, mobile patrols & alarm monitoring.',
+    'Get in touch with Atlas Security NZ. Request a free security quote or call 0800 285 277 for static guards, mobile patrols & alarm monitoring.',
   path: '/contact',
 })
 

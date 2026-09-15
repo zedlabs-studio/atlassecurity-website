@@ -4,9 +4,9 @@ import { JsonLd, getServiceSchema, getBreadcrumbSchema } from '@/components/Json
 import AlarmMonitoringClient from './AlarmMonitoringClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: '24/7 Alarm Systems & CCTV Monitoring Services NZ',
+  title: 'Security Alarm Monitoring NZ | 24/7 Monitoring & Guard Dispatch',
   description:
-    'Advanced alarm system installation, 24/7 CCTV surveillance & rapid alarm response dispatch in New Zealand. Protect your property with Atlas Security.',
+    '24/7 commercial security alarm monitoring & rapid guard dispatch in NZ. Central monitoring station integration for intruder alarms & CCTV verification.',
   path: '/services/alarm-monitoring',
 })
 

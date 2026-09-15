@@ -4,9 +4,9 @@ import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
 import ServicesPageClient from './ServicesPageClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Our Security Services | Static Guard, Mobile Patrol & Alarm Monitoring',
+  title: 'Commercial Security Services NZ | Guarding, Patrols & Monitoring',
   description:
-    'Explore professional security guard services by Atlas Security NZ: licensed static guards, 24/7 mobile patrolling, and rapid alarm monitoring & response.',
+    'Explore commercial security services in New Zealand. Static security guards, mobile vehicle patrols, 24/7 alarm monitoring & industry solutions.',
   path: '/services',
 })
 

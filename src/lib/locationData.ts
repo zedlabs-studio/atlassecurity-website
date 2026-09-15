@@ -25,9 +25,9 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
     name: 'Auckland',
     region: 'Greater Auckland Region',
     tagline: 'Professional Static Guard, Mobile Patrols & 24/7 Alarm Monitoring in Auckland',
-    metaTitle: 'Security Guard & Mobile Patrol Services Auckland | Atlas Security NZ',
+    metaTitle: 'Security Company Auckland | Guards & Mobile Patrols | Atlas Security',
     metaDescription:
-      'Licensed static security guards, mobile patrols & 24/7 alarm monitoring across Auckland CBD, North Shore, South Auckland & West Auckland. Request a free quote today.',
+      'Licensed security company in Auckland. COA security guards, mobile patrols & 24/7 alarm monitoring across Auckland CBD, North Shore, South Auckland & West Auckland.',
     heroDescription:
       'Protecting Auckland commercial buildings, retail centres, industrial sites, and construction zones with COA-certified security personnel.',
     overview:
@@ -70,9 +70,9 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
     name: 'Hamilton',
     region: 'Waikato Region',
     tagline: 'Headquarters Security Guarding, Mobile Patrols & Monitoring in Hamilton & Waikato',
-    metaTitle: 'Security Services & Guarding Hamilton Waikato | Atlas Security NZ',
+    metaTitle: 'Security Services Hamilton | Security Guards & Patrols Waikato | Atlas Security',
     metaDescription:
-      'Atlas Security Head Office in Hamilton provides trusted static guarding, mobile patrols, and 24/7 alarm monitoring for Waikato businesses. Call +64 800 285 277.',
+      'Atlas Security Head Office in Hamilton provides trusted static guarding, mobile patrols, and 24/7 alarm response across Hamilton CBD, Te Rapa, Frankton & Waikato.',
     heroDescription:
       'Headquartered in Hamilton, Atlas Security delivers premier static guarding, industrial patrols, and round-the-clock alarm monitoring across Waikato.',
     overview:
@@ -115,9 +115,9 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
     name: 'Wellington',
     region: 'Wellington Capital Region',
     tagline: 'Government, Corporate & Commercial Security Services in Wellington',
-    metaTitle: 'Security Guards & Patrols Wellington | Atlas Security NZ',
+    metaTitle: 'Security Guards Wellington | Corporate Concierge & Patrols | Atlas Security',
     metaDescription:
-      'Professional security guard services, concierge, mobile patrols & alarm monitoring in Wellington CBD, Lower Hutt, Porirua & Kapiti Coast. Get a quote.',
+      'Professional security guard services, corporate concierge, mobile patrols & 24/7 alarm monitoring in Wellington CBD, Lower Hutt, Porirua & Kapiti Coast.',
     heroDescription:
       'Reliable static security guards, corporate concierge, mobile patrols, and alarm monitoring services across Wellington and the Hutt Valley.',
     overview:

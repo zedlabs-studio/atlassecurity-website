@@ -4,9 +4,9 @@ import { JsonLd, getServiceSchema, getBreadcrumbSchema } from '@/components/Json
 import MobilePatrollingClient from './MobilePatrollingClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Mobile Patrolling Services | 24/7 Patrol Vehicles & Alarm Response NZ',
+  title: 'Mobile Patrol Security NZ | Vehicle Patrols & Lock-Ups | Atlas Security',
   description:
-    'Proactive mobile security patrols & fast alarm response across New Zealand. GPS-tracked patrol vehicles, random inspections, and lock/unlock services.',
+    'Proactive mobile security patrols & fast alarm response across NZ. GPS-tracked patrol vehicles, randomized perimeter checks, and night lock-up services.',
   path: '/services/mobile-patrolling',
 })
 

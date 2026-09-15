@@ -4,9 +4,9 @@ import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
 import AboutPageClient from './AboutPageClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'About Us | NZ Owned & Licensed Security Specialists',
+  title: 'Licensed Security Company NZ | About Atlas Security',
   description:
-    'Learn about Atlas Security NZ. Founded by Hemant Tagra, we provide licensed, high-grade security guard, mobile patrol, and alarm monitoring services across New Zealand.',
+    'Atlas Security is a COA-licensed security company in New Zealand. Learn about our Ministry of Justice compliance, trained guards & operational standards.',
   path: '/about',
 })
 
