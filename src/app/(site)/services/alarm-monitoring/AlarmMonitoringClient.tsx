@@ -216,6 +216,40 @@ export default function AlarmMonitoringClient() {
         </div>
       </section>
 
+      {/* FAQ Accordion Section */}
+      <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
+              Security Alarm Monitoring FAQs
+            </h2>
+            <p className="text-gray-600 mt-2 text-sm">
+              Answers to common questions regarding 24/7 alarm monitoring, CCTV verification, and response dispatch in New Zealand.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">Do I need to switch my alarm monitoring provider to use Atlas Security?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                No, Atlas Security works independently with all major monitoring centers across New Zealand to provide rapid mobile alarm response dispatch regardless of your current monitoring provider.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">How does 24/7 CCTV surveillance monitoring work?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Our centralized monitoring hub receives real-time CCTV motion alerts, verifies security breaches remotely, and immediately dispatches mobile patrol officers or contacts emergency services.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What happens when a false alarm triggers at my property?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Monitoring station operators perform swift signal verification and optional video inspection before dispatching officers. If a false alarm is verified via authorized keyholder contact or video feed, dispatch is cancelled immediately to minimize unnecessary callout fees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Internal SILO Links Section */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16">

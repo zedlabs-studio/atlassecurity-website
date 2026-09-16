@@ -166,6 +166,40 @@ export default function MobilePatrollingClient() {
         </div>
       </section>
 
+      {/* FAQ Accordion Section */}
+      <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
+              Mobile Patrol Security FAQs
+            </h2>
+            <p className="text-gray-600 mt-2 text-sm">
+              Answers to common questions regarding mobile vehicle security patrols and lock-up services in New Zealand.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">How do GPS-tracked mobile patrols verify property visits?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Our mobile security patrol vehicles are equipped with real-time GPS tracking and electronic checkpoint verification, providing clients with logged timestamps, arrival/departure records, and digital incident reports.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What happens during a mobile security lock-up service?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Our mobile patrol officer arrives at your designated closing time, conducts a thorough perimeter scan, checks all entry doors and exterior windows, arms master security alarms, and ensures no unauthorized personnel remain on site.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What factors influence mobile patrol service pricing?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Mobile patrol costs depend on the number of nightly checks required, property size, geographic location, and whether unlock/lock-up services or staff escort duties are included. Contact Atlas Security for a customized mobile patrol plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Internal SILO Links Section */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16">

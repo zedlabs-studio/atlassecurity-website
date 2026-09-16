@@ -45,6 +45,14 @@ export default function MobilePatrollingPage() {
           text: 'Our mobile patrol officer arrives at your designated closing time, verifies all windows and doors are secured, arming alarm systems, and clearing unauthorized personnel from the premises.',
         },
       },
+      {
+        '@type': 'Question',
+        name: 'What factors influence mobile patrol service pricing?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Mobile patrol costs depend on the number of nightly checks required, property size, geographic location, and whether unlock/lock-up services or staff escort duties are included. Contact Atlas Security for a customized mobile patrol plan.',
+        },
+      },
     ],
   }
 

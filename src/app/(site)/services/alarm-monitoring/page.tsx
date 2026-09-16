@@ -45,6 +45,14 @@ export default function AlarmMonitoringPage() {
           text: 'Our centralized monitoring hub receives real-time CCTV motion alerts, verifies security breaches remotely, and immediately dispatches mobile patrol officers or contacts emergency services.',
         },
       },
+      {
+        '@type': 'Question',
+        name: 'What happens when a false alarm triggers at my property?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Monitoring station operators perform swift signal verification and optional video inspection before dispatching officers. If a false alarm is verified via authorized keyholder contact or video feed, dispatch is cancelled immediately to minimize unnecessary callout fees.',
+        },
+      },
     ],
   }
 

@@ -167,6 +167,40 @@ export default function StaticGuardClient() {
         </div>
       </section>
 
+      {/* FAQ Accordion Section */}
+      <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16 max-w-3xl">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
+              Static Security Guard FAQs
+            </h2>
+            <p className="text-gray-600 mt-2 text-sm">
+              Common questions regarding our on-site static security guard deployments across New Zealand.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What industries do your static security guards protect?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                We deploy static security guards across commercial office towers, industrial distribution yards, civil construction sites, retail shopping centers, and private event venues throughout Auckland, Hamilton, and Wellington.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">Are all Atlas Security guards licensed in New Zealand?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Yes, 100% of our static security guards hold active Certificates of Approval (COA) issued under the Private Security Personnel and Private Investigators Act 2010.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What pricing factors determine static guard service costs?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Static security guarding costs depend on shift length, weekly coverage hours, site complexity, access control duties required, and whether specialized concierge or event duties are needed. Contact our team for a site-specific risk audit and transparent proposal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Internal SILO Links Section */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16">

@@ -42,7 +42,15 @@ export default function StaticGuardPage() {
         name: 'Are all Atlas Security guards licensed in New Zealand?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, 100% of our static security guards hold current Certificates of Approval (COA) issued under the Private Security Personnel and Private Investigators Act 2010.',
+          text: 'Yes, 100% of our static security guards hold active Certificates of Approval (COA) issued under the Private Security Personnel and Private Investigators Act 2010.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What pricing factors determine static guard service costs?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Static security guarding costs depend on shift length, weekly coverage hours, site complexity, access control duties required, and whether specialized concierge or event duties are needed. Contact our team for a site-specific risk audit and transparent proposal.',
         },
       },
     ],
