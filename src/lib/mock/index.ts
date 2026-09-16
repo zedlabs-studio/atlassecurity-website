@@ -121,7 +121,7 @@ export const mockBlogs: Blog[] = [
 </div>
 
 <h2>Why Professional Alarm Monitoring Outperforms Self-Monitored Phone Apps</h2>
-<p>While self-monitored smartphone alarm apps allow owners to receive push notifications, they rely entirely on the owner being awake, attentive, and able to respond at 2:00 AM. In contrast, 24/7 central <a href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">security alarm monitoring</a> provides dedicated, uninterrupted operator oversight and guaranteed mobile guard dispatch 365 days a year.</p>
+<p>While self-monitored smartphone alarm apps allow owners to receive push notifications, they rely entirely on the owner being awake, attentive, and able to respond at 2:00 AM. In contrast, 24/7 central <a href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">security alarm monitoring</a> provides dedicated, uninterrupted operator oversight and reliable, protocol-driven mobile guard dispatch 365 days a year.</p>
 
 <h2>Frequently Asked Questions</h2>
 <h3>Do I need to change my current alarm hardware to use Atlas Security monitoring?</h3>
@@ -670,7 +670,7 @@ export const mockBlogs: Blog[] = [
 <p>Different property types require distinct guard deployment models. Commercial office towers benefit from stationed concierge guards, while expansive logistics yards across <a href="/service-area/hamilton" className="text-[#1e40af] font-semibold underline">Te Rapa and Waikato</a> are best served by a combination of static gatehouse guards and GPS-tracked <a href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile security patrols</a>.</p>
 <p>Read our detailed guide on <a href="/blog/static-guards-vs-mobile-patrols-nz" className="text-[#1e40af] font-semibold underline">Static Security Guards vs Mobile Patrols</a> to evaluate which model best fits your operational budget.</p>
 
-<h2>How Atlas Security Guarantees Licensing Compliance</h2>
+<h2>How Atlas Security Ensures Licensing Compliance</h2>
 <p>At Atlas Security NZ, 100% of our security personnel hold active Ministry of Justice COA credentials. Our operational management team conducts ongoing compliance audits, site inductions, and performance reviews to ensure uncompromising safety standards across every client location in New Zealand.</p>
 <p>Learn more about our company values and professional standards on our <a href="/about" className="text-[#1e40af] font-semibold underline">About Atlas Security</a> page.</p>
 

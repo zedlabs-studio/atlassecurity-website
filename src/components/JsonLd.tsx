@@ -147,11 +147,13 @@ export function getBlogPostingSchema({
       '@type': 'Organization',
       name: authorName,
       url: siteConfig.url,
+      '@id': `${siteConfig.url}/#organization`,
     },
     publisher: {
       '@type': 'Organization',
       name: siteConfig.name,
       url: siteConfig.url,
+      '@id': `${siteConfig.url}/#organization`,
       logo: {
         '@type': 'ImageObject',
         url: `${siteConfig.url}/images/logo.jpeg`,

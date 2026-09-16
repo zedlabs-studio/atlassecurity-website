@@ -34,7 +34,7 @@ export default function StaticGuardPage() {
         name: 'What industries do your static security guards protect?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We deploy static security guards across commercial office buildings, industrial facilities, construction sites, retail shopping centres, and private events throughout New Zealand.',
+          text: 'We deploy static security guards across commercial office towers, industrial distribution yards, civil construction sites, retail shopping centers, and private event venues throughout Auckland, Hamilton, and Wellington.',
         },
       },
       {

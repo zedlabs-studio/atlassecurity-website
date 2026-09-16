@@ -58,7 +58,7 @@ This document serves as the master central record for all completed, ongoing, an
 ## 4. Prioritized SEO Roadmap (P0 – P3)
 
 ### P0 — Critical (Immediate External Action)
-* Log into Google Search Console and submit the 25 public URLs from `docs/seo/gsc-indexation-checklist.md` for indexation.
+* Log into Google Search Console and submit the 28 public URLs from `docs/seo/gsc-indexation-checklist.md` for indexation.
 
 ### P1 — High Priority (Local Verification & Profile Setup)
 * Verify and optimize Google Business Profiles for Hamilton HQ, Auckland, and Wellington using `docs/local-seo/gbp-consistency-checklist.md`.

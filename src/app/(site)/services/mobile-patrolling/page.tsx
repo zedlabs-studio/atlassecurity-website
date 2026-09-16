@@ -34,7 +34,7 @@ export default function MobilePatrollingPage() {
         name: 'How do GPS-tracked mobile patrols verify property visits?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our mobile security patrol vehicles are equipped with real-time GPS tracking and electronic checkpoint verification, providing clients with logged timestamps and digital incident reports.',
+          text: 'Our mobile security patrol vehicles are equipped with real-time GPS tracking and electronic checkpoint verification, providing clients with logged timestamps, arrival/departure records, and digital incident reports.',
         },
       },
       {
@@ -42,7 +42,7 @@ export default function MobilePatrollingPage() {
         name: 'What happens during a mobile security lock-up service?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our mobile patrol officer arrives at your designated closing time, verifies all windows and doors are secured, arming alarm systems, and clearing unauthorized personnel from the premises.',
+          text: 'Our mobile patrol officer arrives at your designated closing time, conducts a thorough perimeter scan, checks all entry doors and exterior windows, arms master security alarms, and ensures no unauthorized personnel remain on site.',
         },
       },
       {
