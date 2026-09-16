@@ -83,9 +83,9 @@ function BlogCard({ b }: { b: Blog }) {
   )
 }
 
-export default function BlogPageClient() {
-  const [blogs, setBlogs] = useState<Blog[]>([])
-  const [loading, setLoading] = useState(true)
+export default function BlogPageClient({ initialBlogs = [] }: { initialBlogs?: Blog[] }) {
+  const [blogs, setBlogs] = useState<Blog[]>(initialBlogs)
+  const [loading, setLoading] = useState(initialBlogs.length === 0)
   const [error, setError] = useState(false)
   const gridRef = useRef(null)
   const gridInView = useInView(gridRef, { once: true })
@@ -97,14 +97,21 @@ export default function BlogPageClient() {
         return r.json()
       })
       .then(data => {
-        setBlogs(Array.isArray(data) ? data : [])
+        if (Array.isArray(data) && data.length > 0) {
+          setBlogs(data)
+        }
         setLoading(false)
       })
       .catch(() => {
-        setError(true)
+        // Fallback to initial blogs if API call fails
+        if (initialBlogs.length > 0) {
+          setBlogs(initialBlogs)
+        } else {
+          setError(true)
+        }
         setLoading(false)
       })
-  }, [])
+  }, [initialBlogs])
 
   return (
     <main>

@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary & Verification Protocol
 
-This document lists all **25 public indexable URLs** on the Atlas Security NZ website that require URL Inspection and Indexation Request within Google Search Console (GSC) to ensure rapid indexation and SERP presentation.
+This document lists all **28 public indexable URLs** on the Atlas Security NZ website that require URL Inspection and Indexation Request within Google Search Console (GSC) to ensure rapid indexation and SERP presentation.
 
 > [!IMPORTANT]
 > **Status:** `PENDING CLIENT GSC ACCESS`  
@@ -17,7 +17,7 @@ This document lists all **25 public indexable URLs** on the Atlas Security NZ we
 
 ---
 
-## 2. Master GSC URL Inspection Queue (25 Public Indexable URLs)
+## 2. Master GSC URL Inspection Queue (28 Public Indexable URLs)
 
 | Priority | Targeted Public URL | Page Category | Expected Canonical URL | Expected Indexability | GSC Action Required |
 |---|---|---|---|---|---|
@@ -46,10 +46,13 @@ This document lists all **25 public indexable URLs** on the Atlas Security NZ we
 | **P2** | `https://www.atlassecurity.co.nz/blog/atlas-security-expands-wellington` | Original Blog | `https://www.atlassecurity.co.nz/blog/atlas-security-expands-wellington` | Indexable (`index, follow`) | Inspect & Request Indexing |
 | **P3** | `https://www.atlassecurity.co.nz/blog` | Blog Hub | `https://www.atlassecurity.co.nz/blog` | Indexable (`index, follow`) | Inspect & Request Indexing |
 | **P3** | `https://www.atlassecurity.co.nz/service-area` | Service Area Hub | `https://www.atlassecurity.co.nz/service-area` | Indexable (`index, follow`) | Inspect & Request Indexing |
+| **P3** | `https://www.atlassecurity.co.nz/careers` | Careers Utility | `https://www.atlassecurity.co.nz/careers` | Indexable (`index, follow`) | Inspect & Request Indexing |
+| **P3** | `https://www.atlassecurity.co.nz/terms` | Terms Utility | `https://www.atlassecurity.co.nz/terms` | Indexable (`index, follow`) | Inspect & Request Indexing |
+| **P3** | `https://www.atlassecurity.co.nz/testimonials` | Testimonials Utility | `https://www.atlassecurity.co.nz/testimonials` | Indexable (`index, follow`) | Inspect & Request Indexing |
 
 ---
 
 ## 3. Distinction Note
 
-* **Public Indexable URLs:** 25 pages (Listed above, indexed by search engines).
-* **Total Next.js SSG Routes:** 54 pre-rendered static routes (Includes admin routes `/admin/*`, `/terms`, `/testimonials`, `/careers`).
+* **Public Indexable URLs:** 28 pages (Listed above, indexed by search engines).
+* **Total Next.js SSG Routes:** 54 pre-rendered static routes (Includes admin routes `/admin/*`).

@@ -246,7 +246,65 @@ export default function ServicesPageClient() {
             </div>
           </div>
         </div>
-      </section>      {/* Core Security Services */}
+      </section>
+
+      {/* Service Model Comparison & Selection Matrix */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+              SERVICE SELECTION GUIDE
+            </span>
+            <h2 className="text-3xl font-extrabold text-[#0a1628]">
+              Comparing Security Operational Models
+            </h2>
+            <p className="text-gray-600 mt-3 text-sm lg:text-base">
+              Which Atlas Security model best aligns with your property risk profile, operational budget, and site requirements?
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse bg-[#f8f9fa] rounded-2xl overflow-hidden border border-gray-200">
+              <thead>
+                <tr className="bg-[#0a1628] text-white text-xs uppercase tracking-wider">
+                  <th className="p-4 lg:p-5 font-bold">Security Model</th>
+                  <th className="p-4 lg:p-5 font-bold">Best Suited For</th>
+                  <th className="p-4 lg:p-5 font-bold">Primary Operational Focus</th>
+                  <th className="p-4 lg:p-5 font-bold">Key Benefit</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 text-sm text-gray-700">
+                <tr className="hover:bg-white transition-colors">
+                  <td className="p-4 lg:p-5 font-bold text-[#0a1628]">
+                    <Link href="/services/static-guard" className="hover:text-[#1e40af] underline">Static Guarding</Link>
+                  </td>
+                  <td className="p-4 lg:p-5">High-traffic corporate lobbies, retail malls, high-value civil construction sites</td>
+                  <td className="p-4 lg:p-5">Continuous physical deterrence, visitor access control, contractor logging</td>
+                  <td className="p-4 lg:p-5 font-semibold text-[#1e40af]">Immediate on-site incident intervention</td>
+                </tr>
+                <tr className="hover:bg-white transition-colors">
+                  <td className="p-4 lg:p-5 font-bold text-[#0a1628]">
+                    <Link href="/services/mobile-patrolling" className="hover:text-[#1e40af] underline">Mobile Patrols</Link>
+                  </td>
+                  <td className="p-4 lg:p-5">Multi-building industrial parks, commercial yards, suburban business centers</td>
+                  <td className="p-4 lg:p-5">Randomized perimeter inspections, night lock-ups, welfare checks</td>
+                  <td className="p-4 lg:p-5 font-semibold text-[#1e40af]">Cost-effective multi-site coverage</td>
+                </tr>
+                <tr className="hover:bg-white transition-colors">
+                  <td className="p-4 lg:p-5 font-bold text-[#0a1628]">
+                    <Link href="/services/alarm-monitoring" className="hover:text-[#1e40af] underline">Alarm & Monitoring</Link>
+                  </td>
+                  <td className="p-4 lg:p-5">Commercial office towers, warehouses, retail stores, vacant properties</td>
+                  <td className="p-4 lg:p-5">24/7 central signal oversight, remote CCTV verification, guard dispatch</td>
+                  <td className="p-4 lg:p-5 font-semibold text-[#1e40af]">Round-the-clock automated threat detection</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Security Services */}
       <div ref={servicesRef}>
         {services.map((service, index) => (
           <ServiceRow

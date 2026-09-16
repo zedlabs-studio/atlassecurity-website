@@ -110,6 +110,13 @@ export function getServiceSchema({
       '@type': 'Country',
       name: 'New Zealand',
     },
+    termsOfService: `${siteConfig.url}/terms`,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'NZD',
+      availability: 'https://schema.org/InStock',
+      url: `${siteConfig.url}/contact`,
+    },
   }
 }
 

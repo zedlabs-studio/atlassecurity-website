@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { constructMetadata } from '@/lib/siteConfig'
 import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
+import { mockBlogs } from '@/lib/mock'
 import BlogPageClient from './BlogPageClient'
 
 export const metadata: Metadata = constructMetadata({
@@ -16,10 +17,19 @@ export default function BlogPage() {
     { name: 'Blog', item: '/blog' },
   ])
 
+  const initialBlogs = mockBlogs.map(b => ({
+    id: b.id,
+    title: b.title,
+    slug: b.slug,
+    excerpt: b.excerpt,
+    coverImage: b.coverImage,
+    publishedAt: b.publishedAt || b.createdAt,
+  }))
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
-      <BlogPageClient />
+      <BlogPageClient initialBlogs={initialBlogs} />
     </>
   )
 }

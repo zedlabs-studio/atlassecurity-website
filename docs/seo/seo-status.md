@@ -13,10 +13,10 @@
 This document serves as the master central record for all completed, ongoing, and planned SEO implementations for Atlas Security New Zealand.
 
 ### Quick Stats:
-* **Total Public Indexable Routes:** 25 URLs (including Homepage, Core Services, Verticals, Regional Hubs, Utilities, and 10 Blog Articles).
+* **Total Public Indexable Routes:** 28 URLs (including Homepage, Core Services, Verticals, Regional Hubs, Utilities like /terms & /testimonials, and 10 Blog Articles).
 * **Next.js Pre-rendered SSG Static Routes:** 54 total routes (including admin/utility SSG routes).
 * **TypeScript & Build Status:** Clean compilation (`0 type errors`, Next.js 16 SSG build passing).
-* **On-Page Keyword Optimization:** 100% complete across all 25 public indexable pages.
+* **On-Page Keyword Optimization:** 100% complete across all 28 public indexable pages.
 
 ---
 
