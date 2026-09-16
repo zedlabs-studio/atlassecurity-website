@@ -246,7 +246,18 @@ export default function ServicesPageClient() {
             </div>
           </div>
         </div>
-      </section>
+      </section>      {/* Core Security Services */}
+      <div ref={servicesRef}>
+        {services.map((service, index) => (
+          <ServiceRow
+            key={service.href}
+            service={service}
+            isEven={index % 2 === 0}
+            inView={servicesInView}
+            index={index}
+          />
+        ))}
+      </div>
 
 
       {/* Why Atlas */}
