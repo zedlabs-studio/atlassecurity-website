@@ -1,15 +1,16 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function BlogCoverImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
-      loading="lazy"
-      className="absolute inset-0 w-full h-full object-cover opacity-70"
-      onError={(e) => {
-        (e.target as HTMLImageElement).style.display = 'none'
-      }}
+      fill
+      priority
+      sizes="(max-width: 1024px) 100vw, 1200px"
+      className="object-cover opacity-70"
     />
   )
 }

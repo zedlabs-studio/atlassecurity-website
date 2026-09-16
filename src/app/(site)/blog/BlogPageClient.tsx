@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 import type { Variants } from 'framer-motion'
 import { useRef } from 'react'
@@ -33,13 +34,12 @@ function BlogCard({ b }: { b: Blog }) {
       >
         <div className="relative h-48 bg-[#0a1628] overflow-hidden">
           {b.coverImage ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <Image
               src={b.coverImage}
               alt={b.title}
-              loading="lazy"
-              className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-all duration-500"
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover opacity-80 group-hover:scale-105 transition-all duration-500"
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
