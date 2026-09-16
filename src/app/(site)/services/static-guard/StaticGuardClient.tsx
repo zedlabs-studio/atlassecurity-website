@@ -167,6 +167,25 @@ export default function StaticGuardClient() {
         </div>
       </section>
 
+      {/* Internal SILO Links Section */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-bold text-[#0a1628]">Static Guarding Hubs:</span>
+              <Link href="/service-area/auckland" className="hover:text-[#1e40af] underline">Auckland Static Guards</Link> |
+              <Link href="/service-area/hamilton" className="hover:text-[#1e40af] underline">Hamilton Static Guards</Link> |
+              <Link href="/service-area/wellington" className="hover:text-[#1e40af] underline">Wellington Guards</Link>
+            </div>
+            <div className="flex items-center gap-3">
+              <Link href="/blog/static-guards-vs-mobile-patrols-nz" className="hover:text-[#1e40af] underline">Static vs Mobile Patrol Guide</Link>
+              <span>|</span>
+              <Link href="/services/commercial-security" className="hover:text-[#1e40af] font-semibold underline">Commercial Security →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#1e40af] py-14">
         <div className="container mx-auto px-6 lg:px-16 text-center">
           <h2 className="text-2xl font-extrabold text-white mb-3">Ready to get started?</h2>

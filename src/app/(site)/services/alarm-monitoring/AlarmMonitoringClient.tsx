@@ -216,6 +216,25 @@ export default function AlarmMonitoringClient() {
         </div>
       </section>
 
+      {/* Internal SILO Links Section */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-bold text-[#0a1628]">Alarm Monitoring Hubs:</span>
+              <Link href="/service-area/auckland" className="hover:text-[#1e40af] underline">Auckland Alarm Response</Link> |
+              <Link href="/service-area/hamilton" className="hover:text-[#1e40af] underline">Hamilton Alarm Response</Link> |
+              <Link href="/service-area/wellington" className="hover:text-[#1e40af] underline">Wellington Alarm Response</Link>
+            </div>
+            <div className="flex items-center gap-3">
+              <Link href="/blog/how-business-alarm-monitoring-works-nz" className="hover:text-[#1e40af] underline">Alarm Response Guide</Link>
+              <span>|</span>
+              <Link href="/services/mobile-patrolling" className="hover:text-[#1e40af] font-semibold underline">Mobile Patrol Guard Dispatch →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-[#1e40af] py-14">
         <div className="container mx-auto px-6 lg:px-16 text-center">
