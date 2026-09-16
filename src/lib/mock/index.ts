@@ -509,46 +509,123 @@ export const mockBlogs: Blog[] = [
   },
   {
     id: '2',
-    title: 'Why Mobile Patrols Are the Future of NZ Security',
+    title: 'Why Mobile Patrols Are the Future of NZ Commercial Site Security',
     slug: 'mobile-patrols-future-nz-security',
-    excerpt: 'Static guards are just one layer. Discover why leading NZ businesses are switching to mobile patrol solutions.',
+    excerpt: 'Static guards are just one layer. Discover why leading NZ businesses are switching to GPS-tracked mobile patrol solutions for cost-effective after-hours protection.',
     content: `
-<p>Mobile security patrols provide flexible, cost-effective coverage across multiple commercial sites, warehouses, and industrial parks in New Zealand.</p>
+<p className="lead">As commercial property footprints expand across <a href="/service-area/auckland" className="text-[#1e40af] font-semibold underline">Auckland</a>, <a href="/service-area/hamilton" className="text-[#1e40af] font-semibold underline">Hamilton</a>, and <a href="/service-area/wellington" className="text-[#1e40af] font-semibold underline">Wellington</a>, business owners are looking for flexible physical protection strategies that balance rigorous threat deterrence with operational budget efficiency. Mobile security patrols are rapidly becoming the preferred choice for commercial precincts, industrial parks, and multi-tenant facilities.</p>
 
-<h2>Flexible &amp; Cost-Effective Protection</h2>
-<p>Rather than stationing a full-time officer on site, <a href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile security patrols</a> conduct randomized vehicle checks, perimeter sweeps, and night-time lock-up services at predictable or unpredictable intervals.</p>
+<h2>What Are Mobile Security Patrols?</h2>
+<p>Unlike stationed guards who remain at a single location throughout their shift, <a href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile security patrols</a> feature licensed officers operating GPS-tracked vehicles across dedicated patrol sectors. Officers conduct randomized and scheduled physical inspections of exterior building perimeters, unlit storage yards, loading bays, and entry gates.</p>
+
+<h2>Why NZ Businesses Are Adopting Mobile Patrols</h2>
+<ul>
+  <li><strong>Unpredictable Inspection Schedule:</strong> Randomized patrol timings prevent potential trespassers from predicting guard arrivals, creating a dynamic physical threat deterrent.</li>
+  <li><strong>Cost-Effective Physical Coverage:</strong> Enjoy active multi-point physical security checks at a fraction of the cost of stationing a full-time dedicated static guard.</li>
+  <li><strong>Integrated After-Hours Lock-Ups:</strong> Mobile officers securely close main gates, inspect exterior fire doors, arm master security alarm systems, and escort late-working staff to their vehicles.</li>
+  <li><strong>Immediate 24/7 Alarm Verification &amp; Dispatch:</strong> Patrol vehicles operate as first responders when intruder sensors trigger at our central <a href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">security alarm monitoring station</a>.</li>
+</ul>
 
 <h2>Comparing Patrols to On-Site Guarding</h2>
-<p>Read our in-depth analysis on <a href="/blog/static-guards-vs-mobile-patrols-nz" className="text-[#1e40af] font-semibold underline">Static Security Guards vs Mobile Patrols</a> to determine which protection model best suits your budget and risk profile.</p>
+<p>Choosing between static guards and mobile patrols depends on your facility's operational hours and risk level. Dedicated <a href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guards</a> excel at high-rise office concierges and active <a href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction site security</a>. Mobile patrols, however, offer superior cost efficiency for warehouse yards and commercial business parks. Read our in-depth analysis on <a href="/blog/static-guards-vs-mobile-patrols-nz" className="text-[#1e40af] font-semibold underline">Static Security Guards vs Mobile Patrols</a> to determine the right fit for your property.</p>
 
-<h2>GPS Verification &amp; Proof of Attendance</h2>
-<p>Modern mobile patrol fleets use real-time GPS tracking and electronic checkpoint logging to deliver time-stamped inspection reports to property managers in <a href="/service-area/hamilton" className="text-[#1e40af] font-semibold underline">Hamilton</a>, <a href="/service-area/auckland" className="text-[#1e40af] font-semibold underline">Auckland</a>, and regional commercial centers.</p>
+<h2>GPS Verification &amp; Real-Time Electronic Proof of Attendance</h2>
+<p>Modern mobile patrol fleets utilize real-time GPS tracking and electronic checkpoint scan keys. When a patrol officer checks your perimeter gates, loading docks, or server room doors, a time-stamped digital log is instantly registered, giving property managers verified audit trails of every visit.</p>
+
+<h2>Mobile Patrol Inspection Checklist for Commercial Sites</h2>
+<div className="bg-[#f8f9fa] border border-gray-200 p-6 rounded-xl my-6">
+  <h3 className="font-bold text-[#0a1628] text-base mb-3">Key Checkpoints Covered During a Mobile Patrol Sweep:</h3>
+  <ul className="space-y-2 text-sm text-gray-700">
+    <li>• <strong>Perimeter Door &amp; Gate Verification:</strong> Physical hand-check of all exterior glass doors, fire exits, and boundary gates.</li>
+    <li>• <strong>Window &amp; Latch Inspections:</strong> Verifying ground-level glass panels and window handles remain securely latched.</li>
+    <li>• <strong>Security Lighting Audit:</strong> Identifying non-functional LED floodlights or dark alleyways along loading bays.</li>
+    <li>• <strong>Outbuilding &amp; Storage Checks:</strong> Inspecting detached tool sheds, waste skips, and trailer parking lanes.</li>
+    <li>• <strong>Master Alarm Arming &amp; Reset:</strong> Confirming intruder panels are armed properly upon completing evening lock-up rounds.</li>
+  </ul>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How many times per night will a mobile patrol check my business?</h3>
+<p>Patrol frequency is completely customizable — options typically range from 1 to 5 randomized checks per night depending on your site's risk profile and operational needs.</p>
+
+<h3>Are mobile patrol officers licensed in New Zealand?</h3>
+<p>Yes. All Atlas Security mobile patrol officers hold active Ministry of Justice Certificates of Approval (COA) under the Private Security Personnel and Private Investigators Act 2010.</p>
+
+<h3>Can mobile patrol officers respond to 24/7 intruder alarm triggers?</h3>
+<p>Yes. When your intruder alarm triggers, our 24/7 central monitoring station dispatches the nearest mobile patrol unit immediately for on-site physical verification and securing.</p>
+
+<div className="mt-8 p-6 bg-[#0a1628] text-white rounded-xl">
+  <h3 className="text-xl font-bold mb-2 text-white">Upgrade Your Commercial Security with Mobile Patrols</h3>
+  <p className="text-gray-300 text-sm mb-4">Protect your business premises across Auckland, Hamilton, and Wellington with GPS-verified mobile patrols. Request a free site evaluation today.</p>
+  <a href="/services/mobile-patrolling" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">Explore Mobile Security Patrol Services</a>
+</div>
 `,
     coverImage: '/images/blog-mobile-patrols.jpg',
     published: true,
     publishedAt: '2026-05-20T00:00:00Z',
     createdAt: '2026-05-20T00:00:00Z',
-    updatedAt: '2026-05-20T00:00:00Z',
+    updatedAt: '2026-09-16T00:00:00Z',
   },
   {
     id: '3',
-    title: 'Atlas Security Expands to Wellington Region',
+    title: 'Atlas Security Expands Commercial Guarding & Mobile Patrols Across Wellington',
     slug: 'atlas-security-expands-wellington',
-    excerpt: 'We are proud to announce our coverage now extends across the Wellington region, serving more NZ businesses.',
+    excerpt: 'Atlas Security extends comprehensive physical security services across the Wellington region, serving government, commercial, retail, and industrial clients in the capital.',
     content: `
-<p>Atlas Security NZ is excited to announce the expansion of our dedicated security guard, corporate concierge, and mobile patrol services across the Greater Wellington region.</p>
+<p className="lead">Atlas Security NZ is proud to announce the formal expansion of our licensed security guard, corporate concierge, and mobile patrol operations across the Greater Wellington region. As New Zealand's capital city continues to develop its commercial, public sector, and logistics infrastructure, securing physical premises requires dedicated, highly trained security professionals.</p>
 
-<h2>Serving Wellington CBD, Hutt Valley &amp; Porirua</h2>
-<p>Our expanded capital operations deliver licensed <a href="/service-area/wellington" className="text-[#1e40af] font-semibold underline">Wellington security guards</a> for commercial office towers, government contractors, retail precincts in Petone, and industrial sites in Lower Hutt.</p>
+<h2>Comprehensive Regional Security Coverage across Greater Wellington</h2>
+<p>Our expanded Wellington operations deliver professional, COA-certified security personnel across key commercial and industrial corridors:</p>
+<ul>
+  <li><strong>Wellington CBD &amp; Parliamentary Precinct:</strong> Corporate lobby concierge, electronic access control management, and corporate office tower static guarding.</li>
+  <li><strong>Lower Hutt &amp; Gracefield Industrial Zones:</strong> Warehouse guarding, freight staging yard checks, and mobile patrol vehicle sweeps.</li>
+  <li><strong>Petone &amp; Kilbirnie Retail Hubs:</strong> Customized <a href="/services/retail-security" className="text-[#1e40af] font-semibold underline">retail security guards</a> and loss prevention support to curb shoplifting and safeguard store workers.</li>
+  <li><strong>Porirua &amp; Kapiti Coast Developments:</strong> <a href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">Construction site security</a> and temporary guarding for infrastructure projects.</li>
+</ul>
 
-<h2>Retail &amp; Commercial Security Solutions</h2>
-<p>Wellington store operators can also leverage our specialized <a href="/blog/retail-loss-prevention-nz-stores" className="text-[#1e40af] font-semibold underline">retail loss prevention strategies</a> to combat shoplifting and protect floor staff during trading and closing shifts.</p>
+<h2>Delivering Tailored Physical Security Services in the Capital</h2>
+<p>Wellington businesses can now leverage Atlas Security's complete suite of physical security solutions:</p>
+<ul>
+  <li><strong>Static Security Guarding:</strong> Dedicated stationed officers for corporate towers, government contractors, and high-value sites. Learn more on our <a href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guard service page</a>.</li>
+  <li><strong>GPS Mobile Patrol Vehicles:</strong> Cost-effective after-hours lock-up inspections and randomized perimeter sweeps managed from our dedicated regional patrol units. View our <a href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrolling services</a>.</li>
+  <li><strong>24/7 Alarm Monitoring &amp; Guard Dispatch:</strong> Instant signal verification and rapid guard response through our centralized <a href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">security alarm monitoring station</a>.</li>
+</ul>
+
+<h2>Supporting Wellington Retailers with Proven Loss Prevention</h2>
+<p>Store operators along Lambton Quay, Willis Street, and Jackson Street can protect inventory and store workers using our proven <a href="/blog/retail-loss-prevention-nz-stores" className="text-[#1e40af] font-semibold underline">retail loss prevention strategies</a>. Our COA-certified guards balance approachable customer service with firm de-escalation skills to maintain a safe shopping environment.</p>
+
+<h2>Why Wellington Property Managers Choose Atlas Security</h2>
+<div className="bg-[#f8f9fa] border border-gray-200 p-6 rounded-xl my-6">
+  <h3 className="font-bold text-[#0a1628] text-base mb-3">The Atlas Security Wellington Advantage:</h3>
+  <ol className="space-y-2 text-sm text-gray-700">
+    <li><strong>1. 100% Licensed COA Personnel:</strong> Every officer holds active Ministry of Justice accreditation under the Private Security Personnel Act 2010.</li>
+    <li><strong>2. GPS Patrol Verification:</strong> Transparent, time-stamped digital proof of every site visit and lock-up.</li>
+    <li><strong>3. Rapid Regional Guard Dispatch:</strong> Strategically positioned mobile units across Wellington, Hutt Valley, and Porirua.</li>
+    <li><strong>4. Tailored Site Post Orders:</strong> Standardized site risk assessments and custom operational protocols for every building.</li>
+  </ol>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What areas of Greater Wellington does Atlas Security cover?</h3>
+<p>We provide static guarding, mobile patrols, and alarm monitoring across Wellington CBD, Te Aro, Thorndon, Lower Hutt, Upper Hutt, Petone, Porirua, and Johnsonville.</p>
+
+<h3>Are Wellington security guards available for short-term projects?</h3>
+<p>Yes. We offer flexible guard deployments for temporary construction sites, corporate events, retail sales periods, and emergency site lock-ups.</p>
+
+<h3>How do I request a security assessment for a Wellington property?</h3>
+<p>Visit our dedicated <a href="/service-area/wellington" className="text-[#1e40af] font-semibold underline">Wellington service area page</a> or contact our team directly to arrange a complimentary physical security assessment.</p>
+
+<div className="mt-8 p-6 bg-[#0a1628] text-white rounded-xl">
+  <h3 className="text-xl font-bold mb-2 text-white">Secure Your Wellington Business Premises</h3>
+  <p className="text-gray-300 text-sm mb-4">Partner with Wellington's reliable physical security specialists. Contact Atlas Security today for a tailored operational proposal.</p>
+  <a href="/service-area/wellington" className="inline-block bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold px-6 py-3 rounded-lg text-sm transition-colors">View Wellington Security Services</a>
+</div>
 `,
     coverImage: '/images/blog-wellington-security.jpg',
     published: true,
     publishedAt: '2026-05-10T00:00:00Z',
     createdAt: '2026-05-10T00:00:00Z',
-    updatedAt: '2026-05-10T00:00:00Z',
+    updatedAt: '2026-09-16T00:00:00Z',
   },
   {
     id: 'p3-1',
