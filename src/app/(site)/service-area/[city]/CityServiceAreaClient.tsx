@@ -215,13 +215,23 @@ export default function CityServiceAreaClient({ location }: { location: Location
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16">
           <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <span className="font-bold text-[#0a1628]">Other Service Areas:</span>
               <Link href="/service-area/auckland" className="hover:text-[#1e40af] underline">Auckland</Link> |
               <Link href="/service-area/hamilton" className="hover:text-[#1e40af] underline">Hamilton</Link> |
               <Link href="/service-area/wellington" className="hover:text-[#1e40af] underline">Wellington</Link>
             </div>
-            <div>
+            <div className="flex flex-wrap items-center gap-3">
+              {location.slug === 'hamilton' && (
+                <Link href="/blog/waikato-industrial-distribution-yard-security" className="hover:text-[#1e40af] underline">Waikato Security Guide</Link>
+              )}
+              {location.slug === 'wellington' && (
+                <Link href="/blog/atlas-security-expands-wellington" className="hover:text-[#1e40af] underline">Wellington Expansion News</Link>
+              )}
+              {location.slug === 'auckland' && (
+                <Link href="/blog/top-5-security-tips-nz-businesses" className="hover:text-[#1e40af] underline">NZ Business Security Tips</Link>
+              )}
+              <span>|</span>
               <Link href="/service-area" className="hover:text-[#1e40af] font-semibold underline">View All 16+ Cities Covered →</Link>
             </div>
           </div>
