@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { constructMetadata } from '@/lib/siteConfig'
-import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
+import { JsonLd, getBreadcrumbSchema, getOrganizationSchema } from '@/components/JsonLd'
 import CareersPageClient from './CareersPageClient'
 
 export const metadata: Metadata = constructMetadata({
@@ -18,7 +18,7 @@ export default function CareersPage() {
 
   return (
     <>
-      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={[getOrganizationSchema(), breadcrumbSchema]} />
       <CareersPageClient />
     </>
   )
