@@ -42,6 +42,7 @@ export default function HomePageClient() {
       <Hero />
       <CredibilityAndQuoteSection />
       <ServicesSection />
+      <EngagementProcessSection />
       <IndustriesSection />
       <CoverageStrip />
       <WhyChooseUs />
@@ -448,6 +449,89 @@ function ServicesSection() {
             </motion.div>
           ))}
         </motion.div>
+      </div>
+    </section>
+  )
+}
+
+function EngagementProcessSection() {
+  const steps = [
+    {
+      num: '01',
+      title: 'Initial Consultation & Site Audit',
+      desc: 'We analyze site access points, perimeter vulnerabilities, shift requirements, and compliance obligations for your Auckland, Waikato, or Wellington facility.',
+    },
+    {
+      num: '02',
+      title: 'Service & Guarding Selection',
+      desc: 'Choose between dedicated static guards, scheduled mobile patrols, or integrated alarm monitoring based on risk profile and operational budget.',
+    },
+    {
+      num: '03',
+      title: 'Deployment & SOP Setup',
+      desc: 'Licensed guards are assigned with clear site-specific Standard Operating Procedures (SOPs), incident reporting protocols, and supervisor oversight.',
+    },
+    {
+      num: '04',
+      title: 'Ongoing Review & Reporting',
+      desc: 'Regular reporting, patrol logs, and site check-ins ensure high operational standards and transparent communication for continuous protection.',
+    },
+  ]
+
+  return (
+    <section className="bg-white py-20 border-t border-gray-100">
+      <div className="container mx-auto px-6 lg:px-16">
+        <motion.div
+          className="max-w-3xl mx-auto text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          variants={fadeUp}
+        >
+          <p className="text-[#1e40af] font-semibold text-sm uppercase tracking-widest mb-3">Operational Process</p>
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-[#0a1628] tracking-tight">How Security Engagement Works</h2>
+          <div className="w-14 h-1 bg-[#1e40af] mx-auto mt-4 mb-5 rounded" />
+          <p className="text-gray-600 text-sm leading-relaxed">
+            From your initial site assessment to daily guard operations, we provide transparent, COA-licensed security tailored to commercial, industrial, and retail environments.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          variants={stagger}
+        >
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
+              variants={cardVariant}
+              className="bg-[#f8f9fa] border border-gray-200/80 rounded-xl p-6 relative group hover:border-[#1e40af]/30 transition-all duration-300"
+            >
+              <span className="text-3xl font-extrabold text-[#1e40af]/20 group-hover:text-[#1e40af] transition-colors duration-300 block mb-3">
+                {step.num}
+              </span>
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">{step.title}</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">{step.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <div className="mt-12 bg-[#0a1628] rounded-xl p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-white">
+          <div>
+            <h4 className="font-bold text-base lg:text-lg mb-1">Which security service is right for your site?</h4>
+            <p className="text-gray-300 text-xs lg:text-sm">
+              Compare <Link href="/services/static-guard" className="text-[#3b5fd9] hover:underline font-semibold">Static Guarding</Link>, <Link href="/services/mobile-patrolling" className="text-[#3b5fd9] hover:underline font-semibold">Mobile Patrols</Link>, and <Link href="/services/alarm-monitoring" className="text-[#3b5fd9] hover:underline font-semibold">Alarm Monitoring</Link> on our services hub.
+            </p>
+          </div>
+          <Link
+            href="/services"
+            className="shrink-0 bg-[#1e40af] hover:bg-[#1d3a9e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-lg transition-colors duration-200"
+          >
+            Explore Services Hub
+          </Link>
+        </div>
       </div>
     </section>
   )
