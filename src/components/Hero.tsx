@@ -92,6 +92,7 @@ export default function Hero() {
           <span className="block text-[#3b5fd9]">
             <ScanLine text="OUR MISSION." delay={0.85} />
           </span>
+          <span className="sr-only"> — Licensed Security Guard & Patrol Company NZ</span>
         </h1>
 
         <motion.p
