@@ -216,6 +216,61 @@ export default function AlarmMonitoringClient() {
         </div>
       </section>
 
+      {/* Service Alternatives & Decision Guidance */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+              SERVICE COMPARISON
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
+              When to Consider Alternative Security Services
+            </h2>
+            <p className="text-gray-600 mt-2 text-sm leading-relaxed">
+              24/7 automated alarm monitoring delivers rapid digital alert detection. For complete security coverage, integration with on-site physical personnel or mobile dispatch patrols is essential.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6 hover:border-[#1e40af]/30 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-[#1e40af]/10 flex items-center justify-center text-[#1e40af] font-bold">
+                  🛡️
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0a1628] text-base">Static Security Guarding</h3>
+                  <p className="text-xs text-gray-500">For active daytime or high-risk shift coverage</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                While alarms monitor electronic perimeter breaches, active access management and visible crowd control are best handled by on-site <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guards</Link>.
+              </p>
+              <Link href="/services/static-guard" className="text-xs font-bold text-[#1e40af] hover:underline flex items-center gap-1">
+                Explore Static Guards →
+              </Link>
+            </div>
+
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6 hover:border-[#1e40af]/30 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-[#1e40af]/10 flex items-center justify-center text-[#1e40af] font-bold">
+                  🚗
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0a1628] text-base">Mobile Patrol Security</h3>
+                  <p className="text-xs text-gray-500">For physical verification upon alarm trigger</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                Pair your alarm monitoring system with designated <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol response units</Link> to ensure rapid physical inspection whenever a sensor triggers.
+              </p>
+              <Link href="/services/mobile-patrolling" className="text-xs font-bold text-[#1e40af] hover:underline flex items-center gap-1">
+                Explore Mobile Patrols →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Accordion Section */}
       <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl">

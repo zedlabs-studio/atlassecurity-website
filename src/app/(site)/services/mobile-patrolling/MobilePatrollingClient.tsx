@@ -166,6 +166,61 @@ export default function MobilePatrollingClient() {
         </div>
       </section>
 
+      {/* Service Alternatives & Decision Guidance */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+              SERVICE COMPARISON
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a1628]">
+              When to Consider Alternative Security Services
+            </h2>
+            <p className="text-gray-600 mt-2 text-sm leading-relaxed">
+              Mobile patrols deliver highly flexible, multi-site perimeter coverage. Depending on your facility risk profile, combining or transitioning to dedicated static guarding or alarm monitoring may be recommended.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6 hover:border-[#1e40af]/30 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-[#1e40af]/10 flex items-center justify-center text-[#1e40af] font-bold">
+                  🛡️
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0a1628] text-base">Static Security Guarding</h3>
+                  <p className="text-xs text-gray-500">For high-traffic or high-value premises</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                If your site requires continuous access management, active visitor log-in, or permanent physical presence, dedicated <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guard services</Link> provide uninterrupted on-site intervention.
+              </p>
+              <Link href="/services/static-guard" className="text-xs font-bold text-[#1e40af] hover:underline flex items-center gap-1">
+                Explore Static Guards →
+              </Link>
+            </div>
+
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6 hover:border-[#1e40af]/30 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-[#1e40af]/10 flex items-center justify-center text-[#1e40af] font-bold">
+                  🔔
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0a1628] text-base">Alarm & Monitoring</h3>
+                  <p className="text-xs text-gray-500">For instant automated signal dispatch</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                Combine your mobile patrols with continuous <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">alarm monitoring services</Link> so patrol units are dispatched immediately when sensors detect unauthorized entry.
+              </p>
+              <Link href="/services/alarm-monitoring" className="text-xs font-bold text-[#1e40af] hover:underline flex items-center gap-1">
+                Explore Alarm Monitoring →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Accordion Section */}
       <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16 max-w-3xl">

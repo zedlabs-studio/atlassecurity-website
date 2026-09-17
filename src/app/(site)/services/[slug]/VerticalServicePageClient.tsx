@@ -238,7 +238,7 @@ export default function VerticalServicePageClient({ vertical }: { vertical: Vert
         </div>
       </section>
 
-      {/* SILO Links to Local Service Areas */}
+      {/* SILO Links to Local Service Areas & Supporting Resources */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16">
           <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
@@ -248,7 +248,17 @@ export default function VerticalServicePageClient({ vertical }: { vertical: Vert
               <Link href="/service-area/hamilton" className="hover:text-[#1e40af] underline">Hamilton</Link> |
               <Link href="/service-area/wellington" className="hover:text-[#1e40af] underline">Wellington</Link>
             </div>
-            <div>
+            <div className="flex items-center gap-3">
+              {vertical.slug === 'construction-site-security' && (
+                <Link href="/blog/construction-site-theft-prevention-nz" className="hover:text-[#1e40af] font-semibold underline">Construction Theft Guide →</Link>
+              )}
+              {vertical.slug === 'retail-security' && (
+                <Link href="/blog/retail-loss-prevention-nz-stores" className="hover:text-[#1e40af] font-semibold underline">Retail Loss Prevention Guide →</Link>
+              )}
+              {vertical.slug === 'commercial-security' && (
+                <Link href="/blog/commercial-building-after-hours-security-checklist" className="hover:text-[#1e40af] font-semibold underline">Commercial Security Checklist →</Link>
+              )}
+              <span>|</span>
               <Link href="/services" className="hover:text-[#1e40af] font-semibold underline">Explore All Security Services →</Link>
             </div>
           </div>
