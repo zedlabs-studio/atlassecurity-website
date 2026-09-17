@@ -151,7 +151,7 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
       },
       {
         question: 'How do I arrange security services for a Wellington property?',
-        answer: 'You can call us directly on 0800 285 277 or fill out our online contact form to speak with a security consultant.',
+        answer: 'You can call us directly on +64 22 199 3486 or fill out our online contact form to speak with a security consultant.',
       },
     ],
   },

@@ -26,7 +26,7 @@ The following baseline data represents the official public details established o
 |---|---|---|
 | **Official Business Name** | Atlas Security NZ | Standardized across all pages |
 | **Website URL** | `https://www.atlassecurity.co.nz` | Primary canonical URL |
-| **Phone Number** | `0800 285 277` / `+64 800 285 277` | Toll-free nationwide booking line |
+| **Phone Number** | `+64 22 199 3486` | Direct mobile & dispatch line |
 | **Primary Email** | `info@atlassecurity.co.nz` | Direct quote inbox |
 | **Operating Hours** | 24 Hours / 7 Days a Week | 24/7 Monitoring & Guard Dispatch |
 | **Head Office Region** | Hamilton / Waikato | Primary Operational Hub |

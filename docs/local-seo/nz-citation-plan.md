@@ -53,6 +53,6 @@ Local citations establish digital trust and geo-relevance for New Zealand search
 
 ## 4. Citation Quality & Audit Rules
 
-1. **Exact NAP Compliance:** Every directory submission must match the website baseline (`Atlas Security NZ`, `0800 285 277`, `info@atlassecurity.co.nz`).
+1. **Exact NAP Compliance:** Every directory submission must match the website baseline (`Atlas Security NZ`, `+64 22 199 3486`, `info@atlassecurity.co.nz`).
 2. **Canonical Links:** Ensure all directory profile website links use `https://www.atlassecurity.co.nz` (including `https://` and exact subpage URLs for regional listings).
 3. **No Paid Spam:** Avoid link-farm directories or unmoderated global submission tools that pass negative link equity.

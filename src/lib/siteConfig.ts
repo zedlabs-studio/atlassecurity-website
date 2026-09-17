@@ -5,7 +5,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.atlassecurity.co.nz',
   description:
     'Atlas Security NZ provides top-tier professional static guard, mobile patrol, and alarm monitoring security services across New Zealand.',
-  phone: '+64 800 285 277',
+  phone: '+64 22 199 3486',
   email: 'info@atlassecurity.co.nz',
   address: {
     streetAddress: '100 Queen Street',

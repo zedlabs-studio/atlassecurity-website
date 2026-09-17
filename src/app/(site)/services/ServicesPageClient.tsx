@@ -360,9 +360,9 @@ export default function ServicesPageClient() {
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </Link>
-              <a href="tel:0800285277"
+              <a href="tel:+64221993486"
                 className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-3.5 rounded transition-colors duration-200">
-                +64 800 285 277
+                +64 22 199 3486
               </a>
             </div>
           </motion.div>

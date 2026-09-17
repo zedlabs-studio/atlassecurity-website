@@ -16,11 +16,11 @@
 
 ## Contact
 
-[Contact Us | Free Security Quote & Site Assessment NZ](https://www.atlassecurity.co.nz/contact): Contact Atlas Security NZ for a free security consultation. Call +64 800 285 277 or email info@atlassecurity.co.nz for static guards, mobile patrols & alarm monitoring.
+[Contact Us | Free Security Quote & Site Assessment NZ](https://www.atlassecurity.co.nz/contact): Contact Atlas Security NZ for a free security consultation. Call +64 22 199 3486 or email info@atlassecurity.co.nz for static guards, mobile patrols & alarm monitoring.
 
 ## Service area
 
-[Security Services & Guarding Hamilton Waikato | Atlas Security NZ](https://www.atlassecurity.co.nz/service-area/hamilton): Atlas Security Head Office in Hamilton provides trusted static guarding, mobile patrols, and 24/7 alarm monitoring for Waikato businesses. Call +64 800 285 277.
+[Security Services & Guarding Hamilton Waikato | Atlas Security NZ](https://www.atlassecurity.co.nz/service-area/hamilton): Atlas Security Head Office in Hamilton provides trusted static guarding, mobile patrols, and 24/7 alarm monitoring for Waikato businesses. Call +64 22 199 3486.
 [Service Areas | Security Guards in Auckland, Hamilton & North Island](https://www.atlassecurity.co.nz/service-area): Atlas Security NZ provides static guard, mobile patrol & alarm monitoring services across 16+ cities including Auckland, Hamilton, Tauranga & Wellington.
 [Security Guard & Mobile Patrol Services Auckland | Atlas Security NZ](https://www.atlassecurity.co.nz/service-area/auckland): Licensed static security guards, mobile patrols & 24/7 alarm monitoring across Auckland CBD, North Shore, South Auckland & West Auckland. Request a free quote today.
 [Security Guards & Patrols Wellington | Atlas Security NZ](https://www.atlassecurity.co.nz/service-area/wellington): Professional security guard services, concierge, mobile patrols & alarm monitoring in Wellington CBD, Lower Hutt, Porirua & Kapiti Coast. Get a quote.

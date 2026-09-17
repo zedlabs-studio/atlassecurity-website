@@ -52,10 +52,10 @@ export default function CityServiceAreaClient({ location }: { location: Location
                 Request Free {location.name} Quote
               </Link>
               <a
-                href="tel:0800285277"
+                href="tel:+64221993486"
                 className="border border-white/20 hover:border-white/40 text-white font-bold px-7 py-3.5 rounded-lg transition-all duration-200 text-sm"
               >
-                Call 0800 285 277
+                Call +64 22 199 3486
               </a>
             </div>
           </motion.div>

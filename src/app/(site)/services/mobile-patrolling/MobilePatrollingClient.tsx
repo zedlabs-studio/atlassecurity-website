@@ -86,7 +86,7 @@ export default function MobilePatrollingClient() {
                 Get a Free Quote
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
-              <a href="tel:0800285277" className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-7 py-3.5 rounded transition-all duration-200">
+              <a href="tel:+64221993486" className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-7 py-3.5 rounded transition-all duration-200">
                 Call Now
               </a>
             </div>
@@ -228,8 +228,8 @@ export default function MobilePatrollingClient() {
               Get a Free Quote
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
-            <a href="tel:0800285277" className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-3.5 rounded transition-colors duration-200">
-              +64 800 285 277
+            <a href="tel:+64221993486" className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-3.5 rounded transition-colors duration-200">
+              +64 22 199 3486
             </a>
           </div>
         </div>
