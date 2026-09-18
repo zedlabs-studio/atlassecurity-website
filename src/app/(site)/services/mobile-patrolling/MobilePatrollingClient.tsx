@@ -246,6 +246,12 @@ export default function MobilePatrollingClient() {
               </p>
             </div>
             <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What should a business prepare before requesting a mobile patrol proposal?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Provide details on your property boundaries, key access gates, preferred patrol frequency, lock-up timeframes, and specific high-risk inspection points (such as storage yards or rear emergency exits).
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
               <h3 className="font-bold text-[#0a1628] text-base mb-2">What factors influence mobile patrol service pricing?</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Mobile patrol costs depend on the number of nightly checks required, property size, geographic location, and whether unlock/lock-up services or staff escort duties are included. Contact Atlas Security for a customized mobile patrol plan.

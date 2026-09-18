@@ -247,6 +247,12 @@ export default function StaticGuardClient() {
               </p>
             </div>
             <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What information should a business provide when requesting static guard deployment?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                To tailor your guard deployment effectively, specify your operating hours, key site access points, parking/gatehouse requirements, shift handover expectations, and whether concierge or contractor management duties are required.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
               <h3 className="font-bold text-[#0a1628] text-base mb-2">What pricing factors determine static guard service costs?</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Static security guarding costs depend on shift length, weekly coverage hours, site complexity, access control duties required, and whether specialized concierge or event duties are needed. Contact our team for a site-specific risk audit and transparent proposal.
