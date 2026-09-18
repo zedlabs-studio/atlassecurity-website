@@ -248,6 +248,80 @@ export default function ServicesPageClient() {
         </div>
       </section>
 
+      {/* Primary Requirement Selection Framework */}
+      <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+              SERVICE SELECTION FRAMEWORK
+            </span>
+            <h2 className="text-3xl font-extrabold text-[#0a1628]">
+              Start With Your Site&apos;s Primary Security Requirement
+            </h2>
+            <p className="text-gray-600 mt-3 text-sm lg:text-base">
+              Match your operational requirements to the appropriate physical security model:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs hover:border-[#1e40af]/30 transition-all">
+              <span className="text-xs font-extrabold text-[#1e40af] uppercase tracking-wider block mb-2">IF YOUR SITE REQUIRES</span>
+              <h3 className="font-bold text-[#0a1628] text-lg mb-2">Continuous Physical Presence</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                On-site lobby concierge, contractor sign-ins, or dedicated front gate control during active or after-hours shifts.
+              </p>
+              <Link href="/services/static-guard" className="text-xs font-bold text-[#1e40af] hover:underline flex items-center gap-1">
+                Select Static Guarding →
+              </Link>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs hover:border-[#1e40af]/30 transition-all">
+              <span className="text-xs font-extrabold text-[#1e40af] uppercase tracking-wider block mb-2">IF YOUR SITE REQUIRES</span>
+              <h3 className="font-bold text-[#0a1628] text-lg mb-2">Periodic Physical Checks</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                Randomized perimeter vehicle checks, nightly lock-ups, exterior door inspections, and staff escorts across large premises.
+              </p>
+              <Link href="/services/mobile-patrolling" className="text-xs font-bold text-[#1e40af] hover:underline flex items-center gap-1">
+                Select Mobile Patrols →
+              </Link>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs hover:border-[#1e40af]/30 transition-all">
+              <span className="text-xs font-extrabold text-[#1e40af] uppercase tracking-wider block mb-2">IF YOUR SITE REQUIRES</span>
+              <h3 className="font-bold text-[#0a1628] text-lg mb-2">Automated Event Detection</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                Round-the-clock central signal monitoring connected to building intruder sensors with rapid guard dispatch upon activation.
+              </p>
+              <Link href="/services/alarm-monitoring" className="text-xs font-bold text-[#1e40af] hover:underline flex items-center gap-1">
+                Select Alarm Monitoring →
+              </Link>
+            </div>
+          </div>
+
+          <div className="bg-[#0a1628] text-white rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-extrabold mb-4 text-white text-center">Questions to Ask Before Choosing a Security Service</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-300">
+              <div className="flex gap-2.5">
+                <span className="text-[#3b82f6] font-bold">•</span>
+                <span>Does the site require someone physically present at all times or periodic perimeter checks?</span>
+              </div>
+              <div className="flex gap-2.5">
+                <span className="text-[#3b82f6] font-bold">•</span>
+                <span>Are contractor sign-ins, visitor management, or keycard issuance required?</span>
+              </div>
+              <div className="flex gap-2.5">
+                <span className="text-[#3b82f6] font-bold">•</span>
+                <span>Is an intruder alarm or CCTV surveillance system already installed on site?</span>
+              </div>
+              <div className="flex gap-2.5">
+                <span className="text-[#3b82f6] font-bold">•</span>
+                <span>Are night-time lock-up inspections or late-working staff escorts required?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Model Comparison & Selection Matrix */}
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 lg:px-16">

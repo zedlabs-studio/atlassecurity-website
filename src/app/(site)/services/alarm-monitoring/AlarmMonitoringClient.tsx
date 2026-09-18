@@ -191,6 +191,69 @@ export default function AlarmMonitoringClient() {
         </div>
       </section>
 
+      {/* Role Distinction & Onboarding Setup Guidance */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-2xl p-8">
+              <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                SERVICE ROLE DISTINCTION
+              </span>
+              <h2 className="text-2xl font-extrabold text-[#0a1628] mb-4">
+                Alarm Monitoring &amp; Physical Security Serve Different Roles
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                Understanding how automated monitoring integrates with physical security ensures optimal protection for commercial facilities:
+              </p>
+              <ul className="space-y-3.5 text-sm text-gray-700">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">1.</span>
+                  <span><strong>Alarm Monitoring:</strong> Electronic signal detection, 24/7 central station oversight, and instant signal verification when intruder sensors trigger.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">2.</span>
+                  <span><strong>Static Guarding:</strong> Dedicated on-site physical presence, lobby concierge, and immediate <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guard</Link> intervention.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">3.</span>
+                  <span><strong>Mobile Patrols:</strong> GPS-tracked vehicle visits, exterior checks, and rapid physical guard dispatch following an <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">alarm signal activation</Link>.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-[#0a1628] text-white rounded-2xl p-8">
+              <span className="text-[#3b82f6] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                ONBOARDING PREPARATION
+              </span>
+              <h2 className="text-2xl font-extrabold text-white mb-4">
+                Information Needed When Setting Up Monitoring
+              </h2>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                Setting up 24/7 central alarm monitoring requires key operational parameters to ensure accurate signal escalation:
+              </p>
+              <ul className="space-y-3.5 text-sm text-gray-300">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">•</span>
+                  <span><strong>Alarm System &amp; Panel Details:</strong> Panel model, dual-path IP/cellular dialer type, and zone layout descriptions.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">•</span>
+                  <span><strong>Keyholder Escalation Hierarchy:</strong> Priority order of emergency contact numbers for business owners, site managers, and <Link href="/services/commercial-security" className="text-[#3b82f6] font-semibold underline">commercial building managers</Link>.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">•</span>
+                  <span><strong>Guard Dispatch Authorizations:</strong> Pre-approved instructions for automatic mobile patrol officer dispatch upon signal verification.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">•</span>
+                  <span><strong>Site Access &amp; Lock-Box Information:</strong> Secure gate codes or key lock-box details to enable rapid guard entry during after-hours inspections.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Process */}
       <section className="py-24 bg-[#0a1628]" ref={processRef}>
         <div className="container mx-auto px-6 lg:px-16">

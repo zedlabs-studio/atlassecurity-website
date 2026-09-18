@@ -146,6 +146,73 @@ export default function StaticGuardClient() {
         </div>
       </section>
 
+      {/* Operational Requirements & Deployment Guidance */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-2xl p-8">
+              <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                SITE EVALUATION CRITERIA
+              </span>
+              <h2 className="text-2xl font-extrabold text-[#0a1628] mb-4">
+                Site Requirements Influencing Static Security Deployment
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                Static security guarding is most effective when site parameters require dedicated, unbroken physical oversight. Key operational factors include:
+              </p>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>Access Point Complexity:</strong> Multiple visitor turnstiles, loading dock gates, or contractor entry points that require active credential verification.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>High Visitor &amp; Tenant Volume:</strong> Lobbies in <Link href="/service-area/auckland" className="text-[#1e40af] font-semibold underline">Auckland CBD</Link> or <Link href="/service-area/wellington" className="text-[#1e40af] font-semibold underline">Wellington CBD</Link> office towers requiring concierge etiquette and badge logging.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>High-Value Laydown Areas:</strong> Civil work sites and <Link href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction developments</Link> storing uninstalled copper, equipment, or machinery overnight.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>Customer-Facing Loss Prevention:</strong> Busy <Link href="/services/retail-security" className="text-[#1e40af] font-semibold underline">retail store locations</Link> needing visible anti-shoplifting deterrence and staff closing escorts.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-[#0a1628] text-white rounded-2xl p-8">
+              <span className="text-[#3b82f6] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                DEPLOYMENT PREPARATION
+              </span>
+              <h2 className="text-2xl font-extrabold text-white mb-4">
+                What a Business Should Define Before Deployment
+              </h2>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                To ensure a seamless transition and effective security guard handover, property managers should establish clear operational post orders:
+              </p>
+              <ul className="space-y-3.5 text-sm text-gray-300">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">1.</span>
+                  <span><strong>Guard Scope &amp; Responsibilities:</strong> Clarify whether the officer handles lobby concierge duties, contractor badge issuing, or physical perimeter patrols.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">2.</span>
+                  <span><strong>Access Rules &amp; Keyholder Logs:</strong> Define after-hours entry permissions, authorized tenant lists, and contractor sign-in registers.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">3.</span>
+                  <span><strong>Incident Escalation Matrix:</strong> Specify exact contact protocols for building managers, emergency services, and our 24/7 central dispatch.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">4.</span>
+                  <span><strong>Shift Handover Procedures:</strong> Establish digital reporting expectations and shift handover logs between day and night personnel.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-[#0a1628]" ref={processRef}>
         <div className="container mx-auto px-6 lg:px-16">
           <motion.div className="text-center mb-14" initial="hidden" animate={processInView ? 'visible' : 'hidden'} variants={fadeUp}>

@@ -145,6 +145,73 @@ export default function MobilePatrollingClient() {
         </div>
       </section>
 
+      {/* Route Planning & Evaluation Guidance */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-2xl p-8">
+              <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                OPERATIONAL PLANNING
+              </span>
+              <h2 className="text-2xl font-extrabold text-[#0a1628] mb-4">
+                Planning an Effective Mobile Patrol Route
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                Mobile patrol efficiency relies on structured site assessments and unpredictable timing patterns. Key planning elements include:
+              </p>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>Perimeter Boundary Verification:</strong> Physical hand-checks of boundary fencing, vehicle gates, and rear emergency doors across <Link href="/service-area/hamilton" className="text-[#1e40af] font-semibold underline">Te Rapa and Frankton</Link> industrial parks.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>Vulnerable Point Inspections:</strong> Unlit loading bays, high-value tool sheds on <Link href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction developments</Link>, and subterranean car park gates.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>Nightly Lock-Up &amp; Alarm Arming:</strong> Securing main entry doors, verifying window latches, arming master alarms, and conducting closing staff escorts.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#1e40af] font-bold">•</span>
+                  <span><strong>GPS-Verified Checkpoints:</strong> Time-stamped electronic scan keys installed at perimeter gates to provide verified proof of attendance.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-[#0a1628] text-white rounded-2xl p-8">
+              <span className="text-[#3b82f6] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                SERVICE FITMENT
+              </span>
+              <h2 className="text-2xl font-extrabold text-white mb-4">
+                When Mobile Patrols May Be Considered
+              </h2>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                Mobile vehicle security patrols deliver high-impact physical deterrence for properties that do not require full-time stationed guarding:
+              </p>
+              <ul className="space-y-3.5 text-sm text-gray-300">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">1.</span>
+                  <span><strong>Periodic Site Checks:</strong> Properties needing 2–5 randomized inspections per night to disrupt trespasser reconnaissance.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">2.</span>
+                  <span><strong>Multi-Building Commercial Parks:</strong> Suburban business parks across <Link href="/service-area/auckland" className="text-[#3b82f6] font-semibold underline">Auckland</Link> and <Link href="/service-area/wellington" className="text-[#3b82f6] font-semibold underline">Wellington</Link> with multiple entry gates.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">3.</span>
+                  <span><strong>Integrated Alarm Verification:</strong> Immediate vehicle dispatch when intruder alarms trigger at our 24/7 central <Link href="/services/alarm-monitoring" className="text-[#3b82f6] font-semibold underline">monitoring station</Link>.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#3b82f6] font-bold">4.</span>
+                  <span><strong>Cost-Conscious Risk Management:</strong> Achieving professional physical security coverage at a predictable, budget-friendly flat monthly rate.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-[#0a1628]" ref={processRef}>
         <div className="container mx-auto px-6 lg:px-16">
           <motion.div className="text-center mb-14" initial="hidden" animate={processInView ? 'visible' : 'hidden'} variants={fadeUp}>

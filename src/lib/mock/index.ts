@@ -472,18 +472,43 @@ export const mockBlogs: Blog[] = [
 
 <h2>1. Conduct Regular Physical Security Audits</h2>
 <p>Regularly inspect perimeter fencing, gate latches, exterior LED floodlighting, and electronic access control systems. Identifying physical vulnerabilities early prevents intruders from exploiting weak access points outside regular operating hours.</p>
+<div className="bg-[#f8f9fa] border-l-4 border-[#1e40af] p-4 my-4 text-xs space-y-1">
+  <p><strong>WHAT TO CHECK:</strong> Boundary fence wire integrity, gate latch mechanisms, and ground-level window locks.</p>
+  <p><strong>WHY IT MATTERS:</strong> Over 70% of commercial intrusions enter through compromised ground-level access points.</p>
+  <p><strong>WHAT TO DO NEXT:</strong> Schedule a monthly perimeter audit and repair loose fence panels immediately.</p>
+</div>
 
 <h2>2. Deploy Licensed On-Site Security Personnel</h2>
 <p>A visible, uniformed security presence remains the single most effective deterrent against burglary and antisocial behavior. Depending on your building type and budget, property managers can select between stationed <a href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guards</a> and periodic vehicle patrols. Read our guide on <a href="/blog/static-guards-vs-mobile-patrols-nz" className="text-[#1e40af] font-semibold underline">static security guards vs mobile patrols</a> to evaluate the right fit for your property.</p>
+<div className="bg-[#f8f9fa] border-l-4 border-[#1e40af] p-4 my-4 text-xs space-y-1">
+  <p><strong>WHAT TO CHECK:</strong> Peak risk hours, visitor traffic volume, and high-value asset storage zones.</p>
+  <p><strong>WHY IT MATTERS:</strong> Active physical guards intervene in real time, preventing property damage before it escalates.</p>
+  <p><strong>WHAT TO DO NEXT:</strong> Request a customized site guard proposal tailored to your operational hours.</p>
+</div>
 
 <h2>3. Implement Rigorous Access Control &amp; Visitor Sign-Ins</h2>
 <p>Control access to corporate office floors and warehouse bays by issuing trackable contractor keycards and logging all visitors at main reception desks or gatehouses. Ensure keycard permissions for former employees or temporary contractors are revoked immediately.</p>
+<div className="bg-[#f8f9fa] border-l-4 border-[#1e40af] p-4 my-4 text-xs space-y-1">
+  <p><strong>WHAT TO CHECK:</strong> Active electronic keycard permissions and contractor sign-in registries.</p>
+  <p><strong>WHY IT MATTERS:</strong> Unrevoked access cards allow unmonitored entries into restricted corporate or storage zones.</p>
+  <p><strong>WHAT TO DO NEXT:</strong> Perform a weekly keycard audit and revoke inactive employee badges immediately.</p>
+</div>
 
 <h2>4. Secure Construction &amp; High-Risk Sites After Hours</h2>
 <p>Building sites and civil infrastructure projects contain exposed tools, copper cabling, and heavy plant equipment. Follow our <a href="/blog/construction-site-theft-prevention-nz" className="text-[#1e40af] font-semibold underline">construction site theft prevention guide</a> and consider deploying dedicated <a href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction security guards</a> during night-time and weekend shifts.</p>
+<div className="bg-[#f8f9fa] border-l-4 border-[#1e40af] p-4 my-4 text-xs space-y-1">
+  <p><strong>WHAT TO CHECK:</strong> Perimeter hoardings, heavy machinery cabs, and tool storage vaults.</p>
+  <p><strong>WHY IT MATTERS:</strong> Unsecured tools and materials are prime targets for opportunistic after-hours theft.</p>
+  <p><strong>WHAT TO DO NEXT:</strong> Lock all handheld power tools in steel vaults and schedule night-time <a href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol checks</a>.</p>
+</div>
 
 <h2>5. Partner with a 24/7 Monitored Alarm &amp; Guard Response Provider</h2>
 <p>Ensure your intruder detection sensors and CCTV surveillance systems connect directly to a 24/7 central monitoring station capable of instant signal verification and immediate <a href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">security guard response dispatch</a>.</p>
+<div className="bg-[#f8f9fa] border-l-4 border-[#1e40af] p-4 my-4 text-xs space-y-1">
+  <p><strong>WHAT TO CHECK:</strong> Alarm control panel backup batteries and keyholder emergency contact lists.</p>
+  <p><strong>WHY IT MATTERS:</strong> Dual-path monitoring ensures rapid guard dispatch even if phone cables or internet lines fail.</p>
+  <p><strong>WHAT TO DO NEXT:</strong> Test your alarm signaling with your monitoring station quarterly.</p>
+</div>
 
 <h2>Actionable NZ Business Security Checklist</h2>
 <div className="bg-[#f8f9fa] border border-gray-200 p-6 rounded-xl my-6">

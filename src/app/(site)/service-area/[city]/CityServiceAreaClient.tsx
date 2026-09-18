@@ -83,7 +83,7 @@ export default function CityServiceAreaClient({ location }: { location: Location
                 {location.overview}
               </p>
 
-              <h3 className="font-bold text-[#0a1628] text-base mb-3">Key Suburbs & Sectors Covered in {location.name}:</h3>
+              <h3 className="font-bold text-[#0a1628] text-base mb-3">Key Suburbs &amp; Sectors Covered in {location.name}:</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
                 {location.keySuburbs.map((suburb, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-gray-700 font-medium">
@@ -94,6 +94,28 @@ export default function CityServiceAreaClient({ location }: { location: Location
                   </li>
                 ))}
               </ul>
+
+              {/* Dynamic Local Security Considerations Section */}
+              <div className="mt-8 bg-white border border-gray-200 rounded-xl p-6 shadow-xs mb-8">
+                <h3 className="font-bold text-[#0a1628] text-base mb-3">
+                  Security Considerations for {location.name}-Area Businesses
+                </h3>
+                {location.slug === 'auckland' && (
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Auckland commercial sites range from high-density corporate towers in <Link href="/services/commercial-security" className="text-[#1e40af] font-semibold underline">Auckland CBD</Link> requiring concierge entry control to sprawling industrial distribution yards in Penrose and East Tamaki where nightly <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol sweeps</Link> protect perimeter boundaries.
+                  </p>
+                )}
+                {location.slug === 'hamilton' && (
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Waikato commercial and industrial hubs in Te Rapa and Frankton feature extended freight staging yards and machinery laydown zones. Atlas Security coordinates gatehouse <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static guards</Link> during shift handovers with randomized GPS vehicle checks across the region. Read our <Link href="/blog/waikato-industrial-distribution-yard-security" className="text-[#1e40af] font-semibold underline">Waikato Security Guide</Link> for details.
+                  </p>
+                )}
+                {location.slug === 'wellington' && (
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Wellington capital premises demand discrete corporate lobby concierges for multi-tenant office towers, combined with after-hours perimeter lock-up checks across Lower Hutt and Petone logistics parks. Read our <Link href="/blog/atlas-security-expands-wellington" className="text-[#1e40af] font-semibold underline">Wellington Expansion Report</Link> to learn more.
+                  </p>
+                )}
+              </div>
 
               <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm flex items-center justify-between gap-4">
                 <div>
