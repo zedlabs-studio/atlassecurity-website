@@ -296,6 +296,12 @@ export default function AlarmMonitoringClient() {
               </p>
             </div>
             <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h3 className="font-bold text-[#0a1628] text-base mb-2">What information is required to establish 24/7 alarm monitoring for a business?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                To connect your site to our monitoring network, provide your alarm control panel brand, keyholder contact priority lists, armed zone descriptions, after-hours site access details, and specific escalation instructions for after-hours alarms.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
               <h3 className="font-bold text-[#0a1628] text-base mb-2">What happens when a false alarm triggers at my property?</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Monitoring station operators perform swift signal verification and optional video inspection before dispatching officers. If a false alarm is verified via authorized keyholder contact or video feed, dispatch is cancelled immediately to minimize unnecessary callout fees.

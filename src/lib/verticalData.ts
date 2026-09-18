@@ -59,6 +59,10 @@ export const VERTICAL_DATA: Record<string, VerticalInfo> = {
         answer: 'Construction sites contain exposed, high-value materials and tools. Uniformed static guards provide an active physical deterrent, stopping theft before it occurs.',
       },
       {
+        question: 'What site details are needed to arrange construction security?',
+        answer: 'When requesting site security, provide boundary dimensions, key perimeter gate locations, after-hours delivery schedules, high-value material laydown areas, and contractor sign-in requirements.',
+      },
+      {
         question: 'Can you provide security for temporary or short-term building projects?',
         answer: 'Yes, we provide flexible security contracts for short-term civil builds, temporary site setups, and multi-year commercial developments.',
       },

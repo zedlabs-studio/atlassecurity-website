@@ -56,6 +56,10 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
         answer: 'Atlas Security offers licensed static guards, mobile patrol units, lock-up and unlock services, 24/7 alarm monitoring, and rapid emergency response across the Greater Auckland area.',
       },
       {
+        question: 'What information should Auckland businesses prepare for a security assessment?',
+        answer: 'Specify your property location (e.g., Auckland CBD tower, Penrose industrial park, or North Shore retail complex), operating hours, perimeter access points, and specific site risks.',
+      },
+      {
         question: 'Are Atlas Security guards licensed to work in Auckland?',
         answer: 'Yes, all Atlas Security officers hold current Certificates of Approval (COA) issued under the Private Security Personnel and Private Investigators Act 2010.',
       },
