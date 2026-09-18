@@ -41,16 +41,16 @@ export const mockBlogs: Blog[] = [
 
 <h2>Actionable Commercial Building Security Checklist</h2>
 <div className="bg-[#f8f9fa] border border-gray-200 p-6 rounded-xl my-6">
-  <h3 className="font-bold text-[#0a1628] text-base mb-4">Property Manager After-Hours Security Checklist:</h3>
+  <h3 className="font-bold text-[#0a1628] text-base mb-4">Property Manager After-Hours &amp; Pre-Closing Security Checklist:</h3>
   <ol className="space-y-2 text-sm text-gray-700">
-    <li><strong>1. Verify Perimeter Lock-Up:</strong> Check all ground-floor glass entry doors, revolving doors, and side emergency exits at closing time.</li>
-    <li><strong>2. Audit Keycard Permissions:</strong> Deactivate access credentials for former tenants, terminated staff, and temporary contractors immediately.</li>
-    <li><strong>3. Inspect Basement Garages:</strong> Ensure automatic vehicle gates close completely after every car enters or exits.</li>
-    <li><strong>4. Lock Mechanical &amp; Server Rooms:</strong> Confirm master keys lock electrical riser cupboards, lift motor rooms, and telecom closets.</li>
-    <li><strong>5. Secure Loading Bays:</strong> Verify overhead roller doors are padlocked or electronically secured after evening deliveries.</li>
-    <li><strong>6. Maintain Exterior Lighting:</strong> Check that entry canopy LEDs, car park lighting, and rear alley lights operate reliably.</li>
-    <li><strong>7. Test Intruder Alarms:</strong> Ensure motion detectors and door sensors communicate correctly with your monitoring station.</li>
-    <li><strong>8. Schedule Mobile Lock-Ups &amp; Patrols:</strong> Engage licensed patrol officers to perform randomized perimeter sweeps between 10:00 PM and 5:00 AM.</li>
+    <li><strong>1. Verify Perimeter Lock-Up &amp; Entry Points:</strong> Check all ground-floor glass entry doors, revolving doors, turnstiles, and side emergency exits at closing time.</li>
+    <li><strong>2. Audit Keycard Permissions &amp; Contractor Credentials:</strong> Deactivate access credentials for former tenants, terminated staff, and temporary contractors immediately upon project completion.</li>
+    <li><strong>3. Inspect Basement Garages &amp; Loading Docks:</strong> Ensure automatic vehicle gates close completely after every car enters or exits, and confirm overhead roller doors are locked.</li>
+    <li><strong>4. Lock Mechanical, Server &amp; Plant Rooms:</strong> Confirm master keys lock electrical riser cupboards, lift motor rooms, telecom closets, and server racks.</li>
+    <li><strong>5. Secure Loading Bays &amp; Waste Compaction Areas:</strong> Verify overhead roller doors and waste bins are padlocked or electronically secured after evening deliveries.</li>
+    <li><strong>6. Maintain Exterior &amp; Canopy Lighting:</strong> Check that entry canopy LEDs, car park floodlights, and rear alley security lights operate reliably throughout the night.</li>
+    <li><strong>7. Test Intruder Alarms &amp; Dual-Path Signal Transmission:</strong> Ensure motion detectors, door reed switches, and glass-break sensors communicate correctly with your 24/7 central monitoring station.</li>
+    <li><strong>8. Schedule Mobile Lock-Ups &amp; Static Concierge Sweeps:</strong> Engage licensed patrol officers or static guards to perform randomized perimeter sweeps between 10:00 PM and 5:00 AM.</li>
   </ol>
 </div>
 

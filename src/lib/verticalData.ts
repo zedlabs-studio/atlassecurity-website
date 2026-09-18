@@ -108,12 +108,20 @@ export const VERTICAL_DATA: Record<string, VerticalInfo> = {
     ],
     faqs: [
       {
-        question: 'How do retail security guards balance deterrence with customer service?',
-        answer: 'Our retail security officers are trained in customer engagement, de-escalation techniques, and professional etiquette, serving as both a deterrent to shoplifters and a welcoming presence for genuine shoppers.',
+        question: 'How do retail security guards balance theft deterrence with customer service?',
+        answer: 'Our retail security officers are trained in customer engagement and professional etiquette, welcoming shoppers while providing a firm deterrent to shoplifters.',
       },
       {
-        question: 'Do your guards assist with staff safety during closing hours?',
-        answer: 'Yes, our guards provide closing staff escorts to vehicles and conduct thorough end-of-day register and store lock-up inspections.',
+        question: 'What details are required when requesting retail loss prevention guarding?',
+        answer: 'Specify your store operating hours, peak shopping timeframes, high-shrink merchandise zones, entrance layout, and whether staff closing escorts or register lock-up support are needed.',
+      },
+      {
+        question: 'Can you provide short-term security for retail sales events or peak seasons?',
+        answer: 'Yes, we provide flexible guard deployments for holiday trading periods, Black Friday events, store grand openings, and high-traffic promotional sales across New Zealand.',
+      },
+      {
+        question: 'What compliance licenses do your retail guards hold?',
+        answer: 'Every Atlas Security officer holds an active Ministry of Justice Certificate of Approval (COA) under the Private Security Personnel and Private Investigators Act 2010.',
       },
     ],
   },
@@ -153,12 +161,16 @@ export const VERTICAL_DATA: Record<string, VerticalInfo> = {
     ],
     faqs: [
       {
-        question: 'What types of commercial properties does Atlas Security protect?',
-        answer: 'We protect commercial office towers, business parks, manufacturing plants, logistics warehouses, and corporate facilities across Auckland, Hamilton, Wellington, and major regional centers.',
+        question: 'What static guard duties do you provide for commercial office towers?',
+        answer: 'Our concierge security guards handle front-desk reception, contractor access management, visitor keycard issuance, after-hours tenant verification, and lobby surveillance.',
       },
       {
-        question: 'Can static guards manage building access control systems?',
-        answer: 'Yes, our officers are experienced in operating electronic access control, visitor badge issuance, contractor sign-ins, and key management systems.',
+        question: 'What details should property managers prepare for a commercial security proposal?',
+        answer: 'Provide building square meterage, tenant count, number of exterior access doors, underground car park setup, loading dock hours, and specific after-hours lockup requirements.',
+      },
+      {
+        question: 'Can mobile patrols handle after-hours lock-ups for commercial properties?',
+        answer: 'Yes, our mobile patrol officers perform evening lock-up checks, arm master alarm panels, lock exterior doors, and inspect plant rooms.',
       },
     ],
   },

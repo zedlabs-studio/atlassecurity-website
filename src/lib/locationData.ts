@@ -105,6 +105,10 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
         answer: 'Atlas Security operates its primary operational headquarters in Hamilton, providing centralized coordination for all Waikato security deployments.',
       },
       {
+        question: 'What details should Hamilton business operators prepare for a security assessment?',
+        answer: 'Specify your site layout (e.g., Te Rapa industrial park, Frankton warehouse, or Hamilton CBD commercial office), operating hours, perimeter access points, and specific asset risks.',
+      },
+      {
         question: 'Do you cover industrial areas in Te Rapa and Frankton?',
         answer: 'Yes, we provide specialized static security guards and frequent mobile patrols tailored for industrial parks, manufacturing plants, and logistics hubs in Te Rapa and Frankton.',
       },
@@ -148,6 +152,10 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
       {
         question: 'What areas of Wellington does Atlas Security cover?',
         answer: 'We provide comprehensive security coverage across Wellington CBD, Lower Hutt, Upper Hutt, Porirua, Petone, and the Kapiti Coast.',
+      },
+      {
+        question: 'What details should Wellington property managers prepare for a security assessment?',
+        answer: 'Specify your property location (e.g., Wellington CBD office tower, Lower Hutt industrial park, or Petone retail store), operating hours, entry points, and lock-up times.',
       },
       {
         question: 'Do you provide corporate concierge security in Wellington CBD?',
