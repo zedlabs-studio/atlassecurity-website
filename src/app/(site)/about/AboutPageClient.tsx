@@ -128,12 +128,10 @@ export default function AboutPageClient() {
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
                 As a proudly NZ owned and operated business, we understand the local landscape — the people,
-                the communities, and the unique challenges that NZ businesses face. Every guard we deploy is
-                locally trained, licensed, and background checked.
+                the communities, and the unique challenges that NZ businesses face. Every security officer we deploy holds a valid Certificate of Approval (COA) issued under the Private Security Personnel and Private Investigators Act 2010.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                Today, Atlas Security has earned the trust of 50+ businesses across New Zealand, from Hamilton retail 
-                stores to Wellington construction sites. Our growth is built on one thing: results that speak for themselves. 
+                Today, Atlas Security protects commercial buildings, retail precincts, and construction sites across Auckland, Hamilton, and Wellington. Learn more about our <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static guard services</Link>, <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrols</Link>, and <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">24/7 alarm monitoring</Link>.
               </p>
             </motion.div>
 

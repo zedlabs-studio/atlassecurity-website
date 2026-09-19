@@ -301,9 +301,19 @@ export default function ServiceAreaPageClient() {
           >
             {CORE_SERVICES.map((service, i) => (
               <motion.div key={i} variants={fadeUp}
-                className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6 hover:border-[#1e40af]/40 hover:bg-white hover:shadow-md transition-all duration-300">
-                <h3 className="font-extrabold text-[#0a1628] text-base mb-2">{service.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{service.copy}</p>
+                className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6 hover:border-[#1e40af]/40 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-extrabold text-[#0a1628] text-base mb-2">{service.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{service.copy}</p>
+                </div>
+                <div className="pt-3 border-t border-gray-100 text-xs">
+                  {i === 0 && <Link href="/services/static-guard" className="text-[#1e40af] font-semibold hover:underline">Explore Static Guarding →</Link>}
+                  {i === 1 && <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold hover:underline">Explore Mobile Patrols →</Link>}
+                  {i === 2 && <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold hover:underline">Explore CCTV & Monitoring →</Link>}
+                  {i === 3 && <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold hover:underline">Explore Alarm Monitoring →</Link>}
+                  {i === 4 && <Link href="/services/commercial-security" className="text-[#1e40af] font-semibold hover:underline">Explore Commercial Access →</Link>}
+                  {i === 5 && <Link href="/services/construction-site-security" className="text-[#1e40af] font-semibold hover:underline">Explore Site Security →</Link>}
+                </div>
               </motion.div>
             ))}
           </motion.div>
