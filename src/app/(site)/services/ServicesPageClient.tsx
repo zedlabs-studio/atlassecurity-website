@@ -245,6 +245,22 @@ export default function ServicesPageClient() {
               </Link>
             </div>
           </div>
+
+          {/* Regional & Educational Context Bridge */}
+          <div className="mt-12 pt-8 border-t border-gray-800/80 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-gray-400">
+            <div>
+              <span className="text-white font-bold block mb-1">Regional Service Coverage:</span>
+              <p className="leading-relaxed">
+                We deliver tailored security guard and mobile patrol operations across <Link href="/service-area/auckland" className="text-[#3b82f6] hover:underline font-semibold">Auckland</Link>, <Link href="/service-area/hamilton" className="text-[#3b82f6] hover:underline font-semibold">Hamilton &amp; Waikato</Link>, and <Link href="/service-area/wellington" className="text-[#3b82f6] hover:underline font-semibold">Wellington</Link>. View our <Link href="/service-area" className="text-gray-300 hover:text-white underline">full list of 16+ serviced locations</Link>.
+              </p>
+            </div>
+            <div>
+              <span className="text-white font-bold block mb-1">Buyer Security Resources:</span>
+              <p className="leading-relaxed">
+                Compare operational choices in our <Link href="/blog/static-guards-vs-mobile-patrols-nz" className="text-[#3b82f6] hover:underline font-semibold">Static Guards vs Mobile Patrols Guide</Link> or review our <Link href="/blog/how-to-choose-coa-licensed-security-guard-nz" className="text-[#3b82f6] hover:underline font-semibold">COA Licensing &amp; Compliance Checklist</Link> before selecting a provider.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

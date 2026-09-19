@@ -192,7 +192,7 @@ export default function MobilePatrollingClient() {
               <ul className="space-y-3.5 text-sm text-gray-300">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">1.</span>
-                  <span><strong>Periodic Site Checks:</strong> Properties needing 2–5 randomized inspections per night to disrupt trespasser reconnaissance.</span>
+                  <span><strong>Periodic Site Checks:</strong> Properties needing 2–5 randomized inspections per night to disrupt trespasser reconnaissance. Read our <Link href="/blog/mobile-patrols-future-nz-security" className="text-[#3b82f6] font-semibold underline">Mobile Patrol Insights</Link> for details.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">2.</span>

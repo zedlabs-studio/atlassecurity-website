@@ -163,7 +163,7 @@ export default function StaticGuardClient() {
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>
-                  <span><strong>Access Point Complexity:</strong> Multiple visitor turnstiles, loading dock gates, or contractor entry points that require active credential verification.</span>
+                  <span><strong>Access Point Complexity:</strong> Multiple visitor turnstiles, loading dock gates, or contractor entry points that require active credential verification and <Link href="/blog/how-to-choose-coa-licensed-security-guard-nz" className="text-[#1e40af] font-semibold underline">COA-licensed guard standards</Link>.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>

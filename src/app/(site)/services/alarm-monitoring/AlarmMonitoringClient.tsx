@@ -234,7 +234,7 @@ export default function AlarmMonitoringClient() {
               <ul className="space-y-3.5 text-sm text-gray-300">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">•</span>
-                  <span><strong>Alarm System &amp; Panel Details:</strong> Panel model, dual-path IP/cellular dialer type, and zone layout descriptions.</span>
+                  <span><strong>Alarm System &amp; Panel Details:</strong> Panel model, dual-path IP/cellular dialer type, and zone layout descriptions. Read how <Link href="/blog/how-business-alarm-monitoring-works-nz" className="text-[#3b82f6] font-semibold underline">business alarm monitoring works</Link>.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">•</span>
