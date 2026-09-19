@@ -7,7 +7,7 @@ import BlogPageClient from './BlogPageClient'
 export const metadata: Metadata = constructMetadata({
   title: 'Security Insights & News | Atlas Security NZ Blog',
   description:
-    'Read the latest security insights, site protection advice, and Industry news from the licensed security experts at Atlas Security NZ.',
+    'Read the latest security insights, site protection advice, and industry news from the licensed security experts at Atlas Security NZ.',
   path: '/blog',
 })
 
