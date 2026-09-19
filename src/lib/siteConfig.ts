@@ -45,7 +45,9 @@ export function constructMetadata({
   const ogImage = image || siteConfig.defaultOgImage
 
   return {
-    title,
+    title: {
+      absolute: title,
+    },
     description,
     ...(keywords && { keywords }),
     alternates: {
