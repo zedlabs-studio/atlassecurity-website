@@ -117,6 +117,27 @@ export default function CityServiceAreaClient({ location }: { location: Location
                 )}
               </div>
 
+              {/* Choosing Security Coverage for Different Site Types */}
+              <div className="bg-[#0a1628] text-white rounded-xl p-6 mb-8">
+                <h3 className="font-bold text-white text-base mb-3">
+                  Choosing Security Coverage for Different Site Types in {location.name}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-gray-300">
+                  <div>
+                    <strong className="text-[#3b82f6] block mb-1">Corporate &amp; CBD Towers</strong>
+                    <span>Front-desk concierge, keycard issuing, and <Link href="/services/commercial-security" className="text-[#3b82f6] underline">commercial building security</Link> for multi-tenant premises.</span>
+                  </div>
+                  <div>
+                    <strong className="text-[#3b82f6] block mb-1">Retail Stores &amp; Malls</strong>
+                    <span>Uniformed guards greeting shoppers, protecting staff, and delivering <Link href="/services/retail-security" className="text-[#3b82f6] underline">retail loss prevention</Link>.</span>
+                  </div>
+                  <div>
+                    <strong className="text-[#3b82f6] block mb-1">Industrial &amp; Construction</strong>
+                    <span>Gatehouse static guarding, copper laydown protection, and night-time <Link href="/services/mobile-patrolling" className="text-[#3b82f6] underline">mobile vehicle patrols</Link>.</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm flex items-center justify-between gap-4">
                 <div>
                   <h4 className="font-bold text-[#0a1628] text-sm">Need security for a property in {location.name}?</h4>

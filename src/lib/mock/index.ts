@@ -684,10 +684,12 @@ export const mockBlogs: Blog[] = [
 <div className="bg-[#f8f9fa] border border-gray-200 p-6 rounded-xl my-6">
   <h3 className="font-bold text-[#0a1628] text-base mb-3">Essential Buyer Audit Questions:</h3>
   <ol className="space-y-2 text-sm text-gray-700">
-    <li><strong>1. Are 100% of your guards COA-licensed in New Zealand?</strong> (Every on-site officer must hold active credentials).</li>
-    <li><strong>2. How do you track officer attendance and patrol sweeps?</strong> (Ensure they use GPS tracking and electronic scan points).</li>
+    <li><strong>1. Are 100% of your guards COA-licensed in New Zealand?</strong> (Every on-site officer must hold active credentials issued under the PSPLA Act 2010).</li>
+    <li><strong>2. How do you track officer attendance and patrol sweeps?</strong> (Ensure they use real-time GPS tracking and electronic scan points).</li>
     <li><strong>3. What is your incident reporting procedure?</strong> (Verify that time-stamped digital reports are provided after every shift or alarm response).</li>
     <li><strong>4. Do you provide localized coverage in our region?</strong> (Check regional operational hubs in Auckland, Hamilton, or Wellington).</li>
+    <li><strong>5. How are site post orders created and updated?</strong> (Confirm that custom written post instructions are provided for your specific facility layout and access points).</li>
+    <li><strong>6. What public liability insurance coverage do you maintain?</strong> (Verify active commercial security liability policy coverage for property protection).</li>
   </ol>
 </div>
 

@@ -209,6 +209,58 @@ export default function MobilePatrollingClient() {
               </ul>
             </div>
           </div>
+
+          {/* Operational Scope & Patrol Planning Breakdown */}
+          <div className="mt-16 bg-[#f8f9fa] border border-gray-200 rounded-2xl p-8">
+            <div className="max-w-3xl mb-8">
+              <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                PATROL EXECUTION
+              </span>
+              <h2 className="text-2xl font-extrabold text-[#0a1628]">
+                What a Mobile Patrol Check Can Cover
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                During a physical site visit, patrol officers perform structured inspections across high-risk points to verify building security:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs text-gray-700 mb-8">
+              <div className="bg-white border border-gray-200 rounded-xl p-5">
+                <strong className="text-[#0a1628] font-bold text-sm block mb-1">Perimeter &amp; Gates</strong>
+                <p className="leading-relaxed">Physical hand-checks of boundary fencing, lock latches, vehicle slide gates, and unlit storage yard boundaries.</p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-5">
+                <strong className="text-[#0a1628] font-bold text-sm block mb-1">Doors &amp; Exits</strong>
+                <p className="leading-relaxed">Verifying ground-floor glass entry doors, emergency panic bars, and loading dock roller shutters are latched.</p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-5">
+                <strong className="text-[#0a1628] font-bold text-sm block mb-1">Lighting &amp; Visibility</strong>
+                <p className="leading-relaxed">Checking entry canopy LEDs, identifying dark security blind spots, and reporting non-functional security floodlights.</p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-5">
+                <strong className="text-[#0a1628] font-bold text-sm block mb-1">Condition Anomalies</strong>
+                <p className="leading-relaxed">Identifying water leaks, unlatched windows, forced entry signs, or suspicious vehicle activity around property perimeters.</p>
+              </div>
+            </div>
+
+            <div className="bg-[#0a1628] text-white rounded-xl p-6">
+              <h3 className="font-bold text-white text-sm mb-3">Key Factors for Planning Mobile Patrol Route Coverage</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-300">
+                <div>
+                  <strong className="text-[#3b82f6] block mb-1">1. Property Size &amp; Buildings</strong>
+                  <span>Number of detached warehouses, external sheds, or perimeter gates requiring individual checkpoint scans.</span>
+                </div>
+                <div>
+                  <strong className="text-[#3b82f6] block mb-1">2. Vulnerable Access Points</strong>
+                  <span>Unlit rear loading bays, ground-floor glass facades, and high-value tool vaults on civil sites.</span>
+                </div>
+                <div>
+                  <strong className="text-[#3b82f6] block mb-1">3. Inspection Frequency</strong>
+                  <span>Determining whether site risk warrants 1, 3, or 5 randomized checks per evening shift.</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

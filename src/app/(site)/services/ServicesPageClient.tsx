@@ -315,24 +315,78 @@ export default function ServicesPageClient() {
           </div>
 
           <div className="bg-[#0a1628] text-white rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-extrabold mb-4 text-white text-center">Questions to Ask Before Choosing a Security Service</h3>
+            <h3 className="text-xl font-extrabold mb-4 text-white text-center">Questions to Consider When Comparing Security Services</h3>
+            <p className="text-gray-300 text-xs text-center mb-6 max-w-2xl mx-auto">
+              Evaluating your operational risk profile before selecting a physical or electronic security model helps ensure maximum protection efficiency:
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-300">
               <div className="flex gap-2.5">
                 <span className="text-[#3b82f6] font-bold">•</span>
-                <span>Does the site require someone physically present at all times or periodic perimeter checks?</span>
+                <span><strong>Continuous Physical Presence:</strong> Does your site require an on-site <Link href="/services/static-guard" className="text-[#3b82f6] underline">static guard</Link> for uninterrupted access control and immediate incident intervention?</span>
               </div>
               <div className="flex gap-2.5">
                 <span className="text-[#3b82f6] font-bold">•</span>
-                <span>Are contractor sign-ins, visitor management, or keycard issuance required?</span>
+                <span><strong>Defined Access &amp; Concierge:</strong> Are contractor sign-in logs, visitor badge management, or lobby concierge protocols needed during trading shifts?</span>
               </div>
               <div className="flex gap-2.5">
                 <span className="text-[#3b82f6] font-bold">•</span>
-                <span>Is an intruder alarm or CCTV surveillance system already installed on site?</span>
+                <span><strong>Periodic Perimeter Verification:</strong> Would randomized night-time checks by <Link href="/services/mobile-patrolling" className="text-[#3b82f6] underline">mobile patrol vehicles</Link> adequately secure your boundary gates and exterior doors?</span>
               </div>
               <div className="flex gap-2.5">
                 <span className="text-[#3b82f6] font-bold">•</span>
-                <span>Are night-time lock-up inspections or late-working staff escorts required?</span>
+                <span><strong>Multi-Building Complexities:</strong> Are there multiple detached facilities or storage yards across <Link href="/service-area/auckland" className="text-[#3b82f6] underline">Auckland</Link>, <Link href="/service-area/hamilton" className="text-[#3b82f6] underline">Hamilton</Link>, or <Link href="/service-area/wellington" className="text-[#3b82f6] underline">Wellington</Link> that require vehicle-based coverage?</span>
               </div>
+              <div className="flex gap-2.5">
+                <span className="text-[#3b82f6] font-bold">•</span>
+                <span><strong>Electronic Sensor Integration:</strong> Is an intruder alarm or CCTV system installed that requires 24/7 <Link href="/services/alarm-monitoring" className="text-[#3b82f6] underline">alarm monitoring</Link> and rapid mobile guard dispatch?</span>
+              </div>
+              <div className="flex gap-2.5">
+                <span className="text-[#3b82f6] font-bold">•</span>
+                <span><strong>Escalation &amp; Keyholder Preparedness:</strong> Who holds building post orders, keyholder contacts, and access lock-box codes when an after-hours incident occurs?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Integrated Security Ecosystem Section */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+              INTEGRATED PROTECTION MODEL
+            </span>
+            <h2 className="text-3xl font-extrabold text-[#0a1628]">
+              How Security Services Can Work Together
+            </h2>
+            <p className="text-gray-600 mt-3 text-sm lg:text-base leading-relaxed">
+              Different site types and property footprints present distinct risk profiles. Rather than relying on a single measure, many commercial facilities benefit from matching specific security tiers to different operational periods:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6">
+              <span className="text-xs font-extrabold text-[#1e40af] uppercase tracking-wider block mb-2">TIER 1 — ON-SITE PRESENCE</span>
+              <h3 className="font-bold text-[#0a1628] text-lg mb-2">Static Guarding Operations</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">
+                Stationed <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static security guards</Link> deliver unbroken physical deterrence, manage contractor sign-ins, operate entrance gates, and provide immediate incident intervention during active operational shifts.
+              </p>
+            </div>
+
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6">
+              <span className="text-xs font-extrabold text-[#1e40af] uppercase tracking-wider block mb-2">TIER 2 — PERIODIC INSPECTION</span>
+              <h3 className="font-bold text-[#0a1628] text-lg mb-2">Mobile Patrol Sweeps</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">
+                GPS-tracked <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol vehicles</Link> conduct randomized perimeter checks, inspect exterior fire doors, perform evening lock-ups, and verify boundary fencing across large or multi-site footprints.
+              </p>
+            </div>
+
+            <div className="bg-[#f8f9fa] border border-gray-200 rounded-xl p-6">
+              <span className="text-xs font-extrabold text-[#1e40af] uppercase tracking-wider block mb-2">TIER 3 — ELECTRONIC DETECTION</span>
+              <h3 className="font-bold text-[#0a1628] text-lg mb-2">Alarm &amp; Signal Monitoring</h3>
+              <p className="text-gray-600 text-xs leading-relaxed">
+                Automated intruder sensors and 24/7 central <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">alarm monitoring</Link> provide continuous signal oversight, triggering immediate keyholder notification and mobile guard dispatch when an intrusion occurs.
+              </p>
             </div>
           </div>
         </div>

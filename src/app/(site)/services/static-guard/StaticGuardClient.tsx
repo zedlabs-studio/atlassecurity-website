@@ -210,6 +210,67 @@ export default function StaticGuardClient() {
               </ul>
             </div>
           </div>
+
+          {/* Operational Architecture & Site Instructions Section */}
+          <div className="mt-16 bg-[#f8f9fa] border border-gray-200 rounded-2xl p-8">
+            <div className="max-w-3xl mb-8">
+              <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                OPERATIONAL FRAMEWORK
+              </span>
+              <h2 className="text-2xl font-extrabold text-[#0a1628]">
+                How Static Guarding Is Typically Structured
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                A professional static guard deployment is built on defined operational post parameters, clear access boundaries, and documented escalation rules:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-gray-700 mb-8">
+              <div>
+                <h3 className="font-bold text-[#0a1628] text-sm mb-3">1. Defined Post Location &amp; Access Boundaries</h3>
+                <p className="leading-relaxed mb-3">
+                  Guards operate from a fixed post station — such as a gatehouse, corporate lobby desk, or site entrance — to maintain unbroken visual oversight of primary ingress and egress points.
+                </p>
+                <h3 className="font-bold text-[#0a1628] text-sm mb-3">2. Visitor &amp; Contractor Sign-In Procedures</h3>
+                <p className="leading-relaxed">
+                  Every external worker or visitor is logged electronically, issued trackable visitor passes, and verified against pre-approved site access lists before entering tenant suites or laydown yards.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[#0a1628] text-sm mb-3">3. Shift Handover &amp; Incident Documentation</h3>
+                <p className="leading-relaxed mb-3">
+                  Shift changes require a formal handover check, verifying lock integrity, key sets, incident logs, and site notes between outgoing and incoming guards.
+                </p>
+                <h3 className="font-bold text-[#0a1628] text-sm mb-3">4. Escalation Protocols &amp; Emergency Contacts</h3>
+                <p className="leading-relaxed">
+                  When a security anomaly or perimeter breach occurs, on-site officers follow immediate escalation steps: securing the area, notifying property managers, and requesting emergency services if required.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="font-bold text-[#0a1628] text-sm mb-3">What Should Be Included in Site Instructions (Post Orders)?</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-gray-600">
+                <div>
+                  <strong className="text-[#0a1628] block mb-1">• Authorized Access Lists</strong>
+                  <span>Approved tenant names, contractor registries, and keycard permission tiers.</span>
+                </div>
+                <div>
+                  <strong className="text-[#0a1628] block mb-1">• Restricted Area Rules</strong>
+                  <span>Specific lock protocols for server rooms, plant suites, and basement loading docks.</span>
+                </div>
+                <div>
+                  <strong className="text-[#0a1628] block mb-1">• Opening/Closing Routines</strong>
+                  <span>Timed unlocking of lobby turnstiles, evening window latches, and alarm arming.</span>
+                </div>
+                <div>
+                  <strong className="text-[#0a1628] block mb-1">• Emergency Escalation</strong>
+                  <span>Direct phone contacts for facilities managers, alarm monitoring, and emergency services.</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

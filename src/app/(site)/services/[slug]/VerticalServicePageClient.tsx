@@ -97,48 +97,108 @@ export default function VerticalServicePageClient({ vertical }: { vertical: Vert
 
               {/* Dynamic Industry-Specific Operational Breakdown */}
               {vertical.slug === 'construction-site-security' && (
-                <div className="mt-8 bg-white border border-gray-200 rounded-xl p-6 shadow-xs">
-                  <h3 className="font-bold text-[#0a1628] text-base mb-3">Construction Site Security Planning &amp; Control Points</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
-                    Effective construction site security coordinates physical guarding, perimeter barriers, and after-hours inspections across critical control points:
-                  </p>
-                  <ul className="space-y-2 text-xs text-gray-700">
-                    <li>• <strong>Main Entrance Gates:</strong> Managing contractor sign-ins, delivery logging, and photo ID safety inductions.</li>
-                    <li>• <strong>Material Staging Bays:</strong> Securing copper wiring, plumbing fittings, and timber laydown areas with illuminated LED floodlighting and <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static guards</Link>.</li>
-                    <li>• <strong>Plant &amp; Tool Vaults:</strong> Immobilizing heavy machinery, locking hand tools in steel job-site containers, and conducting night-time <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol checks</Link>.</li>
-                  </ul>
+                <div className="mt-8 space-y-6">
+                  <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs">
+                    <h3 className="font-bold text-[#0a1628] text-base mb-3">Construction Site Security Planning &amp; Control Points</h3>
+                    <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                      Effective construction site security coordinates physical guarding, perimeter barriers, and after-hours inspections across critical control points:
+                    </p>
+                    <ul className="space-y-2 text-xs text-gray-700">
+                      <li>• <strong>Main Entrance Gates:</strong> Managing contractor sign-ins, delivery logging, and photo ID safety inductions.</li>
+                      <li>• <strong>Material Staging Bays:</strong> Securing copper wiring, plumbing fittings, and timber laydown areas with illuminated LED floodlighting and <Link href="/services/static-guard" className="text-[#1e40af] font-semibold underline">static guards</Link>.</li>
+                      <li>• <strong>Plant &amp; Tool Vaults:</strong> Immobilizing heavy machinery, locking hand tools in steel job-site containers, and conducting night-time <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol checks</Link>.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-[#0a1628] text-white rounded-xl p-6">
+                    <h3 className="font-bold text-white text-base mb-3">Security Controls by Construction Stage</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-gray-300">
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">1. Site Setup &amp; Groundwork</strong>
+                        <span>Boundary hoarding installation, gate locking, temporary floodlighting, and plant machinery immobilization.</span>
+                      </div>
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">2. Active Build &amp; Fit-Out</strong>
+                        <span>Contractor sign-in logs, copper/tool vault locking, nightly <Link href="/services/static-guard" className="text-[#3b82f6] underline">static guard placement</Link>, and gate control.</span>
+                      </div>
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">3. Completion &amp; Handover</strong>
+                        <span>Final lock-up inspections, appliance protection, and pre-occupancy <Link href="/services/mobile-patrolling" className="text-[#3b82f6] underline">mobile vehicle sweeps</Link>.</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
 
               {vertical.slug === 'retail-security' && (
-                <div className="mt-8 bg-white border border-gray-200 rounded-xl p-6 shadow-xs">
-                  <h3 className="font-bold text-[#0a1628] text-base mb-3">Retail Security Across the Operating Day</h3>
-                  <div className="space-y-3 text-xs text-gray-700">
-                    <div>
-                      <strong className="text-[#0a1628] font-bold">1. Opening Phase:</strong> Staff arrival checks, store access verification, and pre-trading floor sweeps.
+                <div className="mt-8 space-y-6">
+                  <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs">
+                    <h3 className="font-bold text-[#0a1628] text-base mb-3">Retail Security Across the Operating Day</h3>
+                    <div className="space-y-3 text-xs text-gray-700">
+                      <div>
+                        <strong className="text-[#0a1628] font-bold">1. Opening Phase:</strong> Staff arrival checks, store access verification, and pre-trading floor sweeps.
+                      </div>
+                      <div>
+                        <strong className="text-[#0a1628] font-bold">2. Operating Hours:</strong> Customer-facing concierge presence, active loss prevention, high-risk display monitoring, and staff safety.
+                      </div>
+                      <div>
+                        <strong className="text-[#0a1628] font-bold">3. Closing &amp; After Hours:</strong> Register lock-up support, staff vehicle escorts, alarm arming, and 24/7 central <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">alarm monitoring</Link>.
+                      </div>
                     </div>
-                    <div>
-                      <strong className="text-[#0a1628] font-bold">2. Operating Hours:</strong> Customer-facing concierge presence, active loss prevention, high-risk display monitoring, and staff safety.
-                    </div>
-                    <div>
-                      <strong className="text-[#0a1628] font-bold">3. Closing &amp; After Hours:</strong> Register lock-up support, staff vehicle escorts, alarm arming, and 24/7 central <Link href="/services/alarm-monitoring" className="text-[#1e40af] font-semibold underline">alarm monitoring</Link>.
+                  </div>
+
+                  <div className="bg-[#0a1628] text-white rounded-xl p-6">
+                    <h3 className="font-bold text-white text-base mb-3">Integrated Retail Loss Prevention Components</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-gray-300">
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">Visible Guard Presence</strong>
+                        <span>Uniformed <Link href="/services/static-guard" className="text-[#3b82f6] underline">retail security guards</Link> greeting customers and deterring opportunist shoplifting.</span>
+                      </div>
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">Floor Procedures</strong>
+                        <span>Attentive customer engagement, fitting room garment audits, and high-shrink item display locks.</span>
+                      </div>
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">After-Hours Technology</strong>
+                        <span>CCTV motion alerts connected to 24/7 <Link href="/services/alarm-monitoring" className="text-[#3b82f6] underline">alarm monitoring</Link> for instant signal dispatch.</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               )}
 
               {vertical.slug === 'commercial-security' && (
-                <div className="mt-8 bg-white border border-gray-200 rounded-xl p-6 shadow-xs">
-                  <h3 className="font-bold text-[#0a1628] text-base mb-3">Commercial Building Security by Operating Period &amp; Multi-Tenant Setup</h3>
-                  <div className="space-y-3 text-xs text-gray-700">
-                    <div>
-                      <strong className="text-[#0a1628] font-bold">Normal Trading Hours:</strong> Front-desk lobby concierge, tenant keycard management, contractor badge issuing, and shared lobby oversight.
+                <div className="mt-8 space-y-6">
+                  <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs">
+                    <h3 className="font-bold text-[#0a1628] text-base mb-3">Commercial Building Security by Operating Period &amp; Multi-Tenant Setup</h3>
+                    <div className="space-y-3 text-xs text-gray-700">
+                      <div>
+                        <strong className="text-[#0a1628] font-bold">Normal Trading Hours:</strong> Front-desk lobby concierge, tenant keycard management, contractor badge issuing, and shared lobby oversight.
+                      </div>
+                      <div>
+                        <strong className="text-[#0a1628] font-bold">Closing Phase:</strong> Floor-by-floor perimeter checks, contractor departure verification, basement garage roller door securing, and lock-up.
+                      </div>
+                      <div>
+                        <strong className="text-[#0a1628] font-bold">After Hours:</strong> Inspection of vacant floors, server room checks, 24/7 intruder alarm monitoring, and <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol sweeps</Link>.
+                      </div>
                     </div>
-                    <div>
-                      <strong className="text-[#0a1628] font-bold">Closing Phase:</strong> Floor-by-floor perimeter checks, contractor departure verification, basement garage roller door securing, and lock-up.
-                    </div>
-                    <div>
-                      <strong className="text-[#0a1628] font-bold">After Hours:</strong> Inspection of vacant floors, server room checks, 24/7 intruder alarm monitoring, and <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol sweeps</Link>.
+                  </div>
+
+                  <div className="bg-[#0a1628] text-white rounded-xl p-6">
+                    <h3 className="font-bold text-white text-base mb-3">Commercial Security by Building Zone</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-gray-300">
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">Main Lobby &amp; Elevators</strong>
+                        <span>Lobby concierge guards, visitor badge logging, and turnstile access control management.</span>
+                      </div>
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">Loading Docks &amp; Garages</strong>
+                        <span>Basement vehicle roller gate verification, waste skip locks, and driver deliveries.</span>
+                      </div>
+                      <div>
+                        <strong className="text-[#3b82f6] block mb-1">Vacant Floors &amp; Server Rooms</strong>
+                        <span>Mechanical plant checks, server rack locks, and night-time <Link href="/services/mobile-patrolling" className="text-[#3b82f6] underline">mobile patrol sweeps</Link>.</span>
+                      </div>
                     </div>
                   </div>
                 </div>

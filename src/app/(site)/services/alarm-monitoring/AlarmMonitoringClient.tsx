@@ -251,6 +251,62 @@ export default function AlarmMonitoringClient() {
               </ul>
             </div>
           </div>
+
+          {/* Alarm Signal Workflow & Escalation Guidance */}
+          <div className="mt-16 bg-[#f8f9fa] border border-gray-200 rounded-2xl p-8">
+            <div className="max-w-3xl mb-8">
+              <span className="text-[#1e40af] text-xs font-extrabold tracking-widest uppercase mb-2 block">
+                RESPONSE WORKFLOW
+              </span>
+              <h2 className="text-2xl font-extrabold text-[#0a1628]">
+                What Happens When an Alarm Signal Is Received?
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                When an armed intruder sensor, door reed switch, or glass-break detector triggers outside regular business hours, a structured 5-step response workflow initiates:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-xs text-gray-700 mb-8">
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">1. Signal Transmitted</span>
+                <span>Panel sends encrypted dual-path IP/cellular alert to 24/7 central station.</span>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">2. Event Identified</span>
+                <span>System identifies zone location (e.g. rear warehouse door vs main foyer).</span>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">3. Video Review</span>
+                <span>Operators review integrated CCTV feeds to verify active physical breach.</span>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">4. Keyholder Contact</span>
+                <span>Operators initiate priority calls according to site escalation matrix.</span>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">5. Guard Dispatch</span>
+                <span>Nearest GPS <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">mobile patrol unit</Link> is dispatched to inspect premises.</span>
+              </div>
+            </div>
+
+            <div className="bg-[#0a1628] text-white rounded-xl p-6">
+              <h3 className="font-bold text-white text-sm mb-3">Information That Makes Alarm Escalation Clearer</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-300">
+                <div>
+                  <strong className="text-[#3b82f6] block mb-1">Accurate Zone Labels</strong>
+                  <span>Descriptive names for sensor locations (e.g., &quot;Zone 4 — North Dock Door&quot;).</span>
+                </div>
+                <div>
+                  <strong className="text-[#3b82f6] block mb-1">Priority Contact Order</strong>
+                  <span>Updated primary and secondary keyholder mobile numbers for after-hours calls.</span>
+                </div>
+                <div>
+                  <strong className="text-[#3b82f6] block mb-1">Dispatch Authorizations</strong>
+                  <span>Clear instructions on whether to dispatch patrol officers immediately upon signal.</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
