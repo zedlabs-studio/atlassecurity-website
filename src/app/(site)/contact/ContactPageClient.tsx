@@ -87,7 +87,7 @@ export default function ContactPageClient() {
               initial="hidden" animate="visible" variants={stagger}>
               <motion.div variants={fadeUp}>
                 <h2 className="text-2xl font-extrabold text-[#0a1628] mb-2">Contact Information</h2>
-                <p className="text-gray-500 text-sm leading-relaxed mb-8">Reach out by phone, email or fill in the form — we respond within 2 hours.</p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-8">Reach out by phone, email or fill in the form — we respond promptly during business hours.</p>
               </motion.div>
 
               <div className="space-y-5 mb-10">
