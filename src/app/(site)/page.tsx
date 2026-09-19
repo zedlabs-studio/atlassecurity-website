@@ -4,9 +4,11 @@ import { JsonLd, getOrganizationSchema, getWebSiteSchema } from '@/components/Js
 import HomePageClient from './HomePageClient'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Atlas Security NZ | Licensed Security Company & Patrol Services',
+  title: 'Licensed Security Company and Patrol Services in Auckland, New Zealand | Atlas Security',
   description:
-    'Atlas Security is a leading licensed security company in NZ. We provide static security guards, mobile vehicle patrols, and 24/7 alarm monitoring across Auckland, Waikato & Wellington.',
+    'Atlas Security is a licensed NZ security company providing static guards, mobile patrols and 24/7 alarm monitoring across Auckland, Waikato and Wellington.',
+  keywords:
+    'Licensed Security Company New Zealand, security services New Zealand, security guards New Zealand, licensed security guards New Zealand, professional security company New Zealand, security company Auckland, Wellington, security services Wellington, mobile security patrol Wellington, security company Waikato, security guards Waikato, security services Waikato, mobile security patrol New Zealand, static security guards New Zealand, 24/7 alarm monitoring New Zealand',
   path: '/',
 })
 

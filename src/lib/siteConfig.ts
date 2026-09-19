@@ -29,12 +29,14 @@ export const siteConfig = {
 export function constructMetadata({
   title,
   description,
+  keywords,
   path = '',
   image,
   noIndex = false,
 }: {
   title: string
   description: string
+  keywords?: string | string[]
   path?: string
   image?: string
   noIndex?: boolean
@@ -45,6 +47,7 @@ export function constructMetadata({
   return {
     title,
     description,
+    ...(keywords && { keywords }),
     alternates: {
       canonical: url,
     },
