@@ -132,7 +132,7 @@ export default function AlarmMonitoringClient() {
       </section>
 
       {/* Overview + image */}
-      <section className="py-24 bg-white" ref={detailRef}>
+      <section className="py-12 lg:py-16 bg-white" ref={detailRef}>
         <div className="container mx-auto px-6 lg:px-16">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <motion.div className="flex-1"
@@ -166,7 +166,7 @@ export default function AlarmMonitoringClient() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 bg-[#f8f9fa]" ref={benefitsRef}>
+      <section className="py-12 lg:py-16 bg-[#f8f9fa]" ref={benefitsRef}>
         <div className="container mx-auto px-6 lg:px-16">
           <motion.div className="text-center mb-14"
             initial="hidden" animate={benefitsInView ? 'visible' : 'hidden'} variants={fadeUp}>
