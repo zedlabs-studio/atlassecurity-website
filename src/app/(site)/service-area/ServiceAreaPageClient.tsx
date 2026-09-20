@@ -334,32 +334,50 @@ export default function ServiceAreaPageClient() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
           >
-            {COVERED_CITIES.map((city, i) => (
-              <motion.div key={i} variants={fadeUp}
-                className={`relative rounded-xl p-5 border group hover:-translate-y-1 transition-all duration-300 ${
-                  city.primary
-                    ? 'bg-[#0d1f3c] border-[#1e40af]/30 hover:border-[#1e40af]'
-                    : 'bg-white border-gray-200 hover:border-[#1e40af]/40 hover:shadow-md'
-                }`}
-              >
-                {city.primary && (
-                  <span className="absolute top-3 right-3 text-xs bg-[#1e40af] text-white px-2 py-0.5 rounded-full font-semibold">
-                    Primary
-                  </span>
-                )}
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm mb-3 ${
-                  city.primary ? 'bg-[#1e40af] text-white' : 'bg-[#1e40af]/10 text-[#1e40af]'
-                }`}>
-                  {city.name.charAt(0)}
-                </div>
-                <p className={`font-extrabold text-sm mb-1 ${city.primary ? 'text-white' : 'text-[#0a1628]'}`}>
-                  Security guard services in {city.name}
-                </p>
-                <p className={`text-xs leading-snug ${city.primary ? 'text-gray-400' : 'text-gray-500'}`}>
-                  {city.detail}
-                </p>
-              </motion.div>
-            ))}
+            {COVERED_CITIES.map((city, i) => {
+              const cardContent = (
+                <>
+                  {city.primary && (
+                    <span className="absolute top-3 right-3 text-xs bg-[#1e40af] text-white px-2 py-0.5 rounded-full font-semibold">
+                      Primary Hub
+                    </span>
+                  )}
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm mb-3 ${
+                    city.primary ? 'bg-[#1e40af] text-white' : 'bg-[#1e40af]/10 text-[#1e40af]'
+                  }`}>
+                    {city.name.charAt(0)}
+                  </div>
+                  <p className={`font-extrabold text-sm mb-1 ${city.primary ? 'text-white' : 'text-[#0a1628]'}`}>
+                    Security guard services in {city.name}
+                  </p>
+                  <p className={`text-xs leading-snug ${city.primary ? 'text-gray-400' : 'text-gray-500'}`}>
+                    {city.detail}
+                  </p>
+                  {city.primary && (
+                    <span className="mt-3 text-xs font-bold text-[#3b82f6] group-hover:underline flex items-center gap-1">
+                      View {city.name} Security Hub →
+                    </span>
+                  )}
+                </>
+              )
+
+              return (
+                <motion.div key={i} variants={fadeUp}>
+                  {city.primary ? (
+                    <Link
+                      href={`/service-area/${city.name.toLowerCase()}`}
+                      className="block relative rounded-xl p-5 border group hover:-translate-y-1 transition-all duration-300 bg-[#0d1f3c] border-[#1e40af]/30 hover:border-[#1e40af]"
+                    >
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    <div className="relative rounded-xl p-5 border group hover:-translate-y-1 transition-all duration-300 bg-white border-gray-200 hover:border-[#1e40af]/40 hover:shadow-md">
+                      {cardContent}
+                    </div>
+                  )}
+                </motion.div>
+              )
+            })}
           </motion.div>
         </div>
       </section>
