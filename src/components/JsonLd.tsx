@@ -121,7 +121,7 @@ export function getBlogPostingSchema({
   publishedAt,
   updatedAt,
   coverImage,
-  authorName = 'Atlas Security Team',
+  authorName = siteConfig.name,
 }: {
   title: string
   description: string
