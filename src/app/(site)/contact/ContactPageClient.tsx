@@ -121,7 +121,7 @@ export default function ContactPageClient() {
               {/* What Happens After You Contact Us */}
               <motion.div variants={fadeUp} className="bg-white border border-gray-200 rounded-xl p-5 shadow-xs">
                 <h3 className="text-sm font-extrabold text-[#0a1628] mb-3 uppercase tracking-wider">What Happens Next</h3>
-                <ol className="space-y-3 text-xs text-gray-600">
+                <ol className="space-y-3 text-xs text-gray-600 mb-4">
                   <li className="flex gap-2">
                     <span className="font-bold text-[#1e40af] shrink-0">1.</span>
                     <span><strong>Requirement Audit:</strong> Our operations team reviews your inquiry within 2 business hours.</span>
@@ -135,6 +135,11 @@ export default function ContactPageClient() {
                     <span><strong>Transparent Proposal:</strong> Detailed breakdown of COA static guards, patrol schedules, or alarm monitoring rates.</span>
                   </li>
                 </ol>
+                <div className="pt-3 border-t border-gray-100 text-xs text-gray-500 space-y-1.5">
+                  <p>
+                    Explore our <Link href="/services" className="text-[#1e40af] font-semibold underline">commercial security services</Link> or check <Link href="/service-area" className="text-[#1e40af] font-semibold underline">service area coverage</Link>.
+                  </p>
+                </div>
               </motion.div>
             </motion.div>
 
