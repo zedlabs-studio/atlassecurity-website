@@ -189,6 +189,40 @@ export default function BlogPageClient({ initialBlogs = [] }: { initialBlogs?: B
               ))}
             </motion.div>
           )}
+
+          {/* Contextual Hub Navigation */}
+          <div className="mt-16 bg-white border border-gray-200/80 rounded-2xl p-8 lg:p-10 shadow-sm">
+            <h2 className="text-xl font-extrabold text-[#0a1628] mb-4">Explore Our Security Services & Solutions</h2>
+            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+              Looking for practical security implementation? Atlas Security provides licensed, background-checked security personnel and monitoring across New Zealand.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+              <div>
+                <h3 className="font-bold text-[#0a1628] mb-2 text-xs uppercase tracking-wider text-[#1e40af]">Core Services</h3>
+                <ul className="space-y-1.5 text-gray-600">
+                  <li><Link href="/services/static-guard" className="hover:text-[#1e40af] hover:underline">Static Security Guarding</Link></li>
+                  <li><Link href="/services/mobile-patrolling" className="hover:text-[#1e40af] hover:underline">Mobile Security Patrols</Link></li>
+                  <li><Link href="/services/alarm-monitoring" className="hover:text-[#1e40af] hover:underline">24/7 Alarm Monitoring</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-[#0a1628] mb-2 text-xs uppercase tracking-wider text-[#1e40af]">Industry Solutions</h3>
+                <ul className="space-y-1.5 text-gray-600">
+                  <li><Link href="/services/construction-site-security" className="hover:text-[#1e40af] hover:underline">Construction Site Protection</Link></li>
+                  <li><Link href="/services/retail-security" className="hover:text-[#1e40af] hover:underline">Retail Loss Prevention</Link></li>
+                  <li><Link href="/services/commercial-security" className="hover:text-[#1e40af] hover:underline">Commercial Building Security</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-[#0a1628] mb-2 text-xs uppercase tracking-wider text-[#1e40af]">Service Locations</h3>
+                <ul className="space-y-1.5 text-gray-600">
+                  <li><Link href="/service-area/auckland" className="hover:text-[#1e40af] hover:underline">Auckland Security Services</Link></li>
+                  <li><Link href="/service-area/hamilton" className="hover:text-[#1e40af] hover:underline">Hamilton & Waikato Security</Link></li>
+                  <li><Link href="/service-area/wellington" className="hover:text-[#1e40af] hover:underline">Wellington Security Services</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
