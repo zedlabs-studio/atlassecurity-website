@@ -47,6 +47,14 @@ export default function MobilePatrollingPage() {
       },
       {
         '@type': 'Question',
+        name: 'What should a business prepare before requesting a mobile patrol proposal?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Provide details on your property boundaries, key access gates, preferred patrol frequency, lock-up timeframes, and specific high-risk inspection points (such as storage yards or rear emergency exits).',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'What factors influence mobile patrol service pricing?',
         acceptedAnswer: {
           '@type': 'Answer',

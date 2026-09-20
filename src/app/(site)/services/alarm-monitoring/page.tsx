@@ -47,6 +47,14 @@ export default function AlarmMonitoringPage() {
       },
       {
         '@type': 'Question',
+        name: 'What information is required to establish 24/7 alarm monitoring for a business?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'To connect your site to our monitoring network, provide your alarm control panel brand, keyholder contact priority lists, armed zone descriptions, after-hours site access details, and specific escalation instructions for after-hours alarms.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'What happens when a false alarm triggers at my property?',
         acceptedAnswer: {
           '@type': 'Answer',

@@ -47,6 +47,14 @@ export default function StaticGuardPage() {
       },
       {
         '@type': 'Question',
+        name: 'What information should a business provide when requesting static guard deployment?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'To tailor your guard deployment effectively, specify your operating hours, key site access points, parking/gatehouse requirements, shift handover expectations, and whether concierge or contractor management duties are required.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'What pricing factors determine static guard service costs?',
         acceptedAnswer: {
           '@type': 'Answer',
