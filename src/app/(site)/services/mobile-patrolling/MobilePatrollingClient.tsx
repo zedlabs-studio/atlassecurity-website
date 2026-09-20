@@ -154,10 +154,10 @@ export default function MobilePatrollingClient() {
                 OPERATIONAL PLANNING
               </span>
               <h2 className="text-2xl font-extrabold text-[#0a1628] mb-4">
-                Planning an Effective Mobile Patrol Route
+                Planning an Effective Mobile Patrol Security Route
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Mobile patrol efficiency relies on structured site assessments and unpredictable timing patterns. Key planning elements include:
+                Mobile security patrol efficiency relies on structured site assessments, route optimization, and unpredictable timing patterns. Key planning elements include:
               </p>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2.5">
@@ -166,7 +166,7 @@ export default function MobilePatrollingClient() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>
-                  <span><strong>Vulnerable Point Inspections:</strong> Unlit loading bays, high-value tool sheds on <Link href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction developments</Link>, and subterranean car park gates.</span>
+                  <span><strong>Vulnerable Point Inspections:</strong> Unlit loading bays, vacant/unoccupied commercial spaces, tool sheds on <Link href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction developments</Link>, and subterranean car park gates.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>
@@ -184,7 +184,7 @@ export default function MobilePatrollingClient() {
                 SERVICE FITMENT
               </span>
               <h2 className="text-2xl font-extrabold text-white mb-4">
-                When Mobile Patrols May Be Considered
+                When Mobile Patrols Are Most Suitable
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 Mobile vehicle security patrols deliver high-impact physical deterrence for properties that do not require full-time stationed guarding:
@@ -192,7 +192,7 @@ export default function MobilePatrollingClient() {
               <ul className="space-y-3.5 text-sm text-gray-300">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">1.</span>
-                  <span><strong>Periodic Site Checks:</strong> Properties needing 2–5 randomized inspections per night to disrupt trespasser reconnaissance. Read our <Link href="/blog/mobile-patrols-future-nz-security" className="text-[#3b82f6] font-semibold underline">Mobile Patrol Insights</Link> for details.</span>
+                  <span><strong>Periodic Site Checks:</strong> Facilities needing 2–5 randomized inspections per night to disrupt trespasser reconnaissance. Read our <Link href="/blog/mobile-patrols-future-nz-security" className="text-[#3b82f6] font-semibold underline">Mobile Patrol Insights</Link> for details.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">2.</span>
@@ -244,10 +244,10 @@ export default function MobilePatrollingClient() {
             </div>
 
             <div className="bg-[#0a1628] text-white rounded-xl p-6">
-              <h3 className="font-bold text-white text-sm mb-3">Key Factors for Planning Mobile Patrol Route Coverage</h3>
+              <h3 className="font-bold text-white text-sm mb-3">Key Factors Required for Patrol Route Planning</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-300">
                 <div>
-                  <strong className="text-[#3b82f6] block mb-1">1. Property Size &amp; Buildings</strong>
+                  <strong className="text-[#3b82f6] block mb-1">1. Property Boundaries &amp; Gates</strong>
                   <span>Number of detached warehouses, external sheds, or perimeter gates requiring individual checkpoint scans.</span>
                 </div>
                 <div>

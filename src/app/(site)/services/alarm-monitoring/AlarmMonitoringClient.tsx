@@ -200,7 +200,7 @@ export default function AlarmMonitoringClient() {
                 SERVICE ROLE DISTINCTION
               </span>
               <h2 className="text-2xl font-extrabold text-[#0a1628] mb-4">
-                Alarm Monitoring &amp; Physical Security Serve Different Roles
+                Alarm Monitoring &amp; Physical Guarding Serve Different Roles
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Understanding how automated monitoring integrates with physical security ensures optimal protection for commercial facilities:
@@ -208,7 +208,7 @@ export default function AlarmMonitoringClient() {
               <ul className="space-y-3.5 text-sm text-gray-700">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">1.</span>
-                  <span><strong>Alarm Monitoring:</strong> Electronic signal detection, 24/7 central station oversight, and instant signal verification when intruder sensors trigger.</span>
+                  <span><strong>Business Alarm Monitoring:</strong> Electronic signal detection, 24/7 central station oversight, and instant signal verification when intruder sensors trigger.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">2.</span>
@@ -216,7 +216,7 @@ export default function AlarmMonitoringClient() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">3.</span>
-                  <span><strong>Mobile Patrols:</strong> GPS-tracked vehicle visits, exterior checks, and rapid physical guard dispatch following an <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">alarm signal activation</Link>.</span>
+                  <span><strong>Mobile Patrol Response:</strong> GPS-tracked vehicle visits, exterior checks, and rapid physical guard dispatch following an <Link href="/services/mobile-patrolling" className="text-[#1e40af] font-semibold underline">alarm escalation event</Link>.</span>
                 </li>
               </ul>
             </div>
@@ -226,7 +226,7 @@ export default function AlarmMonitoringClient() {
                 ONBOARDING PREPARATION
               </span>
               <h2 className="text-2xl font-extrabold text-white mb-4">
-                Information Needed When Setting Up Monitoring
+                What Information Is Needed When Setting Up Monitoring?
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 Setting up 24/7 central alarm monitoring requires key operational parameters to ensure accurate signal escalation:
@@ -234,7 +234,7 @@ export default function AlarmMonitoringClient() {
               <ul className="space-y-3.5 text-sm text-gray-300">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">•</span>
-                  <span><strong>Alarm System &amp; Panel Details:</strong> Panel model, dual-path IP/cellular dialer type, and zone layout descriptions. Read how <Link href="/blog/how-business-alarm-monitoring-works-nz" className="text-[#3b82f6] font-semibold underline">business alarm monitoring works</Link>.</span>
+                  <span><strong>Alarm System &amp; Zone Labels:</strong> Alarm panel model, dual-path IP/cellular dialer type, and descriptive zone names (e.g., Zone 3 — Rear Warehouse Door). Read how <Link href="/blog/how-business-alarm-monitoring-works-nz" className="text-[#3b82f6] font-semibold underline">business alarm monitoring works</Link>.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">•</span>
@@ -246,7 +246,7 @@ export default function AlarmMonitoringClient() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">•</span>
-                  <span><strong>Site Access &amp; Lock-Box Information:</strong> Secure gate codes or key lock-box details to enable rapid guard entry during after-hours inspections.</span>
+                  <span><strong>Periodic Instruction Reviews:</strong> What businesses should review periodically — updating contact phone numbers, passcodes, and lock-box details.</span>
                 </li>
               </ul>
             </div>
@@ -259,10 +259,10 @@ export default function AlarmMonitoringClient() {
                 RESPONSE WORKFLOW
               </span>
               <h2 className="text-2xl font-extrabold text-[#0a1628]">
-                What Happens When an Alarm Signal Is Received?
+                What Happens After an Alarm Signal Is Received?
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mt-2">
-                When an armed intruder sensor, door reed switch, or glass-break detector triggers outside regular business hours, a structured 5-step response workflow initiates:
+                When an armed intruder sensor, door reed switch, or glass-break detector triggers outside regular business hours, a structured 5-step alarm response process initiates:
               </p>
             </div>
 
@@ -272,15 +272,15 @@ export default function AlarmMonitoringClient() {
                 <span>Panel sends encrypted dual-path IP/cellular alert to 24/7 central station.</span>
               </div>
               <div className="bg-white border border-gray-200 rounded-xl p-4">
-                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">2. Event Identified</span>
-                <span>System identifies zone location (e.g. rear warehouse door vs main foyer).</span>
+                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">2. Zone Identified</span>
+                <span>System identifies exact alarm zone location (e.g. rear warehouse door vs foyer).</span>
               </div>
               <div className="bg-white border border-gray-200 rounded-xl p-4">
                 <span className="text-[#1e40af] font-extrabold block text-sm mb-1">3. Video Review</span>
                 <span>Operators review integrated CCTV feeds to verify active physical breach.</span>
               </div>
               <div className="bg-white border border-gray-200 rounded-xl p-4">
-                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">4. Keyholder Contact</span>
+                <span className="text-[#1e40af] font-extrabold block text-sm mb-1">4. Keyholder Call</span>
                 <span>Operators initiate priority calls according to site escalation matrix.</span>
               </div>
               <div className="bg-white border border-gray-200 rounded-xl p-4">
@@ -290,19 +290,19 @@ export default function AlarmMonitoringClient() {
             </div>
 
             <div className="bg-[#0a1628] text-white rounded-xl p-6">
-              <h3 className="font-bold text-white text-sm mb-3">Information That Makes Alarm Escalation Clearer</h3>
+              <h3 className="font-bold text-white text-sm mb-3">Key Information Needed for Clear Alarm Escalation</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-300">
                 <div>
-                  <strong className="text-[#3b82f6] block mb-1">Accurate Zone Labels</strong>
-                  <span>Descriptive names for sensor locations (e.g., &quot;Zone 4 — North Dock Door&quot;).</span>
+                  <strong className="text-[#3b82f6] block mb-1">Descriptive Alarm Zones</strong>
+                  <span>Specific labels for sensor locations (e.g., &quot;Zone 4 — North Dock Door&quot;).</span>
                 </div>
                 <div>
-                  <strong className="text-[#3b82f6] block mb-1">Priority Contact Order</strong>
-                  <span>Updated primary and secondary keyholder mobile numbers for after-hours calls.</span>
+                  <strong className="text-[#3b82f6] block mb-1">Updated Keyholder Priority</strong>
+                  <span>Active mobile numbers for primary, secondary, and tertiary emergency contacts.</span>
                 </div>
                 <div>
-                  <strong className="text-[#3b82f6] block mb-1">Dispatch Authorizations</strong>
-                  <span>Clear instructions on whether to dispatch patrol officers immediately upon signal.</span>
+                  <strong className="text-[#3b82f6] block mb-1">Patrol Dispatch Authorizations</strong>
+                  <span>Pre-authorized instructions on whether to dispatch patrol officers immediately.</span>
                 </div>
               </div>
             </div>

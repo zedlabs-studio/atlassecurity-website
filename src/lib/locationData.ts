@@ -29,35 +29,39 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
     metaDescription:
       'Licensed security company in Auckland. COA security guards, mobile patrols & 24/7 alarm monitoring across Auckland CBD, North Shore, South Auckland & West Auckland.',
     heroDescription:
-      'Protecting Auckland commercial buildings, retail centres, industrial sites, and construction zones with COA-certified security personnel.',
+      'Protecting Auckland CBD commercial properties, North Shore retail locations, South Auckland industrial sites, West Auckland commercial precincts, and regional construction sites with COA-certified security personnel.',
     overview:
-      'As New Zealand’s largest metropolitan region, Auckland demands proactive, highly responsive security. Atlas Security provides dedicated static guarding, scheduled mobile vehicle patrols, and rapid alarm response throughout Auckland CBD, Manukau, Takapuna, Henderson, and surrounding business hubs.',
-    keySuburbs: ['Auckland CBD', 'North Shore (Takapuna & Albany)', 'South Auckland (Manukau & East Tamaki)', 'West Auckland (Henderson & Rosebank)', 'Penrose & Mt Wellington Industrial Sector'],
+      'As New Zealand’s largest metropolitan region, Auckland demands proactive, highly responsive security. Atlas Security provides dedicated static guarding, scheduled mobile vehicle patrols, and rapid alarm response throughout Auckland CBD commercial properties, North Shore retail locations, South Auckland industrial yards in Manukau and East Tamaki, West Auckland commercial sites in Henderson and Rosebank, and after-hours security across major civil developments.',
+    keySuburbs: ['CBD Commercial Properties (Auckland CBD)', 'North Shore Retail & Commercial (Takapuna & Albany)', 'South Auckland Industrial & Commercial (Manukau & East Tamaki)', 'West Auckland Commercial Sites (Henderson & Rosebank)', 'Penrose & Mt Wellington Industrial Sector'],
     servicesProvided: [
       {
         title: 'Static Security Guarding',
-        description: 'On-site COA-certified guards for Auckland commercial towers, retail centers, construction sites, and corporate premises.',
+        description: 'On-site COA-certified guards for Auckland CBD commercial properties, North Shore retail locations, South Auckland industrial yards, and civil construction sites.',
         link: '/services/static-guard',
       },
       {
         title: 'Mobile Patrols & Lock-Ups',
-        description: 'GPS-tracked mobile patrol units conducting randomized inspections and night-time lock-up/unlock services across Auckland.',
+        description: 'GPS-tracked mobile patrol units conducting randomized inspections, after-hours security, and night-time lock-up/unlock services across Greater Auckland.',
         link: '/services/mobile-patrolling',
       },
       {
         title: '24/7 Alarm Monitoring & Dispatch',
-        description: 'Instant alarm signal verification and fast security guard dispatch to Auckland properties day or night.',
+        description: 'Instant alarm signal verification and fast security guard dispatch to Auckland commercial and industrial properties day or night.',
         link: '/services/alarm-monitoring',
       },
     ],
     faqs: [
       {
         question: 'What security services does Atlas Security offer in Auckland?',
-        answer: 'Atlas Security offers licensed static guards, mobile patrol units, lock-up and unlock services, 24/7 alarm monitoring, and rapid emergency response across the Greater Auckland area.',
+        answer: 'Atlas Security offers licensed static guards, mobile patrol units, lock-up and unlock services, 24/7 alarm monitoring, after-hours security, and rapid emergency response across Auckland CBD, North Shore, South Auckland, and West Auckland.',
       },
       {
         question: 'What information should Auckland businesses prepare for a security assessment?',
-        answer: 'Specify your property location (e.g., Auckland CBD tower, Penrose industrial park, or North Shore retail complex), operating hours, perimeter access points, and specific site risks.',
+        answer: 'Specify your property location (e.g., Auckland CBD commercial property, Penrose industrial site, North Shore retail location, or West Auckland construction site), operating hours, perimeter access points, and specific site risks.',
+      },
+      {
+        question: 'How do you secure different site types across Auckland suburbs?',
+        answer: 'We deploy concierge static guards for Auckland CBD office towers, customer-focused retail guards for North Shore stores, mobile patrol sweeps for South Auckland industrial yards, and gatehouse security for West Auckland civil sites.',
       },
       {
         question: 'Are Atlas Security guards licensed to work in Auckland?',
@@ -78,19 +82,19 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
     metaDescription:
       'Atlas Security Head Office in Hamilton provides trusted static guarding, mobile patrols, and 24/7 alarm response across Hamilton CBD, Te Rapa, Frankton & Waikato.',
     heroDescription:
-      'Headquartered in Hamilton, Atlas Security delivers premier static guarding, industrial patrols, and round-the-clock alarm monitoring across Waikato.',
+      'Headquartered in Hamilton, Atlas Security delivers premier static guarding, industrial patrols, construction site protection, and round-the-clock alarm monitoring across Hamilton commercial properties, Te Rapa, Frankton, and Waikato.',
     overview:
-      'Hamilton serves as the operational headquarters for Atlas Security. We provide extensive security coverage for Hamilton Central, Te Rapa industrial zone, Frankton logistics parks, Cambridge, Te Awamutu, and the wider Waikato agricultural and commercial sectors.',
-    keySuburbs: ['Hamilton CBD', 'Te Rapa Industrial Park', 'Frankton & Dinsdale Commercial Hubs', 'Cambridge & Te Awamutu', 'Morrinsville & Huntly Corridors'],
+      'Hamilton serves as the operational headquarters for Atlas Security. We provide extensive security coverage for Hamilton commercial properties in the CBD, Te Rapa industrial and distribution environments, Frankton commercial hubs, construction sites, retail precincts, and after-hours site security across Cambridge, Te Awamutu, and the wider Waikato region.',
+    keySuburbs: ['Hamilton Commercial Properties (CBD)', 'Te Rapa Industrial & Distribution Environments', 'Frankton Commercial & Logistics Hubs', 'Construction Sites & Retail Precincts', 'Cambridge, Te Awamutu & Morrinsville Corridors'],
     servicesProvided: [
       {
         title: 'Static Security Guarding',
-        description: 'Dedicated guards protecting Hamilton commercial offices, warehouses, distribution centers, and event venues.',
+        description: 'Dedicated guards protecting Hamilton commercial properties, Te Rapa industrial & distribution environments, Frankton logistics parks, and construction sites.',
         link: '/services/static-guard',
       },
       {
         title: 'Waikato Mobile Patrols',
-        description: 'Frequent night-time vehicle patrols, welfare checks, and perimeter lock-ups across Hamilton & surrounding Waikato towns.',
+        description: 'Frequent after-hours site security, night-time vehicle patrols, welfare checks, and perimeter lock-ups across Hamilton & surrounding Waikato towns.',
         link: '/services/mobile-patrolling',
       },
       {
@@ -102,19 +106,19 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
     faqs: [
       {
         question: 'Where is the Atlas Security head office located in Hamilton?',
-        answer: 'Atlas Security operates its primary operational headquarters in Hamilton, providing centralized coordination for all Waikato security deployments.',
+        answer: 'Atlas Security operates its primary operational headquarters in Hamilton, providing centralized coordination for all Waikato security guard and mobile patrol deployments.',
+      },
+      {
+        question: 'What security services do you provide for Te Rapa and Frankton industrial sites?',
+        answer: 'We provide specialized static gatehouse guards, material storage security, and frequent mobile patrol sweeps for Te Rapa industrial and distribution environments and Frankton logistics parks.',
       },
       {
         question: 'What details should Hamilton business operators prepare for a security assessment?',
-        answer: 'Specify your site layout (e.g., Te Rapa industrial park, Frankton warehouse, or Hamilton CBD commercial office), operating hours, perimeter access points, and specific asset risks.',
-      },
-      {
-        question: 'Do you cover industrial areas in Te Rapa and Frankton?',
-        answer: 'Yes, we provide specialized static security guards and frequent mobile patrols tailored for industrial parks, manufacturing plants, and logistics hubs in Te Rapa and Frankton.',
+        answer: 'Specify your site layout (e.g., Te Rapa distribution yard, Frankton warehouse, Hamilton CBD commercial property, or local construction site), operating hours, perimeter access points, and specific asset risks.',
       },
       {
         question: 'Can I get a custom security assessment for my Hamilton business?',
-        answer: 'Absolutely. We offer free on-site security assessments for Hamilton businesses to evaluate risk factors and tailor a static guard or patrol schedule.',
+        answer: 'Absolutely. We offer free on-site security assessments for Hamilton businesses to evaluate risk factors and tailor a static guard or after-hours patrol schedule.',
       },
     ],
   },
@@ -127,39 +131,39 @@ export const LOCATION_DATA: Record<string, LocationInfo> = {
     metaDescription:
       'Professional security guard services, corporate concierge, mobile patrols & 24/7 alarm monitoring in Wellington CBD, Lower Hutt, Porirua & Kapiti Coast.',
     heroDescription:
-      'Reliable static security guards, corporate concierge, mobile patrols, and alarm monitoring services across Wellington and the Hutt Valley.',
+      'Reliable static security guards, corporate concierge, mobile patrols, and alarm monitoring services across Wellington CBD commercial buildings, multi-tenant properties, Hutt Valley, Porirua, and Kapiti Coast.',
     overview:
-      'In the capital city, security demands high professionalism, compliance, and discretion. Atlas Security delivers tailored security guarding, corporate concierge, and mobile patrol solutions across Wellington CBD, Lower Hutt, Upper Hutt, Porirua, and the Kapiti Coast.',
-    keySuburbs: ['Wellington CBD & Parliamentary Quarter', 'Lower Hutt Industrial & Commercial', 'Porirua Commercial Hub', 'Petone & Seaview Logistics Precinct', 'Upper Hutt & Kapiti Coast'],
+      'In the capital city, security demands high professionalism, compliance, and discretion. Atlas Security delivers tailored security guarding, corporate concierge, after-hours coverage, and mobile patrol solutions across Wellington CBD commercial buildings, multi-tenant properties, Hutt Valley industrial areas in Lower Hutt and Petone, Porirua retail hubs, Kapiti Coast, and civil construction sites.',
+    keySuburbs: ['Wellington CBD Commercial Buildings', 'Multi-Tenant Properties & Parliamentary Precinct', 'Hutt Valley Industrial & Commercial (Lower Hutt & Petone)', 'Porirua Commercial & Retail Hubs', 'Kapiti Coast & Upper Hutt'],
     servicesProvided: [
       {
         title: 'Static Guarding & Concierge',
-        description: 'Professional guards for Wellington corporate headquarters, government institutions, retail precincts, and events.',
+        description: 'Professional guards for Wellington CBD commercial buildings, multi-tenant properties, retail precincts, construction sites, and corporate offices.',
         link: '/services/static-guard',
       },
       {
-        title: 'Mobile Patrols & Alarm Response',
-        description: 'Regular night-time mobile patrols and emergency response units covering the Wellington metro and Hutt Valley areas.',
+        title: 'Mobile Patrols & After-Hours Coverage',
+        description: 'Regular night-time mobile patrols, after-hours coverage, and emergency response units covering Wellington metro, Hutt Valley, Porirua, and Kapiti Coast.',
         link: '/services/mobile-patrolling',
       },
       {
         title: 'Alarm Systems & Surveillance',
-        description: '24/7 surveillance monitoring and rapid dispatch security services for Wellington properties.',
+        description: '24/7 surveillance monitoring and rapid dispatch security services for Wellington commercial and multi-tenant properties.',
         link: '/services/alarm-monitoring',
       },
     ],
     faqs: [
       {
-        question: 'What areas of Wellington does Atlas Security cover?',
-        answer: 'We provide comprehensive security coverage across Wellington CBD, Lower Hutt, Upper Hutt, Porirua, Petone, and the Kapiti Coast.',
+        question: 'What areas of Greater Wellington does Atlas Security cover?',
+        answer: 'We provide comprehensive security coverage across Wellington CBD commercial buildings, multi-tenant properties, Lower Hutt, Upper Hutt, Porirua, Petone, and the Kapiti Coast.',
+      },
+      {
+        question: 'What security services do you offer for Wellington CBD commercial buildings and multi-tenant properties?',
+        answer: 'We offer corporate lobby concierges, tenant access control, after-hours lock-up procedures, vacant floor inspections, and after-hours coverage for multi-tenant properties.',
       },
       {
         question: 'What details should Wellington property managers prepare for a security assessment?',
-        answer: 'Specify your property location (e.g., Wellington CBD office tower, Lower Hutt industrial park, or Petone retail store), operating hours, entry points, and lock-up times.',
-      },
-      {
-        question: 'Do you provide corporate concierge security in Wellington CBD?',
-        answer: 'Yes, our static guards are trained in professional concierge duties, front-desk access control, and customer service tailored for Wellington office buildings.',
+        answer: 'Specify your property location (e.g., Wellington CBD commercial building, Hutt Valley industrial park, or Porirua retail store), operating hours, entry points, and lock-up times.',
       },
       {
         question: 'How do I arrange security services for a Wellington property?',

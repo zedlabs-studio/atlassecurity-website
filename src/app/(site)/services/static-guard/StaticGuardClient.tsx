@@ -155,15 +155,15 @@ export default function StaticGuardClient() {
                 SITE EVALUATION CRITERIA
               </span>
               <h2 className="text-2xl font-extrabold text-[#0a1628] mb-4">
-                Site Requirements Influencing Static Security Deployment
+                When Are Static Security Guards Most Appropriate?
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Static security guarding is most effective when site parameters require dedicated, unbroken physical oversight. Key operational factors include:
+                Static security guarding is ideal for facilities requiring continuous, unbroken physical oversight, active access control, and instant incident response. Key operational scenarios include:
               </p>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>
-                  <span><strong>Access Point Complexity:</strong> Multiple visitor turnstiles, loading dock gates, or contractor entry points that require active credential verification and <Link href="/blog/how-to-choose-coa-licensed-security-guard-nz" className="text-[#1e40af] font-semibold underline">COA-licensed guard standards</Link>.</span>
+                  <span><strong>Access Point Complexity:</strong> Turnstiles, gatehouses, loading docks, and visitor desks needing credential verification, contractor logging, and compliance with <Link href="/blog/how-to-choose-coa-licensed-security-guard-nz" className="text-[#1e40af] font-semibold underline">COA-licensed guard standards</Link>.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>
@@ -171,11 +171,11 @@ export default function StaticGuardClient() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>
-                  <span><strong>High-Value Laydown Areas:</strong> Civil work sites and <Link href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction developments</Link> storing uninstalled copper, equipment, or machinery overnight.</span>
+                  <span><strong>High-Value Material Laydown:</strong> Active civil works and <Link href="/services/construction-site-security" className="text-[#1e40af] font-semibold underline">construction developments</Link> storing uninstalled copper, equipment, or machinery overnight.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#1e40af] font-bold">•</span>
-                  <span><strong>Customer-Facing Loss Prevention:</strong> Busy <Link href="/services/retail-security" className="text-[#1e40af] font-semibold underline">retail store locations</Link> needing visible anti-shoplifting deterrence and staff closing escorts.</span>
+                  <span><strong>Customer-Facing Loss Prevention:</strong> High-footfall <Link href="/services/retail-security" className="text-[#1e40af] font-semibold underline">retail store locations</Link> needing anti-shoplifting deterrence and staff closing escorts.</span>
                 </li>
               </ul>
             </div>
@@ -185,7 +185,7 @@ export default function StaticGuardClient() {
                 DEPLOYMENT PREPARATION
               </span>
               <h2 className="text-2xl font-extrabold text-white mb-4">
-                What a Business Should Define Before Deployment
+                What a Business Should Prepare Before Requesting Static Guarding
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 To ensure a seamless transition and effective security guard handover, property managers should establish clear operational post orders:
@@ -193,19 +193,19 @@ export default function StaticGuardClient() {
               <ul className="space-y-3.5 text-sm text-gray-300">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">1.</span>
-                  <span><strong>Guard Scope &amp; Responsibilities:</strong> Clarify whether the officer handles lobby concierge duties, contractor badge issuing, or physical perimeter patrols.</span>
+                  <span><strong>Guard Scope &amp; Responsibilities:</strong> Define whether officers handle lobby concierge duties, contractor sign-in, or interior perimeter patrols.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">2.</span>
-                  <span><strong>Access Rules &amp; Keyholder Logs:</strong> Define after-hours entry permissions, authorized tenant lists, and contractor sign-in registers.</span>
+                  <span><strong>Access Rules &amp; Keyholder Logs:</strong> Establish after-hours entry rules, tenant authorization lists, and keycard registers.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">3.</span>
-                  <span><strong>Incident Escalation Matrix:</strong> Specify exact contact protocols for building managers, emergency services, and our 24/7 central dispatch.</span>
+                  <span><strong>Incident Escalation Matrix:</strong> Specify contact phone numbers for facilities managers, emergency services, and central dispatch.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#3b82f6] font-bold">4.</span>
-                  <span><strong>Shift Handover Procedures:</strong> Establish digital reporting expectations and shift handover logs between day and night personnel.</span>
+                  <span><strong>Shift Handover Procedures:</strong> Define digital reporting expectations and shift handover logs between day and night personnel.</span>
                 </li>
               </ul>
             </div>
@@ -218,7 +218,7 @@ export default function StaticGuardClient() {
                 OPERATIONAL FRAMEWORK
               </span>
               <h2 className="text-2xl font-extrabold text-[#0a1628]">
-                How Static Guarding Is Typically Structured
+                How Static Security Guard Coverage Is Structured
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mt-2">
                 A professional static guard deployment is built on defined operational post parameters, clear access boundaries, and documented escalation rules:
@@ -227,7 +227,7 @@ export default function StaticGuardClient() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-gray-700 mb-8">
               <div>
-                <h3 className="font-bold text-[#0a1628] text-sm mb-3">1. Defined Post Location &amp; Access Boundaries</h3>
+                <h3 className="font-bold text-[#0a1628] text-sm mb-3">1. Fixed Post Location &amp; Access Boundaries</h3>
                 <p className="leading-relaxed mb-3">
                   Guards operate from a fixed post station — such as a gatehouse, corporate lobby desk, or site entrance — to maintain unbroken visual oversight of primary ingress and egress points.
                 </p>
