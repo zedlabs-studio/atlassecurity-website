@@ -90,7 +90,7 @@ const services = [
         <rect x="1" y="5" width="15" height="14" rx="2"/>
       </svg>
     ),
-    stat: { value: '< 5min', label: 'Avg. response time' },
+    stat: { value: 'Rapid', label: 'Response dispatch' },
   },
 ]
 

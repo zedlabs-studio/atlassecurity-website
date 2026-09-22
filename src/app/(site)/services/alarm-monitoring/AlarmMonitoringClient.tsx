@@ -51,7 +51,7 @@ const data = {
     {
       icon: '⚡',
       title: 'Instant Alarm Response',
-      desc: 'When an alarm triggers, our response team is dispatched immediately. Average response times are among the fastest in New Zealand.',
+      desc: 'When an alarm triggers, our response team is dispatched immediately. Our response process prioritizes rapid signal verification and immediate mobile officer dispatch to protect your site.',
     },
     {
       icon: '🎥',
