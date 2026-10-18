@@ -97,21 +97,18 @@ export default function BlogPageClient({ initialBlogs = [] }: { initialBlogs?: B
         return r.json()
       })
       .then(data => {
-        if (Array.isArray(data) && data.length > 0) {
+        if (Array.isArray(data)) {
           setBlogs(data)
         }
         setLoading(false)
       })
       .catch(() => {
-        // Fallback to initial blogs if API call fails
-        if (initialBlogs.length > 0) {
-          setBlogs(initialBlogs)
-        } else {
+        if (initialBlogs.length === 0) {
           setError(true)
         }
         setLoading(false)
       })
-  }, [initialBlogs])
+  }, [])
 
   return (
     <main>

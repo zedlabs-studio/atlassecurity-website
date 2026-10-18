@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import { constructMetadata } from '@/lib/siteConfig'
 import { JsonLd, getBreadcrumbSchema } from '@/components/JsonLd'
-import { mockBlogs } from '@/lib/mock'
+import { getPublishedBlogs } from '@/lib/blogService'
 import BlogPageClient from './BlogPageClient'
+
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = constructMetadata({
   title: 'Security Insights & News | Atlas Security NZ Blog',
@@ -11,19 +13,21 @@ export const metadata: Metadata = constructMetadata({
   path: '/blog',
 })
 
-export default function BlogPage() {
+export default async function BlogPage() {
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', item: '/' },
     { name: 'Blog', item: '/blog' },
   ])
 
-  const initialBlogs = mockBlogs.map(b => ({
+  const blogs = await getPublishedBlogs()
+
+  const initialBlogs = blogs.map(b => ({
     id: b.id,
     title: b.title,
     slug: b.slug,
     excerpt: b.excerpt,
     coverImage: b.coverImage,
-    publishedAt: b.publishedAt || b.createdAt,
+    publishedAt: b.publishedAt ? new Date(b.publishedAt).toISOString() : null,
   }))
 
   return (

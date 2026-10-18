@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import BlogCoverImage from '@/components/BlogCoverImage'
-import { prisma } from '@/lib/db'
 import { constructMetadata, siteConfig } from '@/lib/siteConfig'
 import { JsonLd, getBlogPostingSchema, getBreadcrumbSchema } from '@/components/JsonLd'
-
+import { getBlogBySlug } from '@/lib/blogService'
 import { mockBlogs } from '@/lib/mock'
+
+export const dynamic = 'force-dynamic'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -15,21 +16,9 @@ export function generateStaticParams() {
   return mockBlogs.map((b) => ({ slug: b.slug }))
 }
 
-async function getBlog(slug: string) {
-  try {
-    const blog = await prisma.blog.findUnique({
-      where: { slug },
-    })
-    if (blog) return blog
-  } catch (err) {
-    console.warn(`Could not fetch blog post ${slug} from DB:`, err)
-  }
-  return mockBlogs.find((b) => b.slug === slug) || null
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const blog = await getBlog(slug)
+  const blog = await getBlogBySlug(slug)
 
   if (!blog) {
     return constructMetadata({
@@ -50,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params
-  const blog = await getBlog(slug)
+  const blog = await getBlogBySlug(slug)
 
   if (!blog) {
     return (

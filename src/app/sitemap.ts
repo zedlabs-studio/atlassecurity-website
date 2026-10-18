@@ -3,6 +3,8 @@ import { prisma } from '@/lib/db'
 import { siteConfig } from '@/lib/siteConfig'
 import { mockBlogs } from '@/lib/mock'
 
+import { ensureBlogsSeeded } from '@/lib/blogService'
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.url
 
@@ -34,6 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   let blogRoutes: MetadataRoute.Sitemap = []
   try {
+    await ensureBlogsSeeded()
     const posts = await prisma.blog.findMany({
       where: { published: true },
       select: {
